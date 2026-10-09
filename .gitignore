@@ -13,3 +13,6 @@ venv/
 runs/**/*.npz
 runs/**/lens_readout/all50_psych_vocab_ranks.csv
 runs/**/lens_readout/all50_top50.csv
+
+# NRC VAD Lexicon content: non-commercial license, not redistributed. Rebuilt locally by chunk 10a.
+runs/**/vad/vad_single_token_lexicon.csv
