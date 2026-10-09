@@ -1,0 +1,36 @@
+{
+  "purpose": "plan item 6: external VAD validation of the S1/S2 steering effects",
+  "lexicon": {
+    "path": "NRC-VAD-Lexicon-v2.1.txt",
+    "sha256": "42c718817fc91d5c133581b24b0bb31d2b14a0b16edb19bc6ce6ab70343e5a45",
+    "rows_parsed": 54801,
+    "filter": "single lowercase alphabetic words whose ' word' form is one Qwen token",
+    "n_tokens": 12761,
+    "token_ids_sha256": "113a8aba4c7844eb4790c11e0d49fde4d5710b752f30b15f57b7944197deaec0"
+  },
+  "plane_sweep_spec_sha256": "f01276aa0f817d4b565c01920a13e19ebad2e463908267d459e5c223bb989aa3",
+  "readout": "per-token mean over the 50 prompts of log(rank_baseline / rank_condition), R lens, final prompt token",
+  "conditions": {
+    "baseline": 0.0,
+    "S1_-0.5": -0.5,
+    "S2_-0.5": -0.5
+  },
+  "layers": [
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    29,
+    30
+  ],
+  "statistic": "Spearman r over lexicon tokens; partial r = Pearson r of rank residuals after regressing out the control ranks; 95% CI from 2000 bootstrap resamples of tokens, seed 20260925",
+  "predictions": {
+    "P1_positive_valence": "At R29, r(gain S2 -0.5, valence) > 0 and r(gain S1 -0.5, valence) > 0, both CIs above 0.",
+    "P2_arousal_late": "Primary: partial r(gain S2 - gain S1, arousal | valence) at R29 exceeds the same at R16 (CI of the difference above 0) and is > 0 at R29 (CI above 0). Raw r reported alongside.",
+    "P3_dominance": "Partial r(gain S2 -0.5 at R29, dominance | valence): CI includes 0 or lies below 0."
+  },
+  "exploratory": "direct-vector VAD correlations for -S2, -S1, -common, -contrast (raw and partial); all layers."
+}

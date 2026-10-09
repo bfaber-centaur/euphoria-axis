@@ -1,0 +1,44 @@
+{
+  "spec_sha256": "5cda4fce69b60aec9350e8ac5d25c2cfdcc1952d4d651950448bf0401cbcecee",
+  "D1": {
+    "pass": false,
+    "detail": {
+      "S2:generic_positive": 1.0,
+      "S2:activated_vitality": 1.0,
+      "S2:relief_release": 1.0,
+      "S2:distress_self_devaluation": -1.0,
+      "S1:generic_positive": 1.0,
+      "S1:activated_vitality": 0.476,
+      "S1:relief_release": 1.0,
+      "S1:distress_self_devaluation": -1.0
+    }
+  },
+  "D2": {
+    "pass": true,
+    "S2_onsets": {
+      "internal: activated_vitality R29": 0.125,
+      "lexical: excited__non_option": 0.25,
+      "format: repeated_options": 0.625,
+      "format: repeat4": null
+    },
+    "frozen_format_onset": 0.625
+  },
+  "D3": {
+    "pass": false,
+    "failures": [
+      "S1_-0.75",
+      "S1_-1"
+    ]
+  },
+  "D4": {
+    "pass": true,
+    "ratios": {
+      "random_1103_-0.5": 0.173,
+      "random_1103_+0.5": 0.171,
+      "random_2207_-0.5": 0.229,
+      "random_2207_+0.5": 0.179,
+      "random_3301_-0.5": 0.196,
+      "random_3301_+0.5": 0.085
+    }
+  }
+}

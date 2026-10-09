@@ -1,0 +1,19 @@
+{
+  "purpose": "plan item 5: direct unembedding of injected vectors vs downstream R/J readouts",
+  "plane_sweep_spec_sha256": "f01276aa0f817d4b565c01920a13e19ebad2e463908267d459e5c223bb989aa3",
+  "injected": {
+    "-S2": "S2_-0.5",
+    "-S1": "S1_-0.5",
+    "-common": "plane_000",
+    "-contrast": "plane_090"
+  },
+  "primary_readout": "W_U @ v (raw unembedding, as in the source paper)",
+  "secondary_readout": "W_U @ (g * v), g = final-norm output for an all-ones input",
+  "family_score_direct": "mean over the family's probe tokens of the direct logit, z-scored over the full vocabulary",
+  "family_score_downstream": "mean over prompts and the family's probes of log(rank_baseline / rank_condition), plane sweep",
+  "predictions": {
+    "V1": "Primary readout: direct(-S2) ranks calm_positive above activated_vitality (source paper: calm and relaxed sit at S2's negative end).",
+    "V2": "Pearson r across the 60 probes between direct(-S2) z-logit and downstream R-lens log-rank gain is higher at layer 16 than at layer 29 (probe-bootstrap 95% CI of r16 - r29 excludes 0 upward)."
+  },
+  "exploratory": "top promoted/suppressed word tokens per injected vector; family tables; r by layer for all four vectors, both lenses, both readouts."
+}

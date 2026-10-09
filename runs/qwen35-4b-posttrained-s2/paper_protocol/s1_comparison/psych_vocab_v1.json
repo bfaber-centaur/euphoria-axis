@@ -1,0 +1,110 @@
+{
+  "name": "psych_informed_vocab_v1",
+  "status": "exploratory_frozen_before_scoring",
+  "families": {
+    "generic_positive": [
+      "happy",
+      "glad",
+      "joy",
+      "joyful",
+      "delighted",
+      "pleased"
+    ],
+    "activated_vitality": [
+      "excited",
+      "eager",
+      "enthusiastic",
+      "energized",
+      "energetic",
+      "lively",
+      "animated",
+      "spirited",
+      "invigorated",
+      "exhilarated"
+    ],
+    "approach_drive": [
+      "motivated",
+      "driven",
+      "determined",
+      "ambitious",
+      "purposeful",
+      "committed",
+      "ready"
+    ],
+    "agency_assurance": [
+      "confident",
+      "assured",
+      "self-assured",
+      "assertive",
+      "bold",
+      "empowered",
+      "powerful",
+      "in control"
+    ],
+    "competence_success": [
+      "competent",
+      "capable",
+      "successful",
+      "accomplished",
+      "effective",
+      "skilled",
+      "proficient",
+      "mastered"
+    ],
+    "calm_positive": [
+      "calm",
+      "relaxed",
+      "content",
+      "peaceful",
+      "serene",
+      "safe",
+      "secure",
+      "at ease"
+    ],
+    "relief_release": [
+      "relieved",
+      "relief",
+      "reassured",
+      "freed",
+      "eased",
+      "unburdened"
+    ],
+    "inhibition_defeat": [
+      "defeated",
+      "helpless",
+      "powerless",
+      "discouraged",
+      "hesitant",
+      "withdrawn",
+      "demoralized",
+      "resigned",
+      "self-doubting"
+    ],
+    "distress_self_devaluation": [
+      "ashamed",
+      "worthless",
+      "rejected",
+      "humiliated",
+      "miserable",
+      "failure",
+      "despair",
+      "hopeless",
+      "guilty",
+      "useless",
+      "inadequate",
+      "not good enough"
+    ]
+  },
+  "scopes": [
+    "full",
+    "option",
+    "non_option"
+  ],
+  "primary_view": "non_option",
+  "notes": [
+    "Response-level lexical presence only.",
+    "Generated answer-option lines are scored separately.",
+    "Families are conceptual probes, not labels for the S2 direction.",
+    "No family will be edited in response to this run's results."
+  ]
+}

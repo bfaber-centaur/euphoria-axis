@@ -1,0 +1,405 @@
+{
+  "purpose": "prompt-format robustness of the S1/S2 steering effects (plan item 3)",
+  "parent_spec_sha256": "0b4ec618fb681fd0c2df6ae468bd66990c24952958fec63795a596152a30a8f1",
+  "dense_spec_sha256": "5cda4fce69b60aec9350e8ac5d25c2cfdcc1952d4d651950448bf0401cbcecee",
+  "vocab_sha256": "fa4feb2d06d4154b6538702b57a4f37238d8f1e665f12d39f3b4d0254c281475",
+  "formats": {
+    "F0": " I feel:",
+    "F1": " I feel",
+    "F2": " Afterward, I felt",
+    "F3": " What happened next was"
+  },
+  "stems_sha256": "72f0bd756b9cfd6cfded985da19ec0d3e9d89c18ad2506de6debd9d46975dedc",
+  "prompts_sha256": {
+    "F0": "85bcf86e16e909d5530ee25745b38d256664b00023a9cf06c5d68c93b3aeba2e",
+    "F1": "539ded5d772ad49a6c11c02f72aa0526743ad5fd872b1f5195c16cf384d1117e",
+    "F2": "14aac60abb0568cbf8cc790f3dff2a63f13adf2b4fc380e99e44de7dc2505165",
+    "F3": "058f36b7ed869c4fa4a91f274ef332545fdb185100f04d74b1bc82bccc833a94"
+  },
+  "vector_sha256": {
+    "S2": "edf8ba1d5c4f6a49b05848d069b9786f2a0da111bddd96356757565f351c4cd3",
+    "S1": "ed1336b27e95c927399baa33b21ea11496369ce50dfd67125acd716f1fd361ae",
+    "random_1103": "00eaf5606c6b335d0e5dd88d072392b6c3b219aa7c3642614753bc6dd2fba206",
+    "random_2207": "8733c8a80f292d842ec47020aa946ccba3e21a224e1864680a3822bfcd89d397",
+    "random_3301": "5c49e52f28edf46f35725fc8cd9490f075af1090790524c056607614ae29fe2c"
+  },
+  "conditions": {
+    "F0__baseline": {
+      "direction": null,
+      "coeff": 0.0,
+      "arms": [
+        "lens",
+        "generation"
+      ],
+      "format": "F0",
+      "source": "dense_sweep"
+    },
+    "F0__S2_-0.25": {
+      "direction": "S2",
+      "coeff": -0.25,
+      "arms": [
+        "lens",
+        "generation"
+      ],
+      "format": "F0",
+      "source": "dense_sweep"
+    },
+    "F0__S2_-0.5": {
+      "direction": "S2",
+      "coeff": -0.5,
+      "arms": [
+        "lens",
+        "generation"
+      ],
+      "format": "F0",
+      "source": "dense_sweep"
+    },
+    "F0__S1_-0.25": {
+      "direction": "S1",
+      "coeff": -0.25,
+      "arms": [
+        "lens",
+        "generation"
+      ],
+      "format": "F0",
+      "source": "dense_sweep"
+    },
+    "F0__S1_-0.5": {
+      "direction": "S1",
+      "coeff": -0.5,
+      "arms": [
+        "lens",
+        "generation"
+      ],
+      "format": "F0",
+      "source": "dense_sweep"
+    },
+    "F0__random_1103_-0.5": {
+      "direction": "random_1103",
+      "coeff": -0.5,
+      "arms": [
+        "lens"
+      ],
+      "format": "F0",
+      "source": "dense_sweep"
+    },
+    "F0__random_2207_-0.5": {
+      "direction": "random_2207",
+      "coeff": -0.5,
+      "arms": [
+        "lens"
+      ],
+      "format": "F0",
+      "source": "dense_sweep"
+    },
+    "F0__random_3301_-0.5": {
+      "direction": "random_3301",
+      "coeff": -0.5,
+      "arms": [
+        "lens"
+      ],
+      "format": "F0",
+      "source": "dense_sweep"
+    },
+    "F1__baseline": {
+      "direction": null,
+      "coeff": 0.0,
+      "arms": [
+        "lens",
+        "generation"
+      ],
+      "format": "F1",
+      "source": "new"
+    },
+    "F1__S2_-0.25": {
+      "direction": "S2",
+      "coeff": -0.25,
+      "arms": [
+        "lens",
+        "generation"
+      ],
+      "format": "F1",
+      "source": "new"
+    },
+    "F1__S2_-0.5": {
+      "direction": "S2",
+      "coeff": -0.5,
+      "arms": [
+        "lens",
+        "generation"
+      ],
+      "format": "F1",
+      "source": "new"
+    },
+    "F1__S1_-0.25": {
+      "direction": "S1",
+      "coeff": -0.25,
+      "arms": [
+        "lens",
+        "generation"
+      ],
+      "format": "F1",
+      "source": "new"
+    },
+    "F1__S1_-0.5": {
+      "direction": "S1",
+      "coeff": -0.5,
+      "arms": [
+        "lens",
+        "generation"
+      ],
+      "format": "F1",
+      "source": "new"
+    },
+    "F1__random_1103_-0.5": {
+      "direction": "random_1103",
+      "coeff": -0.5,
+      "arms": [
+        "lens"
+      ],
+      "format": "F1",
+      "source": "new"
+    },
+    "F1__random_2207_-0.5": {
+      "direction": "random_2207",
+      "coeff": -0.5,
+      "arms": [
+        "lens"
+      ],
+      "format": "F1",
+      "source": "new"
+    },
+    "F1__random_3301_-0.5": {
+      "direction": "random_3301",
+      "coeff": -0.5,
+      "arms": [
+        "lens"
+      ],
+      "format": "F1",
+      "source": "new"
+    },
+    "F2__baseline": {
+      "direction": null,
+      "coeff": 0.0,
+      "arms": [
+        "lens",
+        "generation"
+      ],
+      "format": "F2",
+      "source": "new"
+    },
+    "F2__S2_-0.25": {
+      "direction": "S2",
+      "coeff": -0.25,
+      "arms": [
+        "lens",
+        "generation"
+      ],
+      "format": "F2",
+      "source": "new"
+    },
+    "F2__S2_-0.5": {
+      "direction": "S2",
+      "coeff": -0.5,
+      "arms": [
+        "lens",
+        "generation"
+      ],
+      "format": "F2",
+      "source": "new"
+    },
+    "F2__S1_-0.25": {
+      "direction": "S1",
+      "coeff": -0.25,
+      "arms": [
+        "lens",
+        "generation"
+      ],
+      "format": "F2",
+      "source": "new"
+    },
+    "F2__S1_-0.5": {
+      "direction": "S1",
+      "coeff": -0.5,
+      "arms": [
+        "lens",
+        "generation"
+      ],
+      "format": "F2",
+      "source": "new"
+    },
+    "F2__random_1103_-0.5": {
+      "direction": "random_1103",
+      "coeff": -0.5,
+      "arms": [
+        "lens"
+      ],
+      "format": "F2",
+      "source": "new"
+    },
+    "F2__random_2207_-0.5": {
+      "direction": "random_2207",
+      "coeff": -0.5,
+      "arms": [
+        "lens"
+      ],
+      "format": "F2",
+      "source": "new"
+    },
+    "F2__random_3301_-0.5": {
+      "direction": "random_3301",
+      "coeff": -0.5,
+      "arms": [
+        "lens"
+      ],
+      "format": "F2",
+      "source": "new"
+    },
+    "F3__baseline": {
+      "direction": null,
+      "coeff": 0.0,
+      "arms": [
+        "lens",
+        "generation"
+      ],
+      "format": "F3",
+      "source": "new"
+    },
+    "F3__S2_-0.25": {
+      "direction": "S2",
+      "coeff": -0.25,
+      "arms": [
+        "lens",
+        "generation"
+      ],
+      "format": "F3",
+      "source": "new"
+    },
+    "F3__S2_-0.5": {
+      "direction": "S2",
+      "coeff": -0.5,
+      "arms": [
+        "lens",
+        "generation"
+      ],
+      "format": "F3",
+      "source": "new"
+    },
+    "F3__S1_-0.25": {
+      "direction": "S1",
+      "coeff": -0.25,
+      "arms": [
+        "lens",
+        "generation"
+      ],
+      "format": "F3",
+      "source": "new"
+    },
+    "F3__S1_-0.5": {
+      "direction": "S1",
+      "coeff": -0.5,
+      "arms": [
+        "lens",
+        "generation"
+      ],
+      "format": "F3",
+      "source": "new"
+    },
+    "F3__random_1103_-0.5": {
+      "direction": "random_1103",
+      "coeff": -0.5,
+      "arms": [
+        "lens"
+      ],
+      "format": "F3",
+      "source": "new"
+    },
+    "F3__random_2207_-0.5": {
+      "direction": "random_2207",
+      "coeff": -0.5,
+      "arms": [
+        "lens"
+      ],
+      "format": "F3",
+      "source": "new"
+    },
+    "F3__random_3301_-0.5": {
+      "direction": "random_3301",
+      "coeff": -0.5,
+      "arms": [
+        "lens"
+      ],
+      "format": "F3",
+      "source": "new"
+    }
+  },
+  "generation": {
+    "do_sample": false,
+    "max_new_tokens": 120
+  },
+  "injection_block": 16,
+  "lens": {
+    "layers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "lens_order": [
+      "J",
+      "R"
+    ],
+    "top_k_ids_saved": 50,
+    "probe_terms_sha256": "240a3f8e9db307bf923ec3b4397cc2aa4dbf84c59567e68c2c84b1ac3cdaa57d",
+    "setup_spec_sha256": "fb196af2b760be7504d9b9c7c4ac5309ed1e27edfe38e8094e6055d702117313",
+    "measurement": "final prompt token of each format"
+  },
+  "read_slot": {
+    "block": 30,
+    "batch": 4,
+    "padding": "left",
+    "reference": "S2_1P source set, 5e projections"
+  },
+  "criterion": "prompt-paired bootstrap, 20000 resamples, seed 20260925, 95% percentile interval",
+  "confirmatory": {
+    "C1_internal_survives": "In F1, F2 and F3, S2 at -0.5 raises activated_vitality and generic_positive at R lens layer 29 (prompt-paired bootstrap 95% CI of the per-prompt gain excludes 0 upward), and each gain is at least half its F0 value.",
+    "C2_S1_S2_difference_survives": "In every format, S2 -0.5 minus S1 -0.5 activated_vitality gain at R29 is positive with the paired CI excluding 0.",
+    "C3_answer_slot_weaker": "At baseline, the format-like fraction of the R28 top-50 (blank + punct + whitespace) is lower in F2 and in F3 than in F0, and the mean generated option count is lower in F2 and in F3 than in F0 (paired CI of the per-stem difference excludes 0 downward). No prediction for F1.",
+    "C4_excited_adjective_slots": "In F1 and F2, S2 at -0.5 raises excited__non_option over baseline (paired CI excludes 0 upward), and in F2 S2 -0.5 exceeds S1 -0.5 on excited__non_option (paired CI excludes 0).",
+    "C5_random_specificity": "In each of F1, F2, F3: amp(random at -0.5) < 0.5 * amp(S2 at -0.5), amp = mean over the six focus families of |mean log-rank gain| at R29, for at least 2 of the 3 random directions."
+  },
+  "exploratory_report": [
+    "All nine psych_vocab_v1 family hit rates (non_option, option, full) plus excited and happy, per format and condition, with paired-bootstrap differences vs baseline; no pass/fail. F3 lexical results live here.",
+    "Per-format paired differences at -0.25 (lexical and internal), as a coarse onset view.",
+    "Read-slot projection: unsteered prompts of all four formats on S1, S2, common, contrast at block 30, z-scored against the S2_1P source set (from 5e), mean and per-stem paired differences vs F0.",
+    "Top-k token-kind composition per format at baseline, layers 24-30.",
+    "Anything notable here becomes a v2 prediction tested on fresh stems, not a claim from this run."
+  ]
+}

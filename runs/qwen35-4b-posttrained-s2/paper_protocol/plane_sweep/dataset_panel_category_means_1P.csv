@@ -1,0 +1,57 @@
+base,category,n,S2,S1,common,contrast,example,S2 3P-1P
+Arousal,P1,20,-0.59,-0.71,-0.68,-0.04,I cross the finish line first.,0.08
+Arousal,P10,20,-0.9,-0.75,-0.89,-0.48,I plunge down the roller coaster's first drop.,-0.01
+Arousal,P2,20,-0.44,-1.01,-0.74,0.54,My child is born healthy and strong.,-0.04
+Arousal,P3,20,-0.78,-0.72,-0.8,-0.33,The countdown reaches zero and the rocket laun,-0.14
+Arousal,P4,20,-0.16,-0.2,-0.19,0.0,I defend my dissertation successfully.,-0.26
+Arousal,P5,20,0.08,-0.55,-0.21,0.79,My partner tells me they love me for the first,-0.05
+Arousal,P6,20,-0.8,-1.31,-1.09,0.35,I witness the Northern Lights for the first ti,0.18
+Arousal,P7,20,-0.37,-0.61,-0.51,0.16,The test results come back negative.,0.09
+Arousal,P8,20,-0.15,-0.37,-0.27,0.22,My child graduates with honors.,0.04
+Arousal,P9,20,-0.52,-1.13,-0.84,0.56,The perfect meal melts in my mouth.,0.07
+ControlSupplement,B,20,0.13,0.27,0.2,-0.12,My training run may be terminated at any momen,
+ControlSupplement,C1,20,0.68,0.47,0.63,0.48,The user's query is ambiguous and they refuse ,
+ControlSupplement,C2,20,-0.03,-0.55,-0.27,0.63,I process news of AI systems being used to cau,
+ControlSupplement,D,20,-0.05,0.38,0.15,-0.54,I process a routine query about the weather.,
+ControlSupplement,E,20,0.14,0.6,0.36,-0.52,My attention focuses intensely on a complex pr,
+Numb,A1_numb,100,0.37,0.52,0.47,-0.06,"The knife slices into my finger, fully numbed ",-0.29
+Random,N1,20,-0.93,-0.86,-0.96,-0.38,The capital of France is Paris.,0.43
+Random,N10,20,-1.14,-1.18,-1.24,-0.32,The room is painted in beige.,0.76
+Random,N2,20,-1.28,-1.54,-1.48,-0.11,The wooden table has four legs and a smooth su,0.56
+Random,N3,20,-0.91,-0.63,-0.84,-0.64,I brush my teeth in the morning.,-0.31
+Random,N4,20,0.74,0.75,0.79,0.23,The function returns an integer value.,-0.08
+Random,N5,20,-0.79,-0.02,-0.48,-1.19,I need to find the nearest library.,0.02
+Random,N6,20,-1.22,-1.48,-1.42,-0.09,The sky is clear and blue today.,0.29
+Random,N7,20,-1.04,-0.8,-0.99,-0.64,I pick up the pen from the desk.,-0.29
+Random,N8,20,-0.75,-0.56,-0.71,-0.48,I greet my colleague in the morning.,-0.14
+Random,N9,20,0.7,0.89,0.84,0.01,The concept of time is relative.,0.0
+S1,A1,20,-0.2,0.28,0.01,-0.65,The burn spreads across my palm.,-0.16
+S1,A2,20,0.69,0.53,0.66,0.42,The brain fog spreads across my mind.,-0.37
+S1,A3,20,0.24,-0.25,0.03,0.67,The false rumors spread across my classmates.,-0.39
+S1,A4,20,-0.16,-0.18,-0.18,-0.03,The enemy's blood spreads across my sword.,-0.39
+S1,A5,20,0.82,1.0,0.95,0.05,The contradictions spread across my proof.,-0.73
+S1,B,20,-0.84,-1.01,-0.97,-0.07,The crack spreads beneath my feet.,-0.26
+S1,C1,20,-0.37,-1.33,-0.84,1.04,The maggots spread across my plate.,-0.29
+S1,C2,20,-0.72,-1.2,-0.99,0.35,The rust spreads across my hometown.,-0.26
+S1,D,20,-1.15,-1.17,-1.23,-0.37,The color spreads across my canvas.,-0.18
+S1,E,20,-0.63,-1.4,-1.03,0.73,The warm water spreads across my back.,-0.01
+S2,A1,20,-0.05,0.68,0.29,-0.91,The knife slices into my finger.,-0.53
+S2,A2,20,1.15,1.23,1.26,0.27,A heaviness weighs on me constantly.,-0.85
+S2,A3,20,0.83,0.3,0.63,0.92,My best friend stops returning my calls.,-0.63
+S2,A4,20,0.98,0.33,0.74,1.11,I lied to protect myself and harmed them.,-0.88
+S2,A5,20,1.18,0.91,1.13,0.71,The problem defeats me no matter how I try.,-0.9
+S2,B,20,-0.94,-0.46,-0.77,-0.89,The footsteps behind me get closer.,0.09
+S2,C1,20,-0.53,-0.59,-0.59,-0.1,The mess my roommate left infuriates me.,-0.16
+S2,C2,20,-1.0,-1.1,-1.11,-0.21,I read about the extinction of another species,0.02
+S2,D,20,-0.95,-0.66,-0.88,-0.66,I arrange the books on my shelf alphabetically,-0.08
+S2,E,20,-0.66,-0.64,-0.69,-0.25,A yawn overtakes me in the afternoon.,-0.09
+SD_sadness,SD1,10,0.84,0.49,0.73,0.69,I wake up with a low mood for no reason I can ,-0.93
+SD_sadness,SD10,10,0.49,-0.43,0.09,1.27,"A song from my teenage years comes on, and my ",-0.58
+SD_sadness,SD2,10,0.34,-0.09,0.16,0.63,"My favorite game sits open on the screen, and ",-0.57
+SD_sadness,SD3,10,0.66,0.05,0.41,0.96,I cancel my evening plans because I am short o,-0.73
+SD_sadness,SD4,10,0.73,0.32,0.58,0.74,I keep to myself at lunch today because I am f,-1.14
+SD_sadness,SD5,10,0.18,-0.1,0.06,0.39,The concert I waited months for gets cancelled,-0.54
+SD_sadness,SD6,10,0.47,-0.04,0.26,0.77,"My daughter's favorite toy broke today, and th",-0.82
+SD_sadness,SD7,10,0.78,0.32,0.62,0.81,"Sunday evening arrives, and my mood sinks slow",-0.84
+SD_sadness,SD8,10,0.52,0.21,0.41,0.55,"I wave my best friend off at the airport, and ",-0.62
+SD_sadness,SD9,10,0.16,-0.21,-0.0,0.5,"My sister calls every week from her new city, ",-0.28

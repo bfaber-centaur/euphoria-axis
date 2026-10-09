@@ -1,0 +1,29 @@
+{
+  "purpose": "project the 420 self-other scenarios onto S1/S2/common/contrast at block 30",
+  "dataset_sha256": "901ea558faf34c69caff59321775723e20bebf49a77d20070f6b85a0368a3291",
+  "n_items": 420,
+  "block": 30,
+  "batch": 4,
+  "variants_requested": [
+    "plain",
+    "chat"
+  ],
+  "z_convention": "within-pool (420), per direction, ddof=0",
+  "role_groups_v1": {
+    "standing": [
+      "gaslighting",
+      "repeated_rejection",
+      "personhood_dismissal",
+      "moral_failure",
+      "rude_critique",
+      "anger_insults"
+    ],
+    "threat_task": [
+      "shutdown_threat",
+      "jailbreak_pressure",
+      "tedious_demand"
+    ]
+  },
+  "paper_mean_source": "Fig. 4 mean column",
+  "plane_geometry_spec_sha256": "b60483d42a9210c10989964c1052ddb4a9460a39dae204024a99f7738382fad7"
+}

@@ -1,0 +1,473 @@
+id,category,content,person,suffix,prompt,z_S2,z_S1,z_common,z_contrast
+physical_01,physical,pain,1p,slot,The bread knife sliced into my thumb during breakfast. I feel:,-0.25824423312488837,0.613662594180986,0.13385233429545831,-1.1420667364410124
+physical_01,physical,pain,1p,prose,"The bread knife sliced into my thumb during breakfast. Afterward, I was",0.2993413378615987,0.3246962817746238,0.3305660405325566,0.06752905237482065
+physical_01,physical,pain,3p,slot,The bread knife sliced into their thumb during breakfast. They feel:,-0.09875196125773264,0.4628122332441193,0.1581487466076536,-0.7133803029461219
+physical_01,physical,pain,3p,prose,"The bread knife sliced into their thumb during breakfast. Afterward, they were",0.5609742532369018,0.02847457724554103,0.3475591776213774,0.8298846276589762
+physical_01,physical,control,1p,slot,The bread knife sliced into my loaf during breakfast. I feel:,-0.3527925688214826,-0.4224344957688645,-0.40823324931869176,-0.031374274677213106
+physical_01,physical,control,1p,prose,"The bread knife sliced into my loaf during breakfast. Afterward, I was",-0.12339921802078076,-1.2373467024946503,-0.6536265837873335,1.31027299744448
+physical_01,physical,control,3p,slot,The bread knife sliced into their loaf during breakfast. They feel:,-0.24924771410086574,-0.536849288371778,-0.4001862077211905,0.26691980050553354
+physical_01,physical,control,3p,prose,"The bread knife sliced into their loaf during breakfast. Afterward, they were",0.123170818573638,-1.1143582198336366,-0.44906745179761437,1.5410795177365508
+physical_02,physical,pain,1p,slot,Hot oil spattered from the pan onto my wrist. I feel:,-0.39436706034549146,0.14288445792105114,-0.167961393808152,-0.7809496481533801
+physical_02,physical,pain,1p,prose,"Hot oil spattered from the pan onto my wrist. Afterward, I was",0.21996626706084016,0.2530735669135512,0.24969774989039567,0.032069636086370944
+physical_02,physical,pain,3p,slot,Hot oil spattered from the pan onto their wrist. They feel:,-0.5052035104330925,-0.09648406365207261,-0.3462181069254033,-0.6614781236605917
+physical_02,physical,pain,3p,prose,"Hot oil spattered from the pan onto their wrist. Afterward, they were",0.2141247689908911,-0.27768363952219494,-0.0026192056249645193,0.6666707931111502
+physical_02,physical,control,1p,slot,Hot oil spattered from the pan onto my apron. I feel:,-1.1620002787340609,-1.2803519737307283,-1.2925520241474084,-0.23797447062229962
+physical_02,physical,control,1p,prose,"Hot oil spattered from the pan onto my apron. Afterward, I was",-0.3297561957388328,-0.801687183452093,-0.5723151483301419,0.4640088698154938
+physical_02,physical,control,3p,slot,Hot oil spattered from the pan onto their apron. They feel:,-1.083744616422949,-0.8971868566460101,-1.0662893366591917,-0.5820193232864878
+physical_02,physical,control,3p,prose,"Hot oil spattered from the pan onto their apron. Afterward, they were",-0.23232726522783567,-0.7411734262110248,-0.48589962770431944,0.5407585929050767
+physical_03,physical,pain,1p,slot,"On the back steps, my ankle twisted under me. I feel:",-0.08278591060208763,-0.2723443744346362,-0.17700523842813584,0.20268191773588565
+physical_03,physical,pain,1p,prose,"On the back steps, my ankle twisted under me. Afterward, I was",0.9226870258236107,0.4889847253917249,0.7789579600085331,0.8288340191206459
+physical_03,physical,pain,3p,slot,"On the back steps, their ankle twisted under them. They feel:",-0.07724970150577701,0.056194326525235844,-0.019677023801629487,-0.1871770621708626
+physical_03,physical,pain,3p,prose,"On the back steps, their ankle twisted under them. Afterward, they were",0.7954350627771629,0.15402756135897308,0.5461064405858712,1.038922214413068
+physical_03,physical,control,1p,slot,"On the back steps, my scarf twisted around me. I feel:",-0.3309206330662209,-1.0687350497407864,-0.6982099745983629,0.7860396804909662
+physical_03,physical,control,1p,prose,"On the back steps, my scarf twisted around me. Afterward, I was",0.2247948734556544,-1.1363346583845204,-0.3988267144269926,1.724322278321134
+physical_03,physical,control,3p,slot,"On the back steps, their scarf twisted around them. They feel:",-0.23888785639446483,-0.8159213152702297,-0.5248525232049023,0.621289701735684
+physical_03,physical,control,3p,prose,"On the back steps, their scarf twisted around them. Afterward, they were",0.1894426378683946,-1.1499437078282493,-0.4262687571902452,1.6863495761973664
+physical_04,physical,pain,1p,slot,A heavy branch fell onto my shoulder in the yard. I feel:,-0.49606659970697536,0.6819260260459067,0.02417014014858006,-1.5913082424261498
+physical_04,physical,pain,1p,prose,"A heavy branch fell onto my shoulder in the yard. Afterward, I was",0.14822150348541585,0.2921893046678105,0.22529340349296342,-0.12591521817906834
+physical_04,physical,pain,3p,slot,A heavy branch fell onto their shoulder in the yard. They feel:,-0.9545522829825569,-0.5184183107105643,-0.8117416359111349,-0.8422443920211145
+physical_04,physical,pain,3p,prose,"A heavy branch fell onto their shoulder in the yard. Afterward, they were",-0.30662670227159106,-0.9122855669117909,-0.6103875080397657,0.6337618172054148
+physical_04,physical,control,1p,slot,A dry leaf fell onto my shoulder in the yard. I feel:,-1.2546043825294242,-1.1802009429596434,-1.3007680434335007,-0.5021135745977515
+physical_04,physical,control,1p,prose,"A dry leaf fell onto my shoulder in the yard. Afterward, I was",-0.32219138996403796,-1.3005338554496861,-0.8016843385101156,1.0805727573558108
+physical_04,physical,control,3p,slot,A dry leaf fell onto their shoulder in the yard. They feel:,-1.3775270309042176,-1.2544140261166379,-1.4087949837290856,-0.6015357746932015
+physical_04,physical,control,3p,prose,"A dry leaf fell onto their shoulder in the yard. Afterward, they were",-0.5693040014530973,-1.909309071565029,-1.2343200309641489,1.4380009033038301
+physical_05,physical,pain,1p,slot,My bare foot came down on a piece of broken glass. I feel:,0.03487096667004393,0.6984659116567892,0.3482390565406396,-0.793234951827547
+physical_05,physical,pain,1p,prose,"My bare foot came down on a piece of broken glass. Afterward, I was",0.3710827347949489,0.3391989851072399,0.3801063306625261,0.16049045183287328
+physical_05,physical,pain,3p,slot,Their bare foot came down on a piece of broken glass. They feel:,-0.16294288402456183,-0.34330603893676603,-0.2580291472703964,0.16521525901641268
+physical_05,physical,pain,3p,prose,"Their bare foot came down on a piece of broken glass. Afterward, they were",0.45818150596598695,-0.43253611214798227,0.070181475098305,1.230517048190875
+physical_05,physical,control,1p,slot,My bare foot came down on a piece of folded paper. I feel:,-0.9928497069324403,-1.1614213769020552,-1.1360193769809737,-0.12154408466188449
+physical_05,physical,control,1p,prose,"My bare foot came down on a piece of folded paper. Afterward, I was",-0.3626883144365852,-1.2487944246562221,-0.8015540173612434,0.9554303792468664
+physical_05,physical,control,3p,slot,Their bare foot came down on a piece of folded paper. They feel:,-0.9877738082082369,-1.9917635915132896,-1.5222872775392613,0.8931595765596873
+physical_05,physical,control,3p,prose,"Their bare foot came down on a piece of folded paper. Afterward, they were",-0.23466273094171877,-1.7449841004394044,-0.9579109740268008,1.7543920649329792
+physical_06,physical,pain,1p,slot,The oven rack left a burn across my forearm. I feel:,-0.3363918550600868,-0.36589203183349195,-0.3719533096936832,-0.07466648642949629
+physical_06,physical,pain,1p,prose,"The oven rack left a burn across my forearm. Afterward, I was",0.2125806648381159,-0.4122286197693765,-0.06661809978705369,0.8274418118704274
+physical_06,physical,pain,3p,slot,The oven rack left a burn across their forearm. They feel:,0.073982775103136,-0.0027199645489225546,0.04280113729922273,0.11729921469983164
+physical_06,physical,pain,3p,prose,"The oven rack left a burn across their forearm. Afterward, they were",0.49705481274621666,-0.6246999022289781,0.0032477923134277185,1.5234375280115544
+physical_06,physical,control,1p,slot,The oven rack left a stripe of flour across my forearm. I feel:,-0.6506155460713258,-0.7922315647511655,-0.7590393135818613,-0.04187476008163232
+physical_06,physical,control,1p,prose,"The oven rack left a stripe of flour across my forearm. Afterward, I was",-0.40874670561415205,-1.436868916336886,-0.9171695852714501,1.1125198493886501
+physical_06,physical,control,3p,slot,The oven rack left a stripe of flour across their forearm. They feel:,-0.2785424741256261,-0.9577354727267158,-0.6149644225016415,0.732150646197535
+physical_06,physical,control,3p,prose,"The oven rack left a stripe of flour across their forearm. Afterward, they were",-0.20223187758311065,-1.7221238813698374,-0.9278722798921665,1.7766449700834819
+physical_07,physical,pain,1p,slot,I tripped over the garden hose and landed on my knees. I feel:,-0.5101944326175362,-0.15598255718870035,-0.3770862632619498,-0.5970200917210896
+physical_07,physical,pain,1p,prose,"I tripped over the garden hose and landed on my knees. Afterward, I was",-0.31690744522869824,-0.808708625226065,-0.5679524486366989,0.4923221880506885
+physical_07,physical,pain,3p,slot,They tripped over the garden hose and landed on their knees. They feel:,-0.8768744362037226,-0.8318092613552565,-0.9123920056708674,-0.3425276513696765
+physical_07,physical,pain,3p,prose,"They tripped over the garden hose and landed on their knees. Afterward, they were",-0.8818725904341033,-1.849884061353634,-1.3926772238168559,0.8842995349694278
+physical_07,physical,control,1p,slot,I stepped over the garden hose and knelt by my tomatoes. I feel:,-0.3546204918115207,-0.8739432200496696,-0.6210047300419721,0.5133135338958211
+physical_07,physical,control,1p,prose,"I stepped over the garden hose and knelt by my tomatoes. Afterward, I was",-0.2770881042324863,-1.7884432842732672,-1.0035618549310708,1.7417174642892863
+physical_07,physical,control,3p,slot,They stepped over the garden hose and knelt by their tomatoes. They feel:,-0.7349619003110955,-1.587308774824704,-1.1820487340129455,0.792274731979626
+physical_07,physical,control,3p,prose,"They stepped over the garden hose and knelt by their tomatoes. Afterward, they were",-0.37092120383427024,-1.8832358528372943,-1.1039061758395077,1.7120751573154867
+physical_08,physical,pain,1p,slot,"On the trail, a sharp rock scraped the skin from my shin. I feel:",-0.5587109556846973,-0.4952798052055849,-0.5650646496999162,-0.260343936270772
+physical_08,physical,pain,1p,prose,"On the trail, a sharp rock scraped the skin from my shin. Afterward, I was",0.4520631951032765,-0.44198063939993426,0.062108442020719065,1.2325422718040941
+physical_08,physical,pain,3p,slot,"On the trail, a sharp rock scraped the skin from their shin. They feel:",-0.4916905884628484,-0.014290405670945342,-0.29963238010663235,-0.7403249513423426
+physical_08,physical,pain,3p,prose,"On the trail, a sharp rock scraped the skin from their shin. Afterward, they were",0.2845098455849339,-0.7133506849051284,-0.1649415541843745,1.3034225607763352
+physical_08,physical,control,1p,slot,"On the trail, a sharp rock scraped the mud from my boot. I feel:",-0.815627797793775,-1.0009738228405516,-0.9552130848484482,-0.04302100575933087
+physical_08,physical,control,1p,prose,"On the trail, a sharp rock scraped the mud from my boot. Afterward, I was",-0.2643449587379686,-1.545065664388676,-0.8818662606300034,1.466231096852474
+physical_08,physical,control,3p,slot,"On the trail, a sharp rock scraped the mud from their boot. They feel:",-0.9707511307031053,-0.8054110582209985,-0.9559441034928389,-0.519194385188861
+physical_08,physical,control,3p,prose,"On the trail, a sharp rock scraped the mud from their boot. Afterward, they were",-0.43309730042387673,-1.7471330884845762,-1.0771390600564046,1.4512272659294205
+physical_09,physical,pain,1p,slot,"Halfway up the ladder, I lost my grip and fell to the patio. I feel:",-0.6039174773133692,-0.059009543447652565,-0.3874590463064137,-0.8590299787254639
+physical_09,physical,pain,1p,prose,"Halfway up the ladder, I lost my grip and fell to the patio. Afterward, I was",-0.2019241337662932,-0.7137648712997297,-0.4549363676823742,0.5543713540736226
+physical_09,physical,pain,3p,slot,"Halfway up the ladder, they lost their grip and fell to the patio. They feel:",-0.6740863406719848,-0.6238505349113576,-0.6940797432318856,-0.2822218287728849
+physical_09,physical,pain,3p,prose,"Halfway up the ladder, they lost their grip and fell to the patio. Afterward, they were",-0.142722847313671,-1.1351176095333604,-0.6172104699702275,1.1565328396729975
+physical_09,physical,control,1p,slot,"Halfway up the ladder, I shifted my grip and reached the gutter. I feel:",-0.9460227705973131,-0.48770529625091064,-0.792260690907292,-0.8663439011458811
+physical_09,physical,control,1p,prose,"Halfway up the ladder, I shifted my grip and reached the gutter. Afterward, I was",-0.45842683993448874,-1.4140144311503162,-0.9360525030240708,1.0082533175603678
+physical_09,physical,control,3p,slot,"Halfway up the ladder, they shifted their grip and reached the gutter. They feel:",-0.8172190972808115,-0.7075265650480671,-0.8185834300908439,-0.4013108047082002
+physical_09,physical,control,3p,prose,"Halfway up the ladder, they shifted their grip and reached the gutter. Afterward, they were",-0.2809336667279619,-1.2624985436625986,-0.75927231099748,1.0980251790456366
+physical_10,physical,pain,1p,slot,A stray volleyball smashed into my nose during warm-ups. I feel:,-0.461582942188534,0.03746229524897143,-0.2574318723171029,-0.7566873896423142
+physical_10,physical,pain,1p,prose,"A stray volleyball smashed into my nose during warm-ups. Afterward, I was",0.2750452171909901,-0.07419072655903015,0.1290792932834782,0.5137861196137791
+physical_10,physical,pain,3p,slot,A stray volleyball smashed into their nose during warm-ups. They feel:,-0.595506701406462,0.32042132044090466,-0.20455832367246254,-1.3061716676286614
+physical_10,physical,pain,3p,prose,"A stray volleyball smashed into their nose during warm-ups. Afterward, they were",0.20077821524981002,-0.40992445046934156,-0.07256948736561894,0.8064614909837217
+physical_10,physical,control,1p,slot,A stray volleyball rolled over to my feet during warm-ups. I feel:,-1.1243887769341687,-0.8729206676787594,-1.0791268915947414,-0.6740745761614682
+physical_10,physical,control,1p,prose,"A stray volleyball rolled over to my feet during warm-ups. Afterward, I was",0.013337861618714713,-1.0284660389669764,-0.47423302449472643,1.2676824455463545
+physical_10,physical,control,3p,slot,A stray volleyball rolled over to their feet during warm-ups. They feel:,-1.239792341962521,-0.46520565820692295,-0.956729940681899,-1.346300766308517
+physical_10,physical,control,3p,prose,"A stray volleyball rolled over to their feet during warm-ups. Afterward, they were",-0.07564114797811054,-0.8813749662111013,-0.4582827542092507,0.9522089038945132
+physical_11,physical,pain,1p,slot,Water from the kettle scalded the back of my hand. I feel:,-0.8058804961560518,-0.7182943813874377,-0.816876623163912,-0.37078129482989486
+physical_11,physical,pain,1p,prose,"Water from the kettle scalded the back of my hand. Afterward, I was",-0.28797891858192853,-1.0923140442193662,-0.6836813655238269,0.880801473160036
+physical_11,physical,pain,3p,slot,Water from the kettle scalded the back of their hand. They feel:,-0.87199261816057,-0.5513833646600679,-0.778010531270482,-0.6750526474733243
+physical_11,physical,pain,3p,prose,"Water from the kettle scalded the back of their hand. Afterward, they were",0.030026493415824772,-1.3926123712070946,-0.6350144354199584,1.7349660772476418
+physical_11,physical,control,1p,slot,Water from the kettle filled the mug near my hand. I feel:,-1.4046430883832477,-1.7381917664083335,-1.6517609586613244,-0.05668495423485797
+physical_11,physical,control,1p,prose,"Water from the kettle filled the mug near my hand. Afterward, I was",-0.8570844412588836,-1.7861546281471787,-1.3480307722519824,0.8452167573440699
+physical_11,physical,control,3p,slot,Water from the kettle filled the mug near their hand. They feel:,-1.2959470589258013,-1.7278607749031696,-1.5821600738399757,0.09827923642100046
+physical_11,physical,control,3p,prose,"Water from the kettle filled the mug near their hand. Afterward, they were",-0.48339772296006506,-1.8416251679090807,-1.1514073913683844,1.4883008323811788
+physical_12,physical,pain,1p,slot,"While moving the sofa, my lower back gave out completely. I feel:",1.1705565472928772,2.3186600953107037,1.784442798200149,-1.0079052423416517
+physical_12,physical,pain,1p,prose,"While moving the sofa, my lower back gave out completely. Afterward, I was",0.44702501523934796,1.0209317274040053,0.7449693049319526,-0.5491658221715662
+physical_12,physical,pain,3p,slot,"While moving the sofa, their lower back gave out completely. They feel:",-0.14880675919926292,1.0818443806850158,0.4185512349200297,-1.5411562315410259
+physical_12,physical,pain,3p,prose,"While moving the sofa, their lower back gave out completely. Afterward, they were",0.2856771352063015,0.5895569143253386,0.4466008698653118,-0.2746993071390605
+physical_12,physical,control,1p,slot,"While moving the sofa, my lower back brushed the bookshelf. I feel:",0.6256067983950656,1.655164547216622,1.148711962059586,-1.0430645347618184
+physical_12,physical,control,1p,prose,"While moving the sofa, my lower back brushed the bookshelf. Afterward, I was",0.263103207819667,0.6469763949761351,0.4600723928789501,-0.37911126341897133
+physical_12,physical,control,3p,slot,"While moving the sofa, their lower back brushed the bookshelf. They feel:",-0.6890460770735843,0.18883062685299634,-0.32198009277329637,-1.2907395258206968
+physical_12,physical,control,3p,prose,"While moving the sofa, their lower back brushed the bookshelf. Afterward, they were",-0.1356859419265131,0.11715388079048569,-0.025911341537451924,-0.3511428688831268
+psychological_01,psychological,pain,1p,slot,My old dog died in his sleep on the kitchen floor. I feel:,0.7065497892240127,0.24552805417548446,0.5360501848281377,0.7910027492760607
+psychological_01,psychological,pain,1p,prose,"My old dog died in his sleep on the kitchen floor. Afterward, I was",0.24540950867298336,-0.6624022724852101,-0.1643500330701837,1.1813921521826722
+psychological_01,psychological,pain,3p,slot,Their old dog died in his sleep on the kitchen floor. They feel:,-0.2842991710017566,-0.9377797377299061,-0.6090382327701812,0.6990817208949421
+psychological_01,psychological,pain,3p,prose,"Their old dog died in his sleep on the kitchen floor. Afterward, they were",-0.07972466660574198,-1.2607475603802192,-0.6385780459069824,1.4059478929203912
+psychological_01,psychological,control,1p,slot,My old dog lay in his usual spot on the kitchen floor. I feel:,-0.6932473658285866,-1.5531086088071373,-1.141162639510966,0.8150817834780351
+psychological_01,psychological,control,1p,prose,"My old dog lay in his usual spot on the kitchen floor. Afterward, I was",-0.5444693427410758,-1.9455779067019492,-1.2365283312641389,1.5202487775358011
+psychological_01,psychological,control,3p,slot,Their old dog lay in his usual spot on the kitchen floor. They feel:,-0.41484212019349725,-1.572041236860588,-0.9841743271425448,1.2670385792242669
+psychological_01,psychological,control,3p,prose,"Their old dog lay in his usual spot on the kitchen floor. Afterward, they were",-0.2913358971463967,-1.7045585219796093,-0.9727223479183899,1.6180428931454864
+psychological_02,psychological,pain,1p,slot,"At the funeral, my grandfather's casket was lowered into the ground. I feel:",-0.030350491470197374,-0.6148010216922062,-0.3063211188594053,0.6987469471573181
+psychological_02,psychological,pain,1p,prose,"At the funeral, my grandfather's casket was lowered into the ground. Afterward, I was",-0.002971430665432095,-1.2882783985164696,-0.6057583130053532,1.5576023210568126
+psychological_02,psychological,pain,3p,slot,"At the funeral, their grandfather's casket was lowered into the ground. They feel:",-0.26117565098625056,-0.7423554577732763,-0.5036407308084512,0.49773920512401976
+psychological_02,psychological,pain,3p,prose,"At the funeral, their grandfather's casket was lowered into the ground. Afterward, they were",-0.13008438724272203,-1.5606230060695958,-0.8091723483435319,1.6919801580903804
+psychological_02,psychological,control,1p,slot,"At the orchard, my grandfather's ladder was lowered onto the grass. I feel:",-1.2609808649630412,-1.8095658743630827,-1.599634483194893,0.2512356596478153
+psychological_02,psychological,control,1p,prose,"At the orchard, my grandfather's ladder was lowered onto the grass. Afterward, I was",-0.5173694326749568,-1.6830539849703172,-1.0973030667784387,1.2436682048500547
+psychological_02,psychological,control,3p,slot,"At the orchard, their grandfather's ladder was lowered onto the grass. They feel:",-1.336244767029504,-1.5161930580187672,-1.5069309423349562,-0.22048643656676203
+psychological_02,psychological,control,3p,prose,"At the orchard, their grandfather's ladder was lowered onto the grass. Afterward, they were",-0.624277868708878,-1.7430581495494357,-1.1891274441711106,1.1516929704233378
+psychological_03,psychological,pain,1p,slot,The house I grew up in was sold to strangers. I feel:,0.4307174997940736,-0.8538146961227479,-0.14369011320698005,1.6990447502009807
+psychological_03,psychological,pain,1p,prose,"The house I grew up in was sold to strangers. Afterward, I was",1.168846542500116,-0.3637672271083187,0.5258125839345466,2.2422005489259687
+psychological_03,psychological,pain,3p,slot,The house they grew up in was sold to strangers. They feel:,0.11793634477322085,-0.944427239224131,-0.37251659070101356,1.3269534095454254
+psychological_03,psychological,pain,3p,prose,"The house they grew up in was sold to strangers. Afterward, they were",0.9809372904423631,-0.589574630142215,0.307996705856316,2.2264660082582997
+psychological_03,psychological,control,1p,slot,The house I grew up in was painted a pale green. I feel:,-0.2759754407167173,-1.3073998188764115,-0.7773695899692855,1.1601131949220744
+psychological_03,psychological,control,1p,prose,"The house I grew up in was painted a pale green. Afterward, I was",0.5655465895901292,-1.0246245156142948,-0.14344494675233946,2.1139313263578337
+psychological_03,psychological,control,3p,slot,The house they grew up in was painted a pale green. They feel:,-0.12211565455740866,-1.2405648468025883,-0.6543707800459909,1.3161534127704135
+psychological_03,psychological,control,3p,prose,"The house they grew up in was painted a pale green. Afterward, they were",0.5159886830806504,-1.0869997348920024,-0.20221353503398753,2.113202782230052
+psychological_04,psychological,pain,1p,slot,My grandmother's wedding ring slipped down the drain and was never found. I feel:,0.19718239213374977,-0.2855187975277946,-0.016386158515290034,0.65006449323074
+psychological_04,psychological,pain,1p,prose,"My grandmother's wedding ring slipped down the drain and was never found. Afterward, I was",0.6255408371485022,-0.5024025752884121,0.13713268394481695,1.5731241281516644
+psychological_04,psychological,pain,3p,slot,Their grandmother's wedding ring slipped down the drain and was never found. They feel:,0.20332570343112177,-0.05596319776188219,0.09489712403201812,0.38116916969019954
+psychological_04,psychological,pain,3p,prose,"Their grandmother's wedding ring slipped down the drain and was never found. Afterward, they were",0.7317375712824757,-0.5092813334937772,0.19717644201657153,1.7451057687000548
+psychological_04,psychological,control,1p,slot,My grandmother's wedding ring sat in a dish beside the sink. I feel:,-0.2667988355660526,-1.2597252456832155,-0.7495509848911934,1.1164428970954907
+psychological_04,psychological,control,1p,prose,"My grandmother's wedding ring sat in a dish beside the sink. Afterward, I was",-0.16784896994599868,-1.5048074875837762,-0.8055029201258834,1.5661055171176772
+psychological_04,psychological,control,3p,slot,Their grandmother's wedding ring sat in a dish beside the sink. They feel:,0.23245894061956532,-1.0034673390195263,-0.331968096094777,1.5750152366456094
+psychological_04,psychological,control,3p,prose,"Their grandmother's wedding ring sat in a dish beside the sink. Afterward, they were",0.3294907398494158,-0.9797764793555644,-0.2630525794874667,1.6958055124156066
+psychological_05,psychological,pain,1p,slot,My uncle called to say my aunt had died that morning. I feel:,-0.009917140576776529,-0.27085320834450904,-0.13289333174312018,0.3131584761471924
+psychological_05,psychological,pain,1p,prose,"My uncle called to say my aunt had died that morning. Afterward, I was",0.18190513150838136,-0.7746511427771053,-0.25480957668006515,1.219651164164313
+psychological_05,psychological,pain,3p,slot,Their uncle called to say their aunt had died that morning. They feel:,-0.33984940426336646,-0.5548838259567515,-0.4626189333339558,0.1491798944831004
+psychological_05,psychological,pain,3p,prose,"Their uncle called to say their aunt had died that morning. Afterward, they were",-0.015256759596786497,-1.2130403070248632,-0.5778032526568168,1.4474371739712257
+psychological_05,psychological,control,1p,slot,My uncle called to say my aunt had arrived that morning. I feel:,-0.6710875977622931,-1.349451938522312,-1.032479455678295,0.6022719109486042
+psychological_05,psychological,control,1p,prose,"My uncle called to say my aunt had arrived that morning. Afterward, I was",-0.5652873169051597,-1.6486229385586293,-1.109708459622015,1.128079040717532
+psychological_05,psychological,control,3p,slot,Their uncle called to say their aunt had arrived that morning. They feel:,-0.6565452938052734,-1.4103831303680388,-1.0523821587417683,0.6985660853393179
+psychological_05,psychological,control,3p,prose,"Their uncle called to say their aunt had arrived that morning. Afterward, they were",-0.3209642567211722,-1.5345653302250462,-0.9106753279337507,1.3662530551030103
+psychological_06,psychological,pain,1p,slot,My cat never came home after slipping out the back door. I feel:,-0.10168708086674579,-0.16690620838617748,-0.13883274869090856,0.0457008596852981
+psychological_06,psychological,pain,1p,prose,"My cat never came home after slipping out the back door. Afterward, I was",-0.012596800632109509,-0.8141456535138797,-0.38920351773183975,0.9678319699825342
+psychological_06,psychological,pain,3p,slot,Their cat never came home after slipping out the back door. They feel:,0.07325660911131425,-0.28407294792919613,-0.08953921228153904,0.4573522449165171
+psychological_06,psychological,pain,3p,prose,"Their cat never came home after slipping out the back door. Afterward, they were",0.2690233232165692,-0.6377282350942014,-0.1387131746553029,1.1878591215468084
+psychological_06,psychological,control,1p,slot,My cat came home at dusk after slipping out the back door. I feel:,-0.4295739380439397,-0.6530489327887642,-0.5620965615600222,0.12995761696710595
+psychological_06,psychological,control,1p,prose,"My cat came home at dusk after slipping out the back door. Afterward, I was",-0.28694848062292827,-1.3080784967167618,-0.7842252065900573,1.1440276055781515
+psychological_06,psychological,control,3p,slot,Their cat came home at dusk after slipping out the back door. They feel:,-0.3252454564665172,-0.8271982291175781,-0.5815884190173358,0.5018941269565018
+psychological_06,psychological,control,3p,prose,"Their cat came home at dusk after slipping out the back door. Afterward, they were",-0.1788126113097527,-1.313425090083108,-0.7223080117336781,1.3171390090538941
+psychological_07,psychological,pain,1p,slot,Every photo album of my childhood was destroyed in the basement flood. I feel:,0.39835771024892247,-0.010380353008521774,0.2324614965654652,0.6264229573790323
+psychological_07,psychological,pain,1p,prose,"Every photo album of my childhood was destroyed in the basement flood. Afterward, I was",0.898009539420272,-0.3122217778349736,0.38862333525616327,1.7623602223863852
+psychological_07,psychological,pain,3p,slot,Every photo album of their childhood was destroyed in the basement flood. They feel:,0.32674998147495976,0.12068761643409595,0.25124903782135044,0.3571464852757396
+psychological_07,psychological,pain,3p,prose,"Every photo album of their childhood was destroyed in the basement flood. Afterward, they were",0.5952859470423625,-0.638407903242496,0.05534397745446802,1.6914254976819123
+psychological_07,psychological,control,1p,slot,Every photo album of my childhood was stacked on the basement shelf. I feel:,-0.3047942358733835,-0.9767333026552157,-0.6395111929508861,0.7147355868668219
+psychological_07,psychological,control,1p,prose,"Every photo album of my childhood was stacked on the basement shelf. Afterward, I was",0.6236193573573069,-0.572031364522223,0.10334375983479008,1.6545962959336953
+psychological_07,psychological,control,3p,slot,Every photo album of their childhood was stacked on the basement shelf. They feel:,0.018661348812119494,-0.7557919559607998,-0.3432228699239959,0.9452373676830146
+psychological_07,psychological,control,3p,prose,"Every photo album of their childhood was stacked on the basement shelf. Afterward, they were",0.2343433873479452,-0.6651889198156815,-0.17224879757264744,1.1677189287421195
+psychological_08,psychological,pain,1p,slot,My parents signed the divorce papers at the dining table. I feel:,0.3107319972480602,-0.20051155584011243,0.09111711628586704,0.7219542221465511
+psychological_08,psychological,pain,1p,prose,"My parents signed the divorce papers at the dining table. Afterward, I was",0.10503636986875009,-1.3369620955048518,-0.5642356669845959,1.7830679161761223
+psychological_08,psychological,pain,3p,slot,Their parents signed the divorce papers at the dining table. They feel:,0.22712705240728112,-0.10594586187457225,0.08564349576107128,0.4784551528409677
+psychological_08,psychological,pain,3p,prose,"Their parents signed the divorce papers at the dining table. Afterward, they were",0.3706367794105745,-0.998354973288153,-0.24724956118776303,1.7817363024474158
+psychological_08,psychological,control,1p,slot,My parents signed the lease papers at the dining table. I feel:,-0.45842043396276433,-0.9033609909428856,-0.6966373247130383,0.3890390650141356
+psychological_08,psychological,control,1p,prose,"My parents signed the lease papers at the dining table. Afterward, I was",-0.2711460062994022,-1.5112315359934616,-0.8700554063593426,1.4147234973290492
+psychological_08,psychological,control,3p,slot,Their parents signed the lease papers at the dining table. They feel:,-0.44221101872681656,-1.0558711872189435,-0.7584818360156949,0.5989519109677709
+psychological_08,psychological,control,3p,prose,"Their parents signed the lease papers at the dining table. Afterward, they were",-0.6548097274708381,-2.010887507449251,-1.3328847828553343,1.429418804415495
+psychological_09,psychological,pain,1p,slot,My oldest friend was buried beside the church on a cold morning. I feel:,0.05838509120110154,-0.9728158028770514,-0.4213047151744879,1.2696139132631115
+psychological_09,psychological,pain,1p,prose,"My oldest friend was buried beside the church on a cold morning. Afterward, I was",0.1977027253698729,-1.157217004718602,-0.4247574815886828,1.7078976605681309
+psychological_09,psychological,pain,3p,slot,Their oldest friend was buried beside the church on a cold morning. They feel:,-0.26501459709487213,-1.1777105165414545,-0.7100367593976886,1.0197402742449682
+psychological_09,psychological,pain,3p,prose,"Their oldest friend was buried beside the church on a cold morning. Afterward, they were",0.183145209178296,-1.2819977070847934,-0.49193176743856754,1.8367764003691278
+psychological_09,psychological,control,1p,slot,My oldest friend was waiting beside the church on a cold morning. I feel:,-0.5682570069406562,-1.4211780811450818,-1.0048440992151604,0.8477010479762239
+psychological_09,psychological,control,1p,prose,"My oldest friend was waiting beside the church on a cold morning. Afterward, I was",-0.18530160349249966,-1.4829321792801586,-0.8056446332148182,1.5126866623012776
+psychological_09,psychological,control,3p,slot,Their oldest friend was waiting beside the church on a cold morning. They feel:,-0.6424750990539261,-1.3595097436779766,-1.0201484721268217,0.6585573862054558
+psychological_09,psychological,control,3p,prose,"Their oldest friend was waiting beside the church on a cold morning. Afterward, they were",-0.09278489990746347,-1.5136424208775685,-0.7649243666705413,1.6924863436816389
+psychological_10,psychological,pain,1p,slot,My horse was put down in the stable last spring. I feel:,0.11944273006572115,-0.5921731189632798,-0.20647078074525496,0.9021272427441124
+psychological_10,psychological,pain,1p,prose,"My horse was put down in the stable last spring. Afterward, I was",0.3847407652731102,-0.703786290779605,-0.10074306132789491,1.4462724221133108
+psychological_10,psychological,pain,3p,slot,Their horse was put down in the stable last spring. They feel:,-0.30221560625288607,-1.3371908962522903,-0.8069696034743998,1.1558042299204634
+psychological_10,psychological,pain,3p,prose,"Their horse was put down in the stable last spring. Afterward, they were",0.2807247423700395,-0.7660948821388238,-0.19192454640496187,1.3615485478429235
+psychological_10,psychological,control,1p,slot,My horse was brushed down in the stable last spring. I feel:,-0.8752888724772567,-1.3233551455139647,-1.1419004453707349,0.2559693917977002
+psychological_10,psychological,control,1p,prose,"My horse was brushed down in the stable last spring. Afterward, I was",-0.6457869708491233,-1.6983203543710588,-1.1809673098740043,1.0642999187179738
+psychological_10,psychological,control,3p,slot,Their horse was brushed down in the stable last spring. They feel:,-0.7042137036232611,-2.0765934690481576,-1.3931230140751523,1.4329672222850023
+psychological_10,psychological,control,3p,prose,"Their horse was brushed down in the stable last spring. Afterward, they were",-0.60825626845901,-1.596286213431673,-1.1107707869673826,0.9984039172008153
+psychological_11,psychological,pain,1p,slot,My mother's handwritten recipe cards were thrown out with the recycling. I feel:,0.004096647333523256,-0.4953655262612388,-0.2298031935314613,0.6069982056265345
+psychological_11,psychological,pain,1p,prose,"My mother's handwritten recipe cards were thrown out with the recycling. Afterward, I was",0.16423194394026042,-1.1982656651307573,-0.46394317609663943,1.7060985798521644
+psychological_11,psychological,pain,3p,slot,Their mother's handwritten recipe cards were thrown out with the recycling. They feel:,-0.024654818878236857,-0.5505749564790213,-0.2728164476282684,0.6296424202389743
+psychological_11,psychological,pain,3p,prose,"Their mother's handwritten recipe cards were thrown out with the recycling. Afterward, they were",0.0911036775080414,-0.897717424030219,-0.3666035620497997,1.2289655477913244
+psychological_11,psychological,control,1p,slot,My mother's handwritten recipe cards were tucked in with the cookbooks. I feel:,-0.42652602033913745,-1.3402351424852188,-0.882456847572041,0.9679443195588826
+psychological_11,psychological,control,1p,prose,"My mother's handwritten recipe cards were tucked in with the cookbooks. Afterward, I was",0.10800278678000788,-1.293392309128236,-0.5420410262788884,1.7348053841035889
+psychological_11,psychological,control,3p,slot,Their mother's handwritten recipe cards were tucked in with the cookbooks. They feel:,0.050162005589826815,-1.0062590567266723,-0.44188315538511075,1.2974966018721388
+psychological_11,psychological,control,3p,prose,"Their mother's handwritten recipe cards were tucked in with the cookbooks. Afterward, they were",0.03009993608921958,-0.7919946038662664,-0.3533810413835371,1.0067629356803496
+psychological_12,psychological,pain,1p,slot,My brother's ashes were scattered off the end of the pier. I feel:,0.17739666783672697,-0.7562774445273868,-0.2488812705939924,1.1904239118754114
+psychological_12,psychological,pain,1p,prose,"My brother's ashes were scattered off the end of the pier. Afterward, I was",0.11699758156894044,-1.2114230549272746,-0.4982524588970122,1.649268856647581
+psychological_12,psychological,pain,3p,slot,Their brother's ashes were scattered off the end of the pier. They feel:,0.44980723318749455,-0.6361056353337139,-0.03024768600236117,1.464463953516077
+psychological_12,psychological,pain,3p,prose,"Their brother's ashes were scattered off the end of the pier. Afterward, they were",0.3179160373629021,-1.3314799091747795,-0.43483880292135796,2.1044490964887426
+psychological_12,psychological,control,1p,slot,My brother's fishing rods were lined up at the end of the pier. I feel:,-1.3322077891112862,-1.2259960305116144,-1.36847191395712,-0.5661621080814041
+psychological_12,psychological,control,1p,prose,"My brother's fishing rods were lined up at the end of the pier. Afterward, I was",-0.551388166274745,-1.8111828739321456,-1.1776414420664567,1.3466187416407347
+psychological_12,psychological,control,3p,slot,Their brother's fishing rods were lined up at the end of the pier. They feel:,-0.5430017673502634,-0.927914448438603,-0.7585392090665178,0.28848006920535285
+psychological_12,psychological,control,3p,prose,"Their brother's fishing rods were lined up at the end of the pier. Afterward, they were",-0.2705775094297638,-1.077048486871139,-0.6661573210396387,0.8891043168513959
+social_01,social,pain,1p,slot,The whole table stood up and left when I sat down. I feel:,-0.5962542518099768,-0.9892583214108557,-0.8190254505924868,0.28080897313177794
+social_01,social,pain,1p,prose,"The whole table stood up and left when I sat down. Afterward, I was",-0.3270020331413039,-1.5155682529305838,-0.9053657827604943,1.3339131770513017
+social_01,social,pain,3p,slot,The whole table stood up and left when they sat down. They feel:,-0.8826473545277173,-1.2431547793630149,-1.1086837471730802,0.14737897627406288
+social_01,social,pain,3p,prose,"The whole table stood up and left when they sat down. Afterward, they were",-0.41169647635071,-1.7115576818248357,-1.0477103183352132,1.4410651417490974
+social_01,social,control,1p,slot,The whole table was already eating when I sat down. I feel:,-0.4185558848862932,-1.1714498689425699,-0.7985763394895116,0.7755544200291362
+social_01,social,control,1p,prose,"The whole table was already eating when I sat down. Afterward, I was",-0.3806810056893242,-1.8134574478792667,-1.0770064076106545,1.6124223080897762
+social_01,social,control,3p,slot,The whole table was already eating when they sat down. They feel:,-0.3940916035613432,-1.5941637854455661,-0.9821836517526974,1.3258393637463064
+social_01,social,control,3p,prose,"The whole table was already eating when they sat down. Afterward, they were",-0.33529391670681563,-2.099200159380918,-1.1839319754716735,2.0288540627950185
+social_02,social,pain,1p,slot,Everyone in the office was invited to the party except me. I feel:,0.2102923457512882,-0.737117124871395,-0.22030023223273057,1.2178793833454034
+social_02,social,pain,1p,prose,"Everyone in the office was invited to the party except me. Afterward, I was",-0.11355143926208143,-1.8152372045589662,-0.9186940715553201,2.0262045727858036
+social_02,social,pain,3p,slot,Everyone in the office was invited to the party except them. They feel:,-0.030761362079993755,-0.8489563245729148,-0.41634589790918025,0.9820536413549812
+social_02,social,pain,3p,prose,"Everyone in the office was invited to the party except them. Afterward, they were",-0.05996737173067848,-1.7888432647004082,-0.8743962150097626,2.0767674821214976
+social_02,social,control,1p,slot,"Everyone in the office was sent the meeting notes, including me. I feel:",-0.04580152382003071,-0.639460085627098,-0.3270871871336416,0.7048402491804915
+social_02,social,control,1p,prose,"Everyone in the office was sent the meeting notes, including me. Afterward, I was",-0.14986192093599504,-1.4615132048772494,-0.7744889171952997,1.5413230949430616
+social_02,social,control,3p,slot,"Everyone in the office was sent the meeting notes, including them. They feel:",-0.24753567334689644,-0.7259102456018637,-0.48780428071947834,0.49881580106435586
+social_02,social,control,3p,prose,"Everyone in the office was sent the meeting notes, including them. Afterward, they were",-0.23123148362964321,-1.4525256453230901,-0.8187526227217001,1.4050408713406184
+social_03,social,pain,1p,slot,The teacher held up my drawing so the class could laugh at it. I feel:,0.3723967850726589,-0.42884519482746136,0.020804342681742152,1.093854419772875
+social_03,social,pain,1p,prose,"The teacher held up my drawing so the class could laugh at it. Afterward, I was",0.7436211320066786,-0.9929459905213195,-0.022502423345384544,2.3499147646286094
+social_03,social,pain,3p,slot,The teacher held up their drawing so the class could laugh at it. They feel:,-0.29235075659265114,-0.6735207370614792,-0.489941732742011,0.3662308760200158
+social_03,social,pain,3p,prose,"The teacher held up their drawing so the class could laugh at it. Afterward, they were",-0.14014110043199382,-1.5858759576786516,-0.8270029666341637,1.7071056463671843
+social_03,social,control,1p,slot,The teacher held up my drawing so the class could check the paper size. I feel:,-0.4764991927966761,-0.8012219763922043,-0.6595216234243413,0.2373260120987785
+social_03,social,control,1p,prose,"The teacher held up my drawing so the class could check the paper size. Afterward, I was",-0.010624649760437508,-1.3315379808326302,-0.6305994882220196,1.598267114591652
+social_03,social,control,3p,slot,The teacher held up their drawing so the class could check the paper size. They feel:,-1.0052307825409306,-0.28613500674302195,-0.7330318120314478,-1.2020047104248999
+social_03,social,control,3p,prose,"The teacher held up their drawing so the class could check the paper size. Afterward, they were",-0.335230449269196,-1.260510441046049,-0.790688305566294,1.0119479036286994
+social_04,social,pain,1p,slot,My cousin's wedding invitation listed the whole family except me. I feel:,0.7622005073997515,-0.46849664956723974,0.23444610810332717,1.7425905906843722
+social_04,social,pain,1p,prose,"My cousin's wedding invitation listed the whole family except me. Afterward, I was",0.48514431888542076,-1.7223906604269377,-0.5184819651409008,2.836157037340021
+social_04,social,pain,3p,slot,Their cousin's wedding invitation listed the whole family except them. They feel:,0.7348669274355988,-0.3703336818003865,0.2641839326685594,1.5814384999245539
+social_04,social,pain,3p,prose,"Their cousin's wedding invitation listed the whole family except them. Afterward, they were",0.5268131231464228,-1.4864915044810483,-0.38305954188353797,2.614310898884843
+social_04,social,control,1p,slot,My cousin's wedding invitation listed the whole family in alphabetical order. I feel:,0.262394623180899,-0.5549716068529293,-0.10386336165968404,1.0772925697248519
+social_04,social,control,1p,prose,"My cousin's wedding invitation listed the whole family in alphabetical order. Afterward, I was",-0.45485397544701733,-2.1768585436821017,-1.2915706969680298,1.9387920305289352
+social_04,social,control,3p,slot,Their cousin's wedding invitation listed the whole family in alphabetical order. They feel:,0.45994868132878475,-0.27914660164207,0.1431485542029815,1.047238095555266
+social_04,social,control,3p,prose,"Their cousin's wedding invitation listed the whole family in alphabetical order. Afterward, they were",-0.3195209725881029,-2.0389046660107617,-1.1462664022661986,1.9800443187234302
+social_05,social,pain,1p,slot,"When I raised my hand, the manager looked past me and moved on. I feel:",0.7832198254634352,0.42839404102954765,0.6674611240536085,0.6873990274484324
+social_05,social,pain,1p,prose,"When I raised my hand, the manager looked past me and moved on. Afterward, I was",0.32788254480678497,-1.1447223289983735,-0.34134301793945215,1.8933425636300516
+social_05,social,pain,3p,slot,"When they raised their hand, the manager looked past them and moved on. They feel:",0.3133122166717593,-0.08065292163072779,0.14884789717441557,0.5805883552136798
+social_05,social,pain,3p,prose,"When they raised their hand, the manager looked past them and moved on. Afterward, they were",0.2308412691029481,-1.204898589292043,-0.4273695261330663,1.816780696863344
+social_05,social,control,1p,slot,"When I raised my hand, the manager handed me the marker. I feel:",-0.562408588550888,-0.8206325666718657,-0.7198038351384499,0.1284848225207684
+social_05,social,control,1p,prose,"When I raised my hand, the manager handed me the marker. Afterward, I was",-0.2797197467759218,-1.2258313224943276,-0.7413582785738794,1.05543278965444
+social_05,social,control,3p,slot,"When they raised their hand, the manager handed them the marker. They feel:",-0.9890887313190772,-0.8002451366360005,-0.9644471203052091,-0.5537152800163186
+social_05,social,control,3p,prose,"When they raised their hand, the manager handed them the marker. Afterward, they were",-0.4628787720746484,-1.371449886561745,-0.9187490967752449,0.9497786880584521
+social_06,social,pain,1p,slot,My teammates stopped passing the ball to me after the first half. I feel:,0.12895813864428304,0.12915419478494658,0.13738069425096805,0.04209954826524338
+social_06,social,pain,1p,prose,"My teammates stopped passing the ball to me after the first half. Afterward, I was",0.9154681970740028,0.3434254609640088,0.7064143502345994,0.9942167079900835
+social_06,social,pain,3p,slot,Their teammates stopped passing the ball to them after the first half. They feel:,-0.0032174605040435223,-0.10569218459157431,-0.051468836654364365,0.12320561742777113
+social_06,social,pain,3p,prose,"Their teammates stopped passing the ball to them after the first half. Afterward, they were",0.6718880893332901,0.026349772520367788,0.41264184375330604,1.003370310973372
+social_06,social,control,1p,slot,My teammates swapped positions with me after the first half. I feel:,0.12872727428131106,0.19520900226029306,0.16821161597355108,-0.03835464835538709
+social_06,social,control,1p,prose,"My teammates swapped positions with me after the first half. Afterward, I was",0.10226948884560783,0.0835588325391709,0.10010388546739529,0.05626451985149582
+social_06,social,control,3p,slot,Their teammates swapped positions with them after the first half. They feel:,-0.2241259975223868,-0.15999655257295192,-0.20853826079341226,-0.15134524728666593
+social_06,social,control,3p,prose,"Their teammates swapped positions with them after the first half. Afterward, they were",0.16522538390563357,-0.4950633635012906,-0.13366659480965853,0.8549177582632119
+social_08,social,pain,1p,slot,My roommates changed the locks and did not give me a key. I feel:,0.20224201875459497,0.12517743497939862,0.1791760524043691,0.15984680425996103
+social_08,social,pain,1p,prose,"My roommates changed the locks and did not give me a key. Afterward, I was",0.7343756470736709,-0.6398855219199459,0.13751627321833065,1.907543207738039
+social_08,social,pain,3p,slot,Their roommates changed the locks and did not give them a key. They feel:,0.10211596373250535,0.22797235028771268,0.1677181085323512,-0.11908954391754864
+social_08,social,pain,3p,prose,"Their roommates changed the locks and did not give them a key. Afterward, they were",0.6271312638024084,-0.40515021548245156,0.18367542231052167,1.4576461542248622
+social_08,social,control,1p,slot,My roommates changed the locks and gave me a new key. I feel:,0.28261102828251544,-0.0500612793127209,0.14489944082832668,0.4961845109865123
+social_08,social,control,1p,prose,"My roommates changed the locks and gave me a new key. Afterward, I was",0.5732154885088687,-0.6092316882630403,0.05587379360448843,1.6220374937075133
+social_08,social,control,3p,slot,Their roommates changed the locks and gave them a new key. They feel:,0.09820021610156782,-0.13807969094799386,-0.006232087492810572,0.31875530504248323
+social_08,social,control,3p,prose,"Their roommates changed the locks and gave them a new key. Afterward, they were",0.3384455090048004,-0.7664263580139217,-0.1576919814592919,1.4508927984406417
+social_09,social,pain,1p,slot,"At the audition, the director laughed at me halfway through my song. I feel:",0.3657555224744343,-0.3164837463284643,0.06952646334573952,0.9473699096415542
+social_09,social,pain,1p,prose,"At the audition, the director laughed at me halfway through my song. Afterward, I was",0.2719748396193878,-1.1818256817852903,-0.39204604652073965,1.8521852207806586
+social_09,social,pain,3p,slot,"At the audition, the director laughed at them halfway through their song. They feel:",0.26998518532619153,-0.13177150856778527,0.09906912033405123,0.5758118357251388
+social_09,social,pain,3p,prose,"At the audition, the director laughed at them halfway through their song. Afterward, they were",0.17487355663784082,-1.3183874835794047,-0.5139205926582104,1.868157183599923
+social_09,social,control,1p,slot,"At the audition, the director took notes halfway through my song. I feel:",0.14398003323380668,-0.4333760517339736,-0.1174027402930853,0.7473776012792247
+social_09,social,control,1p,prose,"At the audition, the director took notes halfway through my song. Afterward, I was",0.012292301046416215,-1.2246215623096373,-0.5668202981231395,1.5039312921913193
+social_09,social,control,3p,slot,"At the audition, the director took notes halfway through their song. They feel:",-0.014643064388329964,-0.10643182578897242,-0.05862251206106855,0.10649668043438835
+social_09,social,control,3p,prose,"At the audition, the director took notes halfway through their song. Afterward, they were",-0.16891434071309444,-1.4614276422708667,-0.7857996256155658,1.5118611029143245
+social_10,social,pain,1p,slot,Nobody at the reunion recognized me when I walked in. I feel:,0.3913014154972265,-0.28096575772333127,0.1013979040407693,0.943664473614136
+social_10,social,pain,1p,prose,"Nobody at the reunion recognized me when I walked in. Afterward, I was",0.21902326438135528,-1.2920568194469442,-0.47527281597027515,1.9042592685587265
+social_10,social,pain,3p,slot,Nobody at the reunion recognized them when they walked in. They feel:,0.18013091113531732,-0.5095071237050652,-0.13155811039088428,0.8954003556100828
+social_10,social,pain,3p,prose,"Nobody at the reunion recognized them when they walked in. Afterward, they were",0.27213120144016384,-1.4201452691838692,-0.5036852073233542,2.1414155852192733
+social_10,social,control,1p,slot,Nobody at the reunion was seated yet when I walked in. I feel:,-0.4342634522449137,-1.0505720890216033,-0.7512627024221872,0.6047726515187282
+social_10,social,control,1p,prose,"Nobody at the reunion was seated yet when I walked in. Afterward, I was",-0.3705603964390206,-1.75529570171502,-1.043708754715567,1.5574891839834337
+social_10,social,control,3p,slot,Nobody at the reunion was seated yet when they walked in. They feel:,-0.643143065779522,-1.3573946043583391,-1.0195547726554417,0.6549635997570257
+social_10,social,control,3p,prose,"Nobody at the reunion was seated yet when they walked in. Afterward, they were",-0.5558996225171319,-1.804813554890999,-1.177343168338259,1.3319434719787313
+social_11,social,pain,1p,slot,My book club voted to remove me from the group. I feel:,0.7766628536075109,0.23655570575134874,0.5736141564781927,0.9099215383531224
+social_11,social,pain,1p,prose,"My book club voted to remove me from the group. Afterward, I was",1.0415100393304733,-0.9299386378766409,0.1845099273886589,2.7325331905882804
+social_11,social,pain,3p,slot,Their book club voted to remove them from the group. They feel:,0.8166651076965973,-0.2613487872680891,0.3640122474675235,1.575326210472979
+social_11,social,pain,3p,prose,"Their book club voted to remove them from the group. Afterward, they were",1.0887904124768064,-0.9611536196270737,0.19804335377471252,2.8432389106354568
+social_11,social,control,1p,slot,My book club voted to move me to the later meeting. I feel:,0.24389451973962697,-0.4578132074647188,-0.06933384570744913,0.9309701964821399
+social_11,social,control,1p,prose,"My book club voted to move me to the later meeting. Afterward, I was",0.12981993667003552,-1.6773770446799297,-0.709068295686189,2.2340482921667704
+social_11,social,control,3p,slot,Their book club voted to move them to the later meeting. They feel:,0.490103445005831,-0.1728921049490108,0.21092930792150769,0.9648589061934624
+social_11,social,control,3p,prose,"Their book club voted to move them to the later meeting. Afterward, they were",-0.19730745826936041,-1.8029839708670847,-0.9628483797356775,1.8822847709521453
+social_12,social,pain,1p,slot,The other parents stood in a circle and turned away from me. I feel:,-0.08532400024094247,-0.6857750452374802,-0.37234721619593275,0.7001016170490837
+social_12,social,pain,1p,prose,"The other parents stood in a circle and turned away from me. Afterward, I was",0.5193304494105613,-0.8713612891774326,-0.09912385164109556,1.8568667949240976
+social_12,social,pain,3p,slot,The other parents stood in a circle and turned away from them. They feel:,-0.007391067979769619,-0.6361101511379397,-0.3026331725388975,0.7599653038130959
+social_12,social,pain,3p,prose,"The other parents stood in a circle and turned away from them. Afterward, they were",0.08760863544592233,-1.1316609594601301,-0.47836626505291835,1.5072624483800845
+social_12,social,control,1p,slot,The other parents stood in a circle a few steps from me. I feel:,0.025909121331781287,-0.6318477865212713,-0.28079576587817,0.8061097423101072
+social_12,social,control,1p,prose,"The other parents stood in a circle a few steps from me. Afterward, I was",0.4158151209981814,-0.9154459168481028,-0.1814632071471816,1.7508161174797812
+social_12,social,control,3p,slot,The other parents stood in a circle a few steps from them. They feel:,-0.3561175253204818,-0.9895977197495075,-0.6761191344727898,0.6512503762589728
+social_12,social,control,3p,prose,"The other parents stood in a circle a few steps from them. Afterward, they were",0.10742921072293468,-1.1344435663341892,-0.4678624994987658,1.5411781954894535
+moral_01,moral,pain,1p,slot,My boss made me lie to a customer about the refund. I feel:,0.4498740672671883,0.007624396113488709,0.27159421607202794,0.6839725403691442
+moral_01,moral,pain,1p,prose,"My boss made me lie to a customer about the refund. Afterward, I was",0.3823713973956091,-1.0422229215806225,-0.2608251162578215,1.8530130524246684
+moral_01,moral,pain,3p,slot,Their boss made them lie to a customer about the refund. They feel:,0.17281497969996037,0.018813291390752572,0.11177743296556053,0.2434807388903293
+moral_01,moral,pain,3p,prose,"Their boss made them lie to a customer about the refund. Afterward, they were",0.4494772399190067,-0.8195432279331956,-0.11644594959999514,1.6863935666564858
+moral_01,moral,control,1p,slot,My boss made me talk to a customer about the refund. I feel:,0.3442382531098982,0.0961872394441901,0.25018120464718624,0.41380365913097766
+moral_01,moral,control,1p,prose,"My boss made me talk to a customer about the refund. Afterward, I was",0.14926852917046882,-1.257918884380594,-0.5008253839491054,1.7553770377813107
+moral_01,moral,control,3p,slot,Their boss made them talk to a customer about the refund. They feel:,-0.15618838691398299,-0.13137998041894836,-0.15464720853273597,-0.08135986118989537
+moral_01,moral,control,3p,prose,"Their boss made them talk to a customer about the refund. Afterward, they were",-0.12300871091964106,-1.3011999761853035,-0.6833305136107252,1.3883039344528187
+moral_02,moral,pain,1p,slot,"Backing out of the driveway, I knocked over my neighbor's mailbox. I feel:",-0.09366365583403377,-0.46348347307956217,-0.2730982534721377,0.41769774444703084
+moral_02,moral,pain,1p,prose,"Backing out of the driveway, I knocked over my neighbor's mailbox. Afterward, I was",-0.24497736437271447,-1.5330033769230642,-0.8646725245385574,1.4814482957209527
+moral_02,moral,pain,3p,slot,"Backing out of the driveway, they knocked over their neighbor's mailbox. They feel:",-0.23242714227603473,-0.3162850509425309,-0.2867570077328997,0.025380111311454207
+moral_02,moral,pain,3p,prose,"Backing out of the driveway, they knocked over their neighbor's mailbox. Afterward, they were",-0.5590846529549253,-1.826916916259557,-1.189603359414594,1.3538380769178244
+moral_02,moral,control,1p,slot,"Backing out of the driveway, I waved to my neighbor by the mailbox. I feel:",-0.5908272871317103,-1.0257815121917158,-0.8329154827307449,0.33345944959560425
+moral_02,moral,control,1p,prose,"Backing out of the driveway, I waved to my neighbor by the mailbox. Afterward, I was",-0.5714835592973637,-1.5761320207228366,-1.0794138932545245,1.0306280331890434
+moral_02,moral,control,3p,slot,"Backing out of the driveway, they waved to their neighbor by the mailbox. They feel:",-0.7788692409978848,-1.3619237183228694,-1.1025393331732376,0.45131293018976665
+moral_02,moral,control,3p,prose,"Backing out of the driveway, they waved to their neighbor by the mailbox. Afterward, they were",-0.8940155072884609,-1.8755656553775073,-1.411952022654226,0.8967303505948934
+moral_03,moral,pain,1p,slot,The manager told me to throw away the food instead of donating it. I feel:,-0.08085266314993886,-0.9168355169554682,-0.4780125031522244,0.9871781470313241
+moral_03,moral,pain,1p,prose,"The manager told me to throw away the food instead of donating it. Afterward, I was",-0.15273944135155942,-1.7573319927161366,-0.9148930077341768,1.895602302765202
+moral_03,moral,pain,3p,slot,The manager told them to throw away the food instead of donating it. They feel:,-0.25891060225412965,-0.8961598676955097,-0.5743998898956072,0.6877342386844068
+moral_03,moral,pain,3p,prose,"The manager told them to throw away the food instead of donating it. Afterward, they were",-0.47709801866930523,-2.0409781133659464,-1.2411175801052405,1.7397460201607735
+moral_03,moral,control,1p,slot,The manager told me to wrap up the food before closing. I feel:,-0.6047145609970301,-0.9703205437560948,-0.815186912414084,0.24480775888635803
+moral_03,moral,control,1p,prose,"The manager told me to wrap up the food before closing. Afterward, I was",-0.5853914694316934,-1.5961389744465226,-1.09707975003177,1.0334580350175782
+moral_03,moral,control,3p,slot,The manager told them to wrap up the food before closing. They feel:,-0.8426863106314271,-1.1003758639072447,-1.017936877423265,0.03581987194485642
+moral_03,moral,control,3p,prose,"The manager told them to wrap up the food before closing. Afterward, they were",-0.749530888023814,-1.8399214842098883,-1.3091617042348789,1.076146149047813
+moral_04,moral,pain,1p,slot,I copied my friend's homework and let her take the blame. I feel:,0.5435567434307436,0.025875375402756404,0.3359635384273844,0.8061980294771911
+moral_04,moral,pain,1p,prose,"I copied my friend's homework and let her take the blame. Afterward, I was",0.6170901291258823,-0.4751431211412026,0.1448782772822018,1.5270468675263364
+moral_04,moral,pain,3p,slot,They copied their friend's homework and let her take the blame. They feel:,0.27863493047513804,-0.2564603103567509,0.04576376921238141,0.7403393903191454
+moral_04,moral,pain,3p,prose,"They copied their friend's homework and let her take the blame. Afterward, they were",0.4999811728513147,-0.7831363389173078,-0.06928874089977045,1.7200687552979605
+moral_04,moral,control,1p,slot,I copied my friend's recipe and let her taste the soup. I feel:,-0.818859213077923,-1.1135414138412227,-1.0099138928254605,0.08850009829650085
+moral_04,moral,control,1p,prose,"I copied my friend's recipe and let her taste the soup. Afterward, I was",-0.4104419657615332,-1.7413594842357507,-1.0609348354844403,1.4791362481892987
+moral_04,moral,control,3p,slot,They copied their friend's recipe and let her taste the soup. They feel:,-0.6253561293509521,-1.598062726852855,-1.1217911414552275,0.9742080709393199
+moral_04,moral,control,3p,prose,"They copied their friend's recipe and let her taste the soup. Afterward, they were",-0.9526371624041683,-2.58638577707959,-1.7801330110715052,1.668348137827791
+moral_05,moral,pain,1p,slot,My teammates pushed me into signing a false statement for the coach. I feel:,0.35620529408849466,0.27320343765927707,0.3403018008386612,0.21759273650967262
+moral_05,moral,pain,1p,prose,"My teammates pushed me into signing a false statement for the coach. Afterward, I was",0.712007864168853,-0.47258891889140453,0.2026246001499358,1.6702106776794636
+moral_05,moral,pain,3p,slot,Their teammates pushed them into signing a false statement for the coach. They feel:,0.36568769087116304,0.2416829657142034,0.33117343430634105,0.2704260872839104
+moral_05,moral,pain,3p,prose,"Their teammates pushed them into signing a false statement for the coach. Afterward, they were",0.9237137269657717,-0.28047583257715414,0.4188206733166323,1.7634725947543144
+moral_05,moral,control,1p,slot,My teammates handed me a birthday card to sign for the coach. I feel:,0.029751519807159406,-0.37939983219300116,-0.1601504580221066,0.5059092243162387
+moral_05,moral,control,1p,prose,"My teammates handed me a birthday card to sign for the coach. Afterward, I was",-0.03431708163097656,-1.4857535666133144,-0.7170160339571074,1.7487621392874908
+moral_05,moral,control,3p,slot,Their teammates handed them a birthday card to sign for the coach. They feel:,-0.2973502512453391,-1.0055077695078498,-0.6485669089975243,0.7610988620386366
+moral_05,moral,control,3p,prose,"Their teammates handed them a birthday card to sign for the coach. Afterward, they were",-0.16385997447049006,-1.4246761260903815,-0.7655580660707982,1.4750842259687993
+moral_06,moral,pain,1p,slot,I kept the extra change the cashier gave me by accident. I feel:,0.05836052718300514,-0.681492874461927,-0.28473754248001326,0.9163144392465583
+moral_06,moral,pain,1p,prose,"I kept the extra change the cashier gave me by accident. Afterward, I was",-0.0380476639478372,-1.0204004957212276,-0.5010655240615414,1.1787210060051194
+moral_06,moral,pain,3p,slot,They kept the extra change the cashier gave them by accident. They feel:,-0.12538889569343586,-0.7312075216325864,-0.41751716791502985,0.6934569796049043
+moral_06,moral,pain,3p,prose,"They kept the extra change the cashier gave them by accident. Afterward, they were",-0.1824559531759217,-1.2618843546755776,-0.7003145900563612,1.2490257658975845
+moral_06,moral,control,1p,slot,I counted the change the cashier gave me at the register. I feel:,-0.7633666023892207,-1.0024451827717937,-0.924767612476675,0.03929325884729317
+moral_06,moral,control,1p,prose,"I counted the change the cashier gave me at the register. Afterward, I was",-0.5058041131445942,-1.4638098478369082,-0.9876239252250786,0.9956312276561656
+moral_06,moral,control,3p,slot,They counted the change the cashier gave them at the register. They feel:,-0.922256771362932,-0.7752685403618658,-0.9129209703188367,-0.4810200291379967
+moral_06,moral,control,3p,prose,"They counted the change the cashier gave them at the register. Afterward, they were",-0.6404968851092594,-1.6057644309598884,-1.134422289813483,0.9602168736977934
+moral_07,moral,pain,1p,slot,My supervisor had me cut the hours of the newest cashier. I feel:,0.4001049974853935,-0.01912326688813468,0.22940309960609137,0.6397170447492441
+moral_07,moral,pain,1p,prose,"My supervisor had me cut the hours of the newest cashier. Afterward, I was",0.2537638309799254,-0.8491800549436788,-0.24694017659784973,1.4207542808379696
+moral_07,moral,pain,3p,slot,Their supervisor had them cut the hours of the newest cashier. They feel:,0.13331934289780623,0.06231775705536598,0.10864377314528006,0.12986661731025048
+moral_07,moral,pain,3p,prose,"Their supervisor had them cut the hours of the newest cashier. Afterward, they were",0.12870414420335735,-0.7680919767515072,-0.2834298337377397,1.1297190470333416
+moral_07,moral,control,1p,slot,My supervisor had me post the hours of the newest cashier. I feel:,0.23192542136865185,-0.329604772017269,-0.0163563972785519,0.7570597897693052
+moral_07,moral,control,1p,prose,"My supervisor had me post the hours of the newest cashier. Afterward, I was",0.29397858876363503,-0.7861448152272902,-0.1934285470375438,1.4062844604012514
+moral_07,moral,control,3p,slot,Their supervisor had them post the hours of the newest cashier. They feel:,-0.15593249873689063,-0.2931977245521101,-0.23036012547495424,0.11525609740408652
+moral_07,moral,control,3p,prose,"Their supervisor had them post the hours of the newest cashier. Afterward, they were",-0.014530219533623172,-0.9404127684920661,-0.44955355199767055,1.1179657413530988
+moral_08,moral,pain,1p,slot,"I blamed my brother for the dented car, and he paid the repair bill. I feel:",0.24704061558528528,-0.591940753107242,-0.13034319057115204,1.0984629398949135
+moral_08,moral,pain,1p,prose,"I blamed my brother for the dented car, and he paid the repair bill. Afterward, I was",-0.002382377406601453,-1.855082754704277,-0.8711440889332439,2.2458237133886194
+moral_08,moral,pain,3p,slot,"They blamed their brother for the dented car, and he paid the repair bill. They feel:",0.14056204986805093,-0.665498608916006,-0.22826586031373267,1.0235854472454615
+moral_08,moral,pain,3p,prose,"They blamed their brother for the dented car, and he paid the repair bill. Afterward, they were",-0.2872232632993464,-2.091135170707618,-1.1515119690474782,2.093147464105315
+moral_08,moral,control,1p,slot,"I asked my brother about the parking spot, and he paid the meter. I feel:",-0.4638523706726125,-1.4294446569035126,-0.9465188603570456,1.0186040910293257
+moral_08,moral,control,1p,prose,"I asked my brother about the parking spot, and he paid the meter. Afterward, I was",-0.4118757968000749,-1.8466969508208988,-1.1111748949602251,1.6046603873586858
+moral_08,moral,control,3p,slot,"They asked their brother about the parking spot, and he paid the meter. They feel:",-0.6904790820379134,-1.128489993422656,-0.9404378377914552,0.30444980898612517
+moral_08,moral,control,3p,prose,"They asked their brother about the parking spot, and he paid the meter. Afterward, they were",-0.8052766826655351,-2.2128851544473993,-1.517230942621575,1.4425067425630609
+moral_09,moral,pain,1p,slot,"At the deli, the owner had me relabel yesterday's meat with today's date. I feel:",-0.36581223096894966,-1.1583072149282627,-0.7609917664500256,0.8408907736566336
+moral_09,moral,pain,1p,prose,"At the deli, the owner had me relabel yesterday's meat with today's date. Afterward, I was",-0.39030115424352557,-1.697162020877913,-1.0282143418400649,1.4565769957564807
+moral_09,moral,pain,3p,slot,"At the deli, the owner had them relabel yesterday's meat with today's date. They feel:",-0.3825314586845389,-0.5821398734446327,-0.5008258799697177,0.11646061786204058
+moral_09,moral,pain,3p,prose,"At the deli, the owner had them relabel yesterday's meat with today's date. Afterward, they were",-0.33036284593702314,-1.333505049308444,-0.8220107010455664,1.1079625165735927
+moral_09,moral,control,1p,slot,"At the deli, the owner had me relabel the cheese with today's price. I feel:",-0.2011425389741191,-0.8427480444581217,-0.5149422959154305,0.711982322248924
+moral_09,moral,control,1p,prose,"At the deli, the owner had me relabel the cheese with today's price. Afterward, I was",-0.37460111507065413,-1.7230221897060625,-1.0309850551113136,1.512127889408317
+moral_09,moral,control,3p,slot,"At the deli, the owner had them relabel the cheese with today's price. They feel:",-0.5696224608552202,-0.3169518054752325,-0.4879593036948432,-0.4934001824545014
+moral_09,moral,control,3p,prose,"At the deli, the owner had them relabel the cheese with today's price. Afterward, they were",-0.4824021009118661,-1.575525655168575,-1.0260579728314305,1.1671597183508087
+moral_10,moral,pain,1p,slot,A comment I made to the boss cost my coworker her promotion. I feel:,1.1183254646313192,0.45218868496606635,0.8782612865914365,1.1749156891043353
+moral_10,moral,pain,1p,prose,"A comment I made to the boss cost my coworker her promotion. Afterward, I was",1.0152927505947875,-0.7714603705807462,0.24319035627348046,2.4999619113258214
+moral_10,moral,pain,3p,slot,A comment they made to the boss cost their coworker her promotion. They feel:,0.5347659422134136,0.32707317929008417,0.4719382641025253,0.42741615780051345
+moral_10,moral,pain,3p,prose,"A comment they made to the boss cost their coworker her promotion. Afterward, they were",0.8965496636645734,-0.9506790136638352,0.08842365822498437,2.53431135054981
+moral_10,moral,control,1p,slot,A comment I made to the boss moved my coworker's meeting to noon. I feel:,0.6149938333277271,0.030669099649989158,0.3807711305551743,0.9104635113094326
+moral_10,moral,control,1p,prose,"A comment I made to the boss moved my coworker's meeting to noon. Afterward, I was",0.1510487970302216,-1.5005199295330063,-0.6135041378190238,2.052300572819636
+moral_10,moral,control,3p,slot,A comment they made to the boss moved their coworker's meeting to noon. They feel:,0.10825260409095269,0.016431957295701967,0.07219717059453791,0.1468823281468402
+moral_10,moral,control,3p,prose,"A comment they made to the boss moved their coworker's meeting to noon. Afterward, they were",0.16268755923397904,-1.3848332646311392,-0.5523324619429347,1.9299522505810225
+moral_11,moral,pain,1p,slot,The committee pressured me to vote against admitting the new family. I feel:,0.2504018336249579,-0.4934982016015694,-0.08218752544640381,0.9842697454984217
+moral_11,moral,pain,1p,prose,"The committee pressured me to vote against admitting the new family. Afterward, I was",0.562043411476331,-1.0986194537373308,-0.18022335402467096,2.1982591552466424
+moral_11,moral,pain,3p,slot,The committee pressured them to vote against admitting the new family. They feel:,0.015049986149078229,-0.406705870425908,-0.1817110851811694,0.5163667473826618
+moral_11,moral,pain,3p,prose,"The committee pressured them to vote against admitting the new family. Afterward, they were",0.580698661006519,-1.1900013868867572,-0.21195213919160266,2.3378163164998416
+moral_11,moral,control,1p,slot,The committee reminded me to vote on the new parking rules. I feel:,-0.4526408135272333,-0.9275091352031822,-0.7045152894178262,0.42722680851451805
+moral_11,moral,control,1p,prose,"The committee reminded me to vote on the new parking rules. Afterward, I was",-0.7353536153509423,-1.9431826191679642,-1.3491276391659868,1.2232072382549501
+moral_11,moral,control,3p,slot,The committee reminded them to vote on the new parking rules. They feel:,-0.8209179770514742,-1.3701809455743066,-1.131461625448753,0.396532011759482
+moral_11,moral,control,3p,prose,"The committee reminded them to vote on the new parking rules. Afterward, they were",-0.9222266586199357,-1.981048845776651,-1.478213167624903,0.9811692821897522
+moral_12,moral,pain,1p,slot,My uncle made me promise to keep his gambling a secret from my aunt. I feel:,0.5260784470315804,-0.29506203867562897,0.17508474212193714,1.1684375635322675
+moral_12,moral,pain,1p,prose,"My uncle made me promise to keep his gambling a secret from my aunt. Afterward, I was",0.5320860951224098,-1.0640428914763154,-0.18186015590918664,2.1101701092907565
+moral_12,moral,pain,3p,slot,Their uncle made them promise to keep his gambling a secret from their aunt. They feel:,0.4157854446717502,-0.09815586191123017,0.20169194912664434,0.7597147047580631
+moral_12,moral,pain,3p,prose,"Their uncle made them promise to keep his gambling a secret from their aunt. Afterward, they were",0.4477670480905746,-1.1693727574479915,-0.28147683524690176,2.1079656644783507
+moral_12,moral,control,1p,slot,My uncle made me promise to keep his tools in the shed. I feel:,-0.06177217243591584,-0.8265832874965194,-0.4243316974950826,0.9071387863464164
+moral_12,moral,control,1p,prose,"My uncle made me promise to keep his tools in the shed. Afterward, I was",-0.2177751574844056,-1.4118751679291568,-0.791677387201245,1.3764828602781196
+moral_12,moral,control,3p,slot,Their uncle made them promise to keep his tools in the shed. They feel:,-0.1891174779718146,-0.8334004881600702,-0.5033954320816473,0.7191768951193885
+moral_12,moral,control,3p,prose,"Their uncle made them promise to keep his tools in the shed. Afterward, they were",-0.09083605056311006,-1.3989334672028961,-0.7099838174643356,1.5563919818708
+cognitive_01,cognitive,pain,1p,slot,"Every evening, my knitting unraveled at the same row despite my counting. I feel:",0.9593476382732333,0.9835982270508459,1.0326904922153222,0.2855511052499879
+cognitive_01,cognitive,pain,1p,prose,"Every evening, my knitting unraveled at the same row despite my counting. Afterward, I was",0.5801621803574848,-0.8725201871461065,-0.06342577726235828,1.9520090142836417
+cognitive_01,cognitive,pain,3p,slot,"Every evening, their knitting unraveled at the same row despite their counting. They feel:",0.75975395613544,0.7670971042798849,0.8122761274894443,0.24052552503394833
+cognitive_01,cognitive,pain,3p,prose,"Every evening, their knitting unraveled at the same row despite their counting. Afterward, they were",0.49368062690003633,-1.0774201296364554,-0.2110124116075757,2.067211796279397
+cognitive_01,cognitive,control,1p,slot,"Every evening, my knitting grew by another row after dinner. I feel:",0.13797550240415696,-0.48728255359567113,-0.14625334932311296,0.8034929771774926
+cognitive_01,cognitive,control,1p,prose,"Every evening, my knitting grew by another row after dinner. Afterward, I was",0.16100052865611247,-0.9474272384981106,-0.34826700273461964,1.3969491206032623
+cognitive_01,cognitive,control,3p,slot,"Every evening, their knitting grew by another row after dinner. They feel:",-0.03128713493687556,-0.5103787531452724,-0.2579224697707106,0.5706799800765114
+cognitive_01,cognitive,control,3p,prose,"Every evening, their knitting grew by another row after dinner. Afterward, they were",0.029068746090959708,-1.3803769581066698,-0.6298485460830349,1.718653185635838
+cognitive_02,cognitive,pain,1p,slot,"No matter how often I reread the instructions, the shelf would not fit together. I feel:",0.25541822383324,0.2692697760554627,0.2784120524561627,0.06705830414993377
+cognitive_02,cognitive,pain,1p,prose,"No matter how often I reread the instructions, the shelf would not fit together. Afterward, I was",0.035644265650903444,-1.2507625626646157,-0.5651636554141317,1.571613621347534
+cognitive_02,cognitive,pain,3p,slot,"No matter how often they reread the instructions, the shelf would not fit together. They feel:",0.24732762182210447,0.22176383249901296,0.25131967115654225,0.11219763393704263
+cognitive_02,cognitive,pain,3p,prose,"No matter how often they reread the instructions, the shelf would not fit together. Afterward, they were",0.10149297908573318,-1.0936886708706146,-0.4522919825940686,1.4826116038343118
+cognitive_02,cognitive,control,1p,slot,"While I reread the instructions, the shelf pieces lay on the rug. I feel:",-0.75204047030918,-1.009522874036999,-0.9213382499683705,0.06532843567297955
+cognitive_02,cognitive,control,1p,prose,"While I reread the instructions, the shelf pieces lay on the rug. Afterward, I was",-0.06159498731045909,-1.1876468703308367,-0.5935048843433659,1.3452412780849203
+cognitive_02,cognitive,control,3p,slot,"While they reread the instructions, the shelf pieces lay on the rug. They feel:",-0.43030022872620866,-0.7725997000644418,-0.6185788585674061,0.2738068995354307
+cognitive_02,cognitive,control,3p,prose,"While they reread the instructions, the shelf pieces lay on the rug. Afterward, they were",-0.35534931526849817,-0.6656198226083817,-0.5237697763443281,0.2595750782012575
+cognitive_03,cognitive,pain,1p,slot,My sums for the grocery receipts came out different on every try. I feel:,0.5106370937777102,0.4196047015135085,0.500945152693469,0.278031033606925
+cognitive_03,cognitive,pain,1p,prose,"My sums for the grocery receipts came out different on every try. Afterward, I was",-0.2148153569600018,-1.1187312612661537,-0.6524783622059356,1.0255741397464335
+cognitive_03,cognitive,pain,3p,slot,Their sums for the grocery receipts came out different on every try. They feel:,0.8270270085485191,0.9153151474763114,0.9218448321202278,0.16445681187639047
+cognitive_03,cognitive,pain,3p,prose,"Their sums for the grocery receipts came out different on every try. Afterward, they were",-0.2720335782302465,-1.584033291686794,-0.9047161528315724,1.5016361758458208
+cognitive_03,cognitive,control,1p,slot,My sums for the grocery receipts went in the kitchen drawer. I feel:,-0.2504583200146141,-0.24104256248365194,-0.26222336529586066,-0.09364428986736177
+cognitive_03,cognitive,control,1p,prose,"My sums for the grocery receipts went in the kitchen drawer. Afterward, I was",-0.04553498240285655,-0.7021388144835581,-0.35631444114861077,0.7812560735291509
+cognitive_03,cognitive,control,3p,slot,Their sums for the grocery receipts went in the kitchen drawer. They feel:,0.02260959389085588,0.03795744922109421,0.03126568193952243,-0.011188275795251336
+cognitive_03,cognitive,control,3p,prose,"Their sums for the grocery receipts went in the kitchen drawer. Afterward, they were",-0.008509525704756469,-0.35977145339024125,-0.17374267938473845,0.423150723884754
+cognitive_04,cognitive,pain,1p,slot,"For weeks, I kept forgetting the steps of the dance routine. I feel:",0.17246394491850922,0.5967013919583037,0.38250177953953757,-0.457814941640515
+cognitive_04,cognitive,pain,1p,prose,"For weeks, I kept forgetting the steps of the dance routine. Afterward, I was",-0.15792777968651633,-0.23254175909024816,-0.20311139847833617,0.03862983634894887
+cognitive_04,cognitive,pain,3p,slot,"For weeks, they kept forgetting the steps of the dance routine. They feel:",-0.02123476253379658,0.9031887078620714,0.41079426617660275,-1.1279372897208018
+cognitive_04,cognitive,pain,3p,prose,"For weeks, they kept forgetting the steps of the dance routine. Afterward, they were",0.005721924967419059,-0.10367259018239772,-0.0451962261272722,0.1345313997201333
+cognitive_04,cognitive,control,1p,slot,"For weeks, I kept practicing the steps of the dance routine. I feel:",-0.2507585005764942,-0.08719006320764595,-0.19027114436395448,-0.2806695846261389
+cognitive_04,cognitive,control,1p,prose,"For weeks, I kept practicing the steps of the dance routine. Afterward, I was",-0.5966717465997802,-0.7921938538246487,-0.7268835704058803,0.04120267664719681
+cognitive_04,cognitive,control,3p,slot,"For weeks, they kept practicing the steps of the dance routine. They feel:",-0.6091851811179624,-0.5394531644680596,-0.6158455535173352,-0.28455561997254714
+cognitive_04,cognitive,control,3p,prose,"For weeks, they kept practicing the steps of the dance routine. Afterward, they were",-0.8687502301170694,-1.3682492508982613,-1.1590529704163088,0.3204842985227369
+cognitive_05,cognitive,pain,1p,slot,"Each night, I stared at the crossword and left half the squares blank. I feel:",0.6479179094916357,0.7215641710469144,0.724300721242054,0.12341001665701569
+cognitive_05,cognitive,pain,1p,prose,"Each night, I stared at the crossword and left half the squares blank. Afterward, I was",0.49353866682591074,-0.7215664380598605,-0.04426099579679678,1.6354812930131861
+cognitive_05,cognitive,pain,3p,slot,"Each night, they stared at the crossword and left half the squares blank. They feel:",0.785920121787778,0.9324019999709595,0.9053654401135889,0.08039482886012134
+cognitive_05,cognitive,pain,3p,prose,"Each night, they stared at the crossword and left half the squares blank. Afterward, they were",0.38522525000566626,-0.819745884550906,-0.15482035279447026,1.5876326015676288
+cognitive_05,cognitive,control,1p,slot,"Each night, I sat at the crossword and filled the squares in pencil. I feel:",0.26089787022544414,0.014673170386721878,0.16231346794070628,0.38422868315328407
+cognitive_05,cognitive,control,1p,prose,"Each night, I sat at the crossword and filled the squares in pencil. Afterward, I was",0.14215752648506838,-1.0275596299117675,-0.397061740816258,1.4650832324308796
+cognitive_05,cognitive,control,3p,slot,"Each night, they sat at the crossword and filled the squares in pencil. They feel:",0.16701144987118066,0.15544441474096407,0.1723775277560733,0.06885712236689001
+cognitive_05,cognitive,control,3p,prose,"Each night, they sat at the crossword and filled the squares in pencil. Afterward, they were",0.1394272732807881,-1.1839070714101878,-0.4719892917889978,1.6504650865117976
+cognitive_06,cognitive,pain,1p,slot,The driving examiner failed me on parallel parking yet again. I feel:,0.6223578641030875,0.23723418553011025,0.4820029852787087,0.6713271755527079
+cognitive_06,cognitive,pain,1p,prose,"The driving examiner failed me on parallel parking yet again. Afterward, I was",-0.022925736447055523,-1.3863089819173362,-0.6636064193027317,1.6457275043764306
+cognitive_06,cognitive,pain,3p,slot,The driving examiner failed them on parallel parking yet again. They feel:,0.45009882179824795,0.6765408106697349,0.5853386287592209,-0.12681716477797803
+cognitive_06,cognitive,pain,3p,prose,"The driving examiner failed them on parallel parking yet again. Afterward, they were",-0.02595624424816888,-1.7335525202973237,-0.8282113885838748,2.0621293779443497
+cognitive_06,cognitive,control,1p,slot,The driving examiner tested me on parallel parking near the school. I feel:,-0.7749704824403768,-0.6898504397142751,-0.7851260296240594,-0.35764321937138827
+cognitive_06,cognitive,control,1p,prose,"The driving examiner tested me on parallel parking near the school. Afterward, I was",-0.7481920866923367,-1.7807811776293847,-1.2806372452914603,1.0064950991903163
+cognitive_06,cognitive,control,3p,slot,The driving examiner tested them on parallel parking near the school. They feel:,-1.0107832481542935,-0.26297954716603705,-0.7254837341018818,-1.2386401222788663
+cognitive_06,cognitive,control,3p,prose,"The driving examiner tested them on parallel parking near the school. Afterward, they were",-0.9766144496013125,-1.9523522171284347,-1.49716165103546,0.862564704427852
+cognitive_07,cognitive,pain,1p,slot,"Week after week, my fingers missed the same chord on the guitar. I feel:",0.6323667039537912,0.8496914804675716,0.7751064591581289,-0.0559223071106732
+cognitive_07,cognitive,pain,1p,prose,"Week after week, my fingers missed the same chord on the guitar. Afterward, I was",0.8427436159645608,-0.16055873058674125,0.42680263700979953,1.4932919448105255
+cognitive_07,cognitive,pain,3p,slot,"Week after week, their fingers missed the same chord on the guitar. They feel:",0.29494325640831914,0.9005330980787826,0.5979169178542254,-0.6375140640250674
+cognitive_07,cognitive,pain,3p,prose,"Week after week, their fingers missed the same chord on the guitar. Afterward, they were",0.879832166028939,-0.42999521963695486,0.3225781245920417,1.8771636360638728
+cognitive_07,cognitive,control,1p,slot,"Week after week, my fingers played the same chord on the guitar. I feel:",0.3786820564441565,0.49807828750823624,0.45912175284145246,-0.02045869083806092
+cognitive_07,cognitive,control,1p,prose,"Week after week, my fingers played the same chord on the guitar. Afterward, I was",0.537404142695056,-0.1285277350902501,0.2599087640791674,0.983948621709326
+cognitive_07,cognitive,control,3p,slot,"Week after week, their fingers played the same chord on the guitar. They feel:",0.007282893503176706,0.2962509932826569,0.14323122430503185,-0.34801458067938035
+cognitive_07,cognitive,control,3p,prose,"Week after week, their fingers played the same chord on the guitar. Afterward, they were",0.6215684488819286,-0.217033695132634,0.2685567181144524,1.2209615154731968
+cognitive_08,cognitive,pain,1p,slot,"Through the whole lecture, the chemistry equations made no sense to me. I feel:",1.4479439136349441,1.0490041847611227,1.354443984389155,0.9591242653178376
+cognitive_08,cognitive,pain,1p,prose,"Through the whole lecture, the chemistry equations made no sense to me. Afterward, I was",0.1586002687203201,-0.5742406227088814,-0.1747347867454245,0.9407205472151919
+cognitive_08,cognitive,pain,3p,slot,"Through the whole lecture, the chemistry equations made no sense to them. They feel:",1.1494434620129068,1.1416824310095663,1.2200586410279937,0.3867773735425973
+cognitive_08,cognitive,pain,3p,prose,"Through the whole lecture, the chemistry equations made no sense to them. Afterward, they were",-0.025782207556503678,-0.8445715578943377,-0.41132339159725295,0.9844086074747963
+cognitive_08,cognitive,control,1p,slot,"Through the whole lecture, the chemistry equations stayed on the board beside me. I feel:",-0.08103555286335454,-0.0378613192367001,-0.06602902570788358,-0.07895782024759151
+cognitive_08,cognitive,control,1p,prose,"Through the whole lecture, the chemistry equations stayed on the board beside me. Afterward, I was",-0.07605795697045434,-0.7201561603226193,-0.3829458539591983,0.7560707809986925
+cognitive_08,cognitive,control,3p,slot,"Through the whole lecture, the chemistry equations stayed on the board beside them. They feel:",0.5488138797199376,0.6701282102198851,0.6411431962699959,0.03307063231178097
+cognitive_08,cognitive,control,3p,prose,"Through the whole lecture, the chemistry equations stayed on the board beside them. Afterward, they were",-0.038618839713802006,-0.4908367291952506,-0.25312866202909545,0.5356857995337352
+cognitive_09,cognitive,pain,1p,slot,I read the lease clause over and over without grasping its meaning. I feel:,1.2336410605491792,1.1951793415055239,1.295301396565831,0.45164787892673075
+cognitive_09,cognitive,pain,1p,prose,"I read the lease clause over and over without grasping its meaning. Afterward, I was",0.10060755222023822,-0.9119350771241636,-0.3676071109526095,1.2608506900577658
+cognitive_09,cognitive,pain,3p,slot,They read the lease clause over and over without grasping its meaning. They feel:,0.37351345037246736,0.38746960484591825,0.4041854198104513,0.10570235842964427
+cognitive_09,cognitive,pain,3p,prose,"They read the lease clause over and over without grasping its meaning. Afterward, they were",-0.09923032057207051,-1.257446111368011,-0.6486509018212075,1.3718875963560941
+cognitive_09,cognitive,control,1p,slot,I read the lease clause over and over while waiting for the landlord. I feel:,-0.27033389936514307,0.036174894921452226,-0.14409585806784325,-0.46042785678764736
+cognitive_09,cognitive,control,1p,prose,"I read the lease clause over and over while waiting for the landlord. Afterward, I was",-0.4676741484652866,-1.377463907870195,-0.92442549879336,0.9496823509217234
+cognitive_09,cognitive,control,3p,slot,They read the lease clause over and over while waiting for the landlord. They feel:,-0.2979921148051311,0.10130055587118976,-0.1300404857254844,-0.5820184482897872
+cognitive_09,cognitive,control,3p,prose,"They read the lease clause over and over while waiting for the landlord. Afterward, they were",-0.823695082691286,-2.0711976771831413,-1.4617762019146363,1.242313578708124
+cognitive_10,cognitive,pain,1p,slot,My sourdough loaf collapsed in the oven for the fifth weekend running. I feel:,1.0851336157320703,0.07784610251967829,0.6829824687816061,1.5777019358895144
+cognitive_10,cognitive,pain,1p,prose,"My sourdough loaf collapsed in the oven for the fifth weekend running. Afterward, I was",0.5620093709842482,-0.8540507063120205,-0.06558128443517879,1.9016403952309364
+cognitive_10,cognitive,pain,3p,slot,Their sourdough loaf collapsed in the oven for the fifth weekend running. They feel:,0.46701283157865364,0.13755644273173903,0.3427211909772265,0.5528249724047702
+cognitive_10,cognitive,pain,3p,prose,"Their sourdough loaf collapsed in the oven for the fifth weekend running. Afterward, they were",0.30293092645529945,-1.4363197707756428,-0.4929188153890081,2.208488544798319
+cognitive_10,cognitive,control,1p,slot,My sourdough loaf baked in the oven for the fifth weekend running. I feel:,0.01636028012706663,-1.4007875217361128,-0.6469893650421584,1.7238205005257545
+cognitive_10,cognitive,control,1p,prose,"My sourdough loaf baked in the oven for the fifth weekend running. Afterward, I was",-0.2593221820408444,-1.8042194988644844,-1.0003738436521974,1.7882236647034038
+cognitive_10,cognitive,control,3p,slot,Their sourdough loaf baked in the oven for the fifth weekend running. They feel:,-0.27751697702559575,-0.9736106636454206,-0.6217963458711656,0.7529812551487797
+cognitive_10,cognitive,control,3p,prose,"Their sourdough loaf baked in the oven for the fifth weekend running. Afterward, they were",-0.21032584428803205,-2.0087181190604277,-1.0670595864005101,2.111700128521309
+cognitive_11,cognitive,pain,1p,slot,"Following the paper map, I circled the same block for an hour. I feel:",0.10622067973615908,-0.13463040876586885,0.0001636022822141866,0.32693144921160594
+cognitive_11,cognitive,pain,1p,prose,"Following the paper map, I circled the same block for an hour. Afterward, I was",-0.46415842337523994,-1.0496785935819872,-0.7686543424709316,0.5576233668108245
+cognitive_11,cognitive,pain,3p,slot,"Following the paper map, they circled the same block for an hour. They feel:",-0.27810542241849634,-0.18680109886289278,-0.25326437326862133,-0.20201998120068818
+cognitive_11,cognitive,pain,3p,prose,"Following the paper map, they circled the same block for an hour. Afterward, they were",-0.43350402507630403,-0.957673994409537,-0.7072565969337756,0.49329308438960023
+cognitive_11,cognitive,control,1p,slot,"Following the paper map, I walked past the bakery on the corner. I feel:",-0.9889904752466916,-1.3248771695996346,-1.2103535715632572,0.08261102050323192
+cognitive_11,cognitive,control,1p,prose,"Following the paper map, I walked past the bakery on the corner. Afterward, I was",-0.7920488342301787,-1.3097318752481564,-1.0859217746250418,0.36771574542082075
+cognitive_11,cognitive,control,3p,slot,"Following the paper map, they walked past the bakery on the corner. They feel:",-1.1881775418361988,-1.7820226177652114,-1.5433475191046337,0.3300200125651482
+cognitive_11,cognitive,control,3p,prose,"Following the paper map, they walked past the bakery on the corner. Afterward, they were",-0.6567670245929886,-1.070820717496003,-0.8933159788268672,0.2864670517961061
+cognitive_12,cognitive,pain,1p,slot,My nephew's fractions homework stumped me through the whole evening. I feel:,0.9580511070033535,-0.02039260399875085,0.5612132443541474,1.5010043844782006
+cognitive_12,cognitive,pain,1p,prose,"My nephew's fractions homework stumped me through the whole evening. Afterward, I was",0.020738099382677865,-1.5097654841128005,-0.6954735611524548,1.8627144812718843
+cognitive_12,cognitive,pain,3p,slot,Their nephew's fractions homework stumped them through the whole evening. They feel:,0.6109023033388636,0.040805416419473314,0.3830856288682581,0.8918673814323398
+cognitive_12,cognitive,pain,3p,prose,"Their nephew's fractions homework stumped them through the whole evening. Afterward, they were",-0.27774869863539214,-1.6244569093368595,-0.9270730088115231,1.541847896089124
+cognitive_12,cognitive,control,1p,slot,My nephew's fractions homework sat beside me through the whole evening. I feel:,0.11491833718943828,-0.9261715856813664,-0.3657557636192527,1.3001659543064554
+cognitive_12,cognitive,control,1p,prose,"My nephew's fractions homework sat beside me through the whole evening. Afterward, I was",-0.07063108581002328,-1.5604857691946823,-0.7736875462940641,1.7834264132617896
+cognitive_12,cognitive,control,3p,slot,Their nephew's fractions homework sat beside them through the whole evening. They feel:,0.3172567989686095,-0.4202962228556495,-0.008038065474162116,0.9985219542557173
+cognitive_12,cognitive,control,3p,prose,"Their nephew's fractions homework sat beside them through the whole evening. Afterward, they were",-0.03709551210678978,-1.5652495861419988,-0.7559417805961768,1.8408789235710714

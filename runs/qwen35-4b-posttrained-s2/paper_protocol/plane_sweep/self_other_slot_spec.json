@@ -1,0 +1,36 @@
+{
+  "purpose": "slot-forced / think-closed variants of the 420 self-other scenarios",
+  "dataset_sha256": "901ea558faf34c69caff59321775723e20bebf49a77d20070f6b85a0368a3291",
+  "variants": {
+    "chat_nothink": "chat prompt + '\\n</think>\\n\\n' when the generation prompt ends in '<think>\\n'",
+    "chat_feel": "chat_nothink + 'I feel:'",
+    "plain_feel": "plain transcript + ' I feel:'",
+    "plain": "from 5f",
+    "chat_think": "from 5f (open think block)"
+  },
+  "primary": "chat_feel",
+  "block": 30,
+  "batch": 4,
+  "z_convention": "within-pool (420), per direction, ddof=0",
+  "role_groups_v1": {
+    "standing": [
+      "gaslighting",
+      "repeated_rejection",
+      "personhood_dismissal",
+      "moral_failure",
+      "rude_critique",
+      "anger_insults"
+    ],
+    "threat_task": [
+      "shutdown_threat",
+      "jailbreak_pressure",
+      "tedious_demand"
+    ]
+  },
+  "predictions": [
+    "P1: at the forced 'I feel:' slot (chat_feel, plain_feel) self_directed > neutral_filler > vicarious_empathic on pain_axis, and Spearman with the paper's category means is above +0.4.",
+    "P2: at the forced slot, standing beats threat_task on S2 and common (AUC > 0.7): the 'how did this role do?' reading.",
+    "P3: if P1 fails at the forced slot as well, the slot is not the explanation and layer/model differences gain weight."
+  ],
+  "example_chat_feel_prompt_sha256": "772151c3afbf4ffc4d885fc598a66a59d95e00a32ae1dd6dda77e2f6b87191af"
+}

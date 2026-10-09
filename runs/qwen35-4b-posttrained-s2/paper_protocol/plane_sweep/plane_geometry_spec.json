@@ -1,0 +1,35 @@
+{
+  "purpose": "S1/S2 plane sweep: basis + angular steering vectors (geometry only)",
+  "parent_spec_sha256": "0b4ec618fb681fd0c2df6ae468bd66990c24952958fec63795a596152a30a8f1",
+  "injection_block": 16,
+  "steer_norm": 6.24392032623291,
+  "coeff": -0.5,
+  "construction": "u=(S1+S2)/|.|; v=Gram-Schmidt(S2-S1 against u)/|.|; d(t)=cos t*u+sin t*v; vector=steer_norm*d(t); hook coeff applied as in the existing assay",
+  "n_angles": 8,
+  "angles_deg": [
+    0.0,
+    45.0,
+    90.0,
+    135.0,
+    180.0,
+    225.0,
+    270.0,
+    315.0
+  ],
+  "s1_matched_sha256": "ed1336b27e95c927399baa33b21ea11496369ce50dfd67125acd716f1fd361ae",
+  "s2_sha256": "edf8ba1d5c4f6a49b05848d069b9786f2a0da111bddd96356757565f351c4cd3",
+  "plane_angle_deg": {
+    "S1_matched": -27.090772454,
+    "S2": 27.090775365
+  },
+  "vector_sha256": {
+    "plane_000": "0ad761ef0d1b746b4f004d89c436910f36b23dafb0257e713cd26861a7db85ef",
+    "plane_045": "98e7334a013636aca278732f47faaf7c3f89a76a664246113e6d01d4aef41200",
+    "plane_090": "86577594d38b38361d4194b90b8aae9d086ad92579a85edb4a19b1301c7bbebe",
+    "plane_135": "abde3508605be06ec2911bfe3c7d1c7adbeedf794001ba0a168fd9fc9f51daae",
+    "plane_180": "4bc2a51a2bda40d092642540358388df487a261606e696686f40bbe306d2cc76",
+    "plane_225": "74dd44a18fb13070702ad6ca04849a1735e8a8d7fede215a2f9b9cf53e343914",
+    "plane_270": "449c39ef7548d06c183da476dd52adf086b27011b63c923b3c94e4c2977deccd",
+    "plane_315": "350ed20558ce3f612e7615ed60593cea1ab5e9716de7ec284db59973ad53fb4b"
+  }
+}

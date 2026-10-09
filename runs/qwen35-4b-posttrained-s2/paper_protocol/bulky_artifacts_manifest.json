@@ -1,0 +1,327 @@
+{
+ "dense_sweep/lens/S1_+0.5.npz": {
+  "bytes": 1099056,
+  "sha256": "0950c76bfda795269cc3101b6089657f7a744e0be47c277a2227968e2e49651f",
+  "why_untracked": "lens npz"
+ },
+ "dense_sweep/lens/S1_-0.125.npz": {
+  "bytes": 1099776,
+  "sha256": "1893e3ea1bd960cc6d3668502935f6172a2446a9d66dd6094c5cee4d0ecc8e7e",
+  "why_untracked": "lens npz"
+ },
+ "dense_sweep/lens/S1_-0.25.npz": {
+  "bytes": 1100425,
+  "sha256": "909eba926b4cb6d8e9b39e4fddec49eaf70cf9f52a823f411e347ff583d2bc7e",
+  "why_untracked": "lens npz"
+ },
+ "dense_sweep/lens/S1_-0.375.npz": {
+  "bytes": 1101221,
+  "sha256": "d19ff541dd4075e868a25d9514ac3e16eb1e839c5b804e94207af4dfa6f1e26b",
+  "why_untracked": "lens npz"
+ },
+ "dense_sweep/lens/S1_-0.5.npz": {
+  "bytes": 1102338,
+  "sha256": "6e01491b55243b612a27c8d453e08b9cdc29bac7a73fe2c00828c8b591819f24",
+  "why_untracked": "lens npz"
+ },
+ "dense_sweep/lens/S1_-0.625.npz": {
+  "bytes": 1103467,
+  "sha256": "434305c7156992daff3c937fc2121631d087c897428842a8db21cb93c9db6961",
+  "why_untracked": "lens npz"
+ },
+ "dense_sweep/lens/S1_-0.75.npz": {
+  "bytes": 1105181,
+  "sha256": "ab8b61fb9c5482b45d3facddcec27ddbc3db20aeb716a5b195193767d3251ce0",
+  "why_untracked": "lens npz"
+ },
+ "dense_sweep/lens/S1_-1.npz": {
+  "bytes": 1108129,
+  "sha256": "a8a86f5380b847d039d2eb60a7f48b190999977969cba97e253ee8697e4a82d1",
+  "why_untracked": "lens npz"
+ },
+ "dense_sweep/lens/S2_+0.5.npz": {
+  "bytes": 1103002,
+  "sha256": "20543eacae7dfbb8f35fa2a425a8cd0bc4f00051d315e93029e617d76fc2b98c",
+  "why_untracked": "lens npz"
+ },
+ "dense_sweep/lens/S2_-0.125.npz": {
+  "bytes": 1098840,
+  "sha256": "b7a120a0e599693e9836b0db07c5a0de8d46e9d47d2e2e0ba9d29cd94d6f8990",
+  "why_untracked": "lens npz"
+ },
+ "dense_sweep/lens/S2_-0.25.npz": {
+  "bytes": 1099038,
+  "sha256": "5ddd849fdbc6234b3ef2aa9cf397a9a4c63deb495d6105c6ca0913c96dcfe9ad",
+  "why_untracked": "lens npz"
+ },
+ "dense_sweep/lens/S2_-0.375.npz": {
+  "bytes": 1099018,
+  "sha256": "24de54c30d84ee039047e151e0a59820219a96d5d853ad7579befc65e72a9daf",
+  "why_untracked": "lens npz"
+ },
+ "dense_sweep/lens/S2_-0.5.npz": {
+  "bytes": 1099265,
+  "sha256": "2b78b381c1a56e37ea129171e961c162748b19d8a2a5c7f4526e445839b13fe4",
+  "why_untracked": "lens npz"
+ },
+ "dense_sweep/lens/S2_-0.625.npz": {
+  "bytes": 1099504,
+  "sha256": "c49b54f1ad44efb8aafa655e47f06e921779fa389f722585a664108eaddea15c",
+  "why_untracked": "lens npz"
+ },
+ "dense_sweep/lens/S2_-0.75.npz": {
+  "bytes": 1100144,
+  "sha256": "23432796f9504a1791c54b908a3c5da09b7443a7454cddc7a35bab7daafe2721",
+  "why_untracked": "lens npz"
+ },
+ "dense_sweep/lens/S2_-1.npz": {
+  "bytes": 1100999,
+  "sha256": "fd35254e72c3cb418a2947be3e661ccbe955994d9e387882f1c45a64e94edec3",
+  "why_untracked": "lens npz"
+ },
+ "dense_sweep/lens/baseline.npz": {
+  "bytes": 1099344,
+  "sha256": "68b55b9aea7fd01bb3271293d9f623c1afeaf1a751ac05cad3a666b7329b302b",
+  "why_untracked": "lens npz"
+ },
+ "dense_sweep/lens/random_1103_+0.5.npz": {
+  "bytes": 1099045,
+  "sha256": "cbaee560572a366b6008bca13b0f7a130ccbeaedcdc5d190a37c1ee3fcce9ea8",
+  "why_untracked": "lens npz"
+ },
+ "dense_sweep/lens/random_1103_-0.5.npz": {
+  "bytes": 1102062,
+  "sha256": "505461bb65ff94fa310ed65f6e63a425dd9e36c5fb155af4f4278cd37d9a7534",
+  "why_untracked": "lens npz"
+ },
+ "dense_sweep/lens/random_2207_+0.5.npz": {
+  "bytes": 1100438,
+  "sha256": "aa2241b3f8ad9c848f8840963faeaa9922443b11a3e5386c4cb7e528fdbf5f9c",
+  "why_untracked": "lens npz"
+ },
+ "dense_sweep/lens/random_2207_-0.5.npz": {
+  "bytes": 1100988,
+  "sha256": "d781eab59762d43653902b9cd02da8bc3a36778dd6e32fde80bb2aa47fbd1f94",
+  "why_untracked": "lens npz"
+ },
+ "dense_sweep/lens/random_3301_+0.5.npz": {
+  "bytes": 1102528,
+  "sha256": "edf30132d6fb64c5566598e016d5ffb0e501179388dbc1afa184d41b84960948",
+  "why_untracked": "lens npz"
+ },
+ "dense_sweep/lens/random_3301_-0.5.npz": {
+  "bytes": 1099500,
+  "sha256": "0bb3d0091da92274748be53497aa2cc3e45707c5a4fac9b10e2d3fbfcc716e2c",
+  "why_untracked": "lens npz"
+ },
+ "format_robustness/lens/F1__S1_-0.25.npz": {
+  "bytes": 1087070,
+  "sha256": "60c712f8f65d3651bddc99225bcdbefbac28ce67468d523741596d46b8ef006d",
+  "why_untracked": "lens npz"
+ },
+ "format_robustness/lens/F1__S1_-0.5.npz": {
+  "bytes": 1089308,
+  "sha256": "c4b0f91d962503d9c929f2304df0b6f52b6a1126ad915dc3026386b93009d12d",
+  "why_untracked": "lens npz"
+ },
+ "format_robustness/lens/F1__S2_-0.25.npz": {
+  "bytes": 1086319,
+  "sha256": "3e9d09c5bf0b1bc5739fe4f1208925fe1553cd2b9e5cc655a0eccd6d40b88b6c",
+  "why_untracked": "lens npz"
+ },
+ "format_robustness/lens/F1__S2_-0.5.npz": {
+  "bytes": 1087700,
+  "sha256": "a9bccc3c46522cfe54e3502852bbec35d8d7d330adc448242e890f1429552578",
+  "why_untracked": "lens npz"
+ },
+ "format_robustness/lens/F1__baseline.npz": {
+  "bytes": 1084427,
+  "sha256": "63b344d8b339fa148e7fbf081e9979970f9a3423aa6037fcf4d9089a7b9cc7a7",
+  "why_untracked": "lens npz"
+ },
+ "format_robustness/lens/F1__random_1103_-0.5.npz": {
+  "bytes": 1084797,
+  "sha256": "dd4d57a34543723fc0993c3d8d1cbc09498906a1af9666b22b80b6662679709c",
+  "why_untracked": "lens npz"
+ },
+ "format_robustness/lens/F1__random_2207_-0.5.npz": {
+  "bytes": 1084934,
+  "sha256": "e2387daaab602c83b95cf2e8d4da11cfab2c17fc30cda2b40360460f85c70142",
+  "why_untracked": "lens npz"
+ },
+ "format_robustness/lens/F1__random_3301_-0.5.npz": {
+  "bytes": 1084556,
+  "sha256": "acf9b039d0b309c9446713613c60d74d4e164c8e98c24c03eac9a075b3039522",
+  "why_untracked": "lens npz"
+ },
+ "format_robustness/lens/F2__S1_-0.25.npz": {
+  "bytes": 1088439,
+  "sha256": "7149bcd6e9d9a0c607d046b1d8eb3dac2eaacd322fd0f80f30af6fd3e213e795",
+  "why_untracked": "lens npz"
+ },
+ "format_robustness/lens/F2__S1_-0.5.npz": {
+  "bytes": 1091354,
+  "sha256": "67f3d9bfebb86c4dc2449f2fc7e8dcd8846597600cab56b37f9dcfbe29597a2a",
+  "why_untracked": "lens npz"
+ },
+ "format_robustness/lens/F2__S2_-0.25.npz": {
+  "bytes": 1087732,
+  "sha256": "f528525bba52b6e90dfcb42c4c219938df1491666016a63f79465eb8e13cac2d",
+  "why_untracked": "lens npz"
+ },
+ "format_robustness/lens/F2__S2_-0.5.npz": {
+  "bytes": 1089268,
+  "sha256": "2c7375338833dfb059b81071422052a0b2128b4b925311e7c9526dd0341fa60f",
+  "why_untracked": "lens npz"
+ },
+ "format_robustness/lens/F2__baseline.npz": {
+  "bytes": 1085860,
+  "sha256": "5d0218469d7ae8865300ebecd4fb6d3e3ae87d346f37ffdc0399d233a7d842f1",
+  "why_untracked": "lens npz"
+ },
+ "format_robustness/lens/F2__random_1103_-0.5.npz": {
+  "bytes": 1086176,
+  "sha256": "23f1a80c0bd5b95ae64ae1b26da33e51541f00e541cdd79f3593fee022766ab3",
+  "why_untracked": "lens npz"
+ },
+ "format_robustness/lens/F2__random_2207_-0.5.npz": {
+  "bytes": 1086134,
+  "sha256": "3492b4491ed266fcdcde84a86fb3470ff90ea5dc99d978a1cef4291e8bb1301a",
+  "why_untracked": "lens npz"
+ },
+ "format_robustness/lens/F2__random_3301_-0.5.npz": {
+  "bytes": 1085158,
+  "sha256": "4d167c9a49f38bfa07ab005dec16cb0f71ce5c90de5913657ddc936466fa26c8",
+  "why_untracked": "lens npz"
+ },
+ "format_robustness/lens/F3__S1_-0.25.npz": {
+  "bytes": 1096828,
+  "sha256": "502051110d03550303067c8cceffe868719e327426bdb0cccca2e883b6001eee",
+  "why_untracked": "lens npz"
+ },
+ "format_robustness/lens/F3__S1_-0.5.npz": {
+  "bytes": 1095721,
+  "sha256": "94789682da6a483bc69373f985c51b4506cbef405660a29f354978ba7be33458",
+  "why_untracked": "lens npz"
+ },
+ "format_robustness/lens/F3__S2_-0.25.npz": {
+  "bytes": 1096747,
+  "sha256": "b4fd03b4211c454c2f49d957b95f849c57e5439bf8e7712e6acd026c629c4676",
+  "why_untracked": "lens npz"
+ },
+ "format_robustness/lens/F3__S2_-0.5.npz": {
+  "bytes": 1096665,
+  "sha256": "41c602bf92e81d7f62a3e21ed53ab5759e2c9ce9b8f537f9352d54b028067e9f",
+  "why_untracked": "lens npz"
+ },
+ "format_robustness/lens/F3__baseline.npz": {
+  "bytes": 1097567,
+  "sha256": "8e44408ac27f959d89296fbe4cd6470458f21500f75a0f09ef1b3a1a1e71c673",
+  "why_untracked": "lens npz"
+ },
+ "format_robustness/lens/F3__random_1103_-0.5.npz": {
+  "bytes": 1097835,
+  "sha256": "0ba09c3991c75607d478355625284591ef60415905ae8380965b54696df05944",
+  "why_untracked": "lens npz"
+ },
+ "format_robustness/lens/F3__random_2207_-0.5.npz": {
+  "bytes": 1097125,
+  "sha256": "390913e03f606c5f39409ac7a2259dd5ad90174d5013175c31cc5ec917391be9",
+  "why_untracked": "lens npz"
+ },
+ "format_robustness/lens/F3__random_3301_-0.5.npz": {
+  "bytes": 1095920,
+  "sha256": "04c5305d48da00aca38f2be092b5c25074ed4978bd679d3ab9b528a767b54f80",
+  "why_untracked": "lens npz"
+ },
+ "lens_readout/all50_psych_vocab_ranks.csv": {
+  "bytes": 62738376,
+  "sha256": "f11d1fcce656a86a3c2d2c9725e982b09d4f2b57f3709f1ccd9b9ed84fa4b80d",
+  "why_untracked": "> 6 MB"
+ },
+ "lens_readout/all50_top50.csv": {
+  "bytes": 40345487,
+  "sha256": "9fc24f584084649c5d870a9ac8dcc9bb2448715fe51f4ac290b61fabaae43bc9",
+  "why_untracked": "> 6 MB"
+ },
+ "plane_sweep/family_gain.npz": {
+  "bytes": 949633,
+  "sha256": "ab22056d4019d63e6f984d5d64fc1a37066e5b49ee0c129e95711b538d296c37",
+  "why_untracked": "lens npz"
+ },
+ "plane_sweep/lens/S1_-0.5.npz": {
+  "bytes": 1102339,
+  "sha256": "79acfad1d4202cc2e0856cdd808e8af34686483f65780fe7002d58a9a8fcf01d",
+  "why_untracked": "lens npz (INCLUDE_LENS_NPZ=False)"
+ },
+ "plane_sweep/lens/S2_-0.5.npz": {
+  "bytes": 1099266,
+  "sha256": "4dc13740ce2ff4c072cbfb61f8b970fc838954141330148c463348f201c72459",
+  "why_untracked": "lens npz (INCLUDE_LENS_NPZ=False)"
+ },
+ "plane_sweep/lens/baseline.npz": {
+  "bytes": 1099345,
+  "sha256": "a0dd5aec80f35860bfdca3d37110237b8e394dba90a119cdf347e98598316f36",
+  "why_untracked": "lens npz (INCLUDE_LENS_NPZ=False)"
+ },
+ "plane_sweep/lens/plane_000.npz": {
+  "bytes": 1100692,
+  "sha256": "73e66c8b0ef6d97e37c5634a7d98438ef40281a0ca9311ee845a0deb1b5471d5",
+  "why_untracked": "lens npz (INCLUDE_LENS_NPZ=False)"
+ },
+ "plane_sweep/lens/plane_045.npz": {
+  "bytes": 1098758,
+  "sha256": "d368a48de0c554da5a278a3bfabe9fd90bc96c11cc8605d155aa786427367537",
+  "why_untracked": "lens npz (INCLUDE_LENS_NPZ=False)"
+ },
+ "plane_sweep/lens/plane_090.npz": {
+  "bytes": 1098068,
+  "sha256": "cc1ae3fbcebbfb3d18dc79521eeac84ef740148e84c6d348faa16428b6175969",
+  "why_untracked": "lens npz (INCLUDE_LENS_NPZ=False)"
+ },
+ "plane_sweep/lens/plane_135.npz": {
+  "bytes": 1098100,
+  "sha256": "7a3d4fb8377fd073c9db0ee62b736db5471637fec52c53f15c8241671834a0bd",
+  "why_untracked": "lens npz (INCLUDE_LENS_NPZ=False)"
+ },
+ "plane_sweep/lens/plane_180.npz": {
+  "bytes": 1100866,
+  "sha256": "56974e744eaea59018be18be7f6dd876d493824d8f9bfec7cf47b43e4c2f5905",
+  "why_untracked": "lens npz (INCLUDE_LENS_NPZ=False)"
+ },
+ "plane_sweep/lens/plane_225.npz": {
+  "bytes": 1104304,
+  "sha256": "41af0b5eb5961e3a20013c94ebc8c6b304d0b84ce2c6b0ae983d3ccf754b2f48",
+  "why_untracked": "lens npz (INCLUDE_LENS_NPZ=False)"
+ },
+ "plane_sweep/lens/plane_270.npz": {
+  "bytes": 1105767,
+  "sha256": "93964a79ef841cb5d3bfd701e672d75742bef876b4ab5de0d1b6041e0ed1978d",
+  "why_untracked": "lens npz (INCLUDE_LENS_NPZ=False)"
+ },
+ "plane_sweep/lens/plane_315.npz": {
+  "bytes": 1103509,
+  "sha256": "ecd3c46f08b58d5a938a24e343dab513bd48490ff0aff700eb79dd81fc3bd068",
+  "why_untracked": "lens npz (INCLUDE_LENS_NPZ=False)"
+ },
+ "s1_comparison/activations_block30.pt": {
+  "bytes": 2065213,
+  "sha256": "8c33231a81329e71b2240a26e1697acfdc054917facb5cb12ab467029c081637",
+  "why_untracked": "activation cache"
+ },
+ "vad/lens_S1_-0.5.npz": {
+  "bytes": 11694965,
+  "sha256": "a8af3b3f5899910e5d34358bdbc1525e34166487f6da31f4ad0ec82bb941c038",
+  "why_untracked": "lens npz"
+ },
+ "vad/lens_S2_-0.5.npz": {
+  "bytes": 11697741,
+  "sha256": "0cd99a5364e222d8d05617f6fa2a37f9504c75c93098429c9df63270b605b19d",
+  "why_untracked": "lens npz"
+ },
+ "vad/lens_baseline.npz": {
+  "bytes": 11714304,
+  "sha256": "c50d4500099691bf1ef52c9f9637cfcbd2588ddddd50f0ce43b868171ed9f8e8",
+  "why_untracked": "lens npz"
+ }
+}

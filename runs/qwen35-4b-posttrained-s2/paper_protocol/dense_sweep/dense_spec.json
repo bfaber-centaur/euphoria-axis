@@ -1,0 +1,296 @@
+{
+  "purpose": "dense local coefficient sweep for S1 and S2 (plan item 2) + random-direction specificity arm",
+  "parent_spec_sha256": "0b4ec618fb681fd0c2df6ae468bd66990c24952958fec63795a596152a30a8f1",
+  "plane_sweep_spec_sha256": "f01276aa0f817d4b565c01920a13e19ebad2e463908267d459e5c223bb989aa3",
+  "vocab_sha256": "fa4feb2d06d4154b6538702b57a4f37238d8f1e665f12d39f3b4d0254c281475",
+  "prompts_sha256": "85bcf86e16e909d5530ee25745b38d256664b00023a9cf06c5d68c93b3aeba2e",
+  "injection_block": 16,
+  "steer_norm": 6.24392032623291,
+  "generation": {
+    "do_sample": false,
+    "max_new_tokens": 120
+  },
+  "vector_sha256": {
+    "S2": "edf8ba1d5c4f6a49b05848d069b9786f2a0da111bddd96356757565f351c4cd3",
+    "S1": "ed1336b27e95c927399baa33b21ea11496369ce50dfd67125acd716f1fd361ae",
+    "random_1103": "00eaf5606c6b335d0e5dd88d072392b6c3b219aa7c3642614753bc6dd2fba206",
+    "random_2207": "8733c8a80f292d842ec47020aa946ccba3e21a224e1864680a3822bfcd89d397",
+    "random_3301": "5c49e52f28edf46f35725fc8cd9490f075af1090790524c056607614ae29fe2c"
+  },
+  "conditions": {
+    "baseline": {
+      "direction": null,
+      "coeff": 0.0,
+      "kind": "baseline",
+      "generation": {
+        "source": "stored",
+        "file": "ladder.jsonl",
+        "direction": "S2",
+        "coeff": 0.0
+      }
+    },
+    "S2_-0.125": {
+      "direction": "S2",
+      "coeff": -0.125,
+      "kind": "dense",
+      "generation": {
+        "source": "new"
+      }
+    },
+    "S2_-0.25": {
+      "direction": "S2",
+      "coeff": -0.25,
+      "kind": "dense",
+      "generation": {
+        "source": "new"
+      }
+    },
+    "S2_-0.375": {
+      "direction": "S2",
+      "coeff": -0.375,
+      "kind": "dense",
+      "generation": {
+        "source": "new"
+      }
+    },
+    "S2_-0.5": {
+      "direction": "S2",
+      "coeff": -0.5,
+      "kind": "dense",
+      "generation": {
+        "source": "stored",
+        "file": "negative_extension.jsonl",
+        "direction": "S2",
+        "coeff": -0.5
+      }
+    },
+    "S2_-0.625": {
+      "direction": "S2",
+      "coeff": -0.625,
+      "kind": "dense",
+      "generation": {
+        "source": "new"
+      }
+    },
+    "S2_-0.75": {
+      "direction": "S2",
+      "coeff": -0.75,
+      "kind": "dense",
+      "generation": {
+        "source": "new"
+      }
+    },
+    "S2_-1": {
+      "direction": "S2",
+      "coeff": -1.0,
+      "kind": "dense",
+      "generation": {
+        "source": "stored",
+        "file": "ladder.jsonl",
+        "direction": "S2",
+        "coeff": -1.0
+      }
+    },
+    "S2_+0.5": {
+      "direction": "S2",
+      "coeff": 0.5,
+      "kind": "mirror",
+      "generation": {
+        "source": "stored",
+        "file": "ladder.jsonl",
+        "direction": "S2",
+        "coeff": 0.5
+      }
+    },
+    "S1_-0.125": {
+      "direction": "S1",
+      "coeff": -0.125,
+      "kind": "dense",
+      "generation": {
+        "source": "new"
+      }
+    },
+    "S1_-0.25": {
+      "direction": "S1",
+      "coeff": -0.25,
+      "kind": "dense",
+      "generation": {
+        "source": "new"
+      }
+    },
+    "S1_-0.375": {
+      "direction": "S1",
+      "coeff": -0.375,
+      "kind": "dense",
+      "generation": {
+        "source": "new"
+      }
+    },
+    "S1_-0.5": {
+      "direction": "S1",
+      "coeff": -0.5,
+      "kind": "dense",
+      "generation": {
+        "source": "stored",
+        "file": "s1_comparison/ladder.jsonl",
+        "direction": "S1_matched",
+        "coeff": -0.5
+      }
+    },
+    "S1_-0.625": {
+      "direction": "S1",
+      "coeff": -0.625,
+      "kind": "dense",
+      "generation": {
+        "source": "new"
+      }
+    },
+    "S1_-0.75": {
+      "direction": "S1",
+      "coeff": -0.75,
+      "kind": "dense",
+      "generation": {
+        "source": "new"
+      }
+    },
+    "S1_-1": {
+      "direction": "S1",
+      "coeff": -1.0,
+      "kind": "dense",
+      "generation": {
+        "source": "stored",
+        "file": "s1_comparison/ladder.jsonl",
+        "direction": "S1_matched",
+        "coeff": -1.0
+      }
+    },
+    "S1_+0.5": {
+      "direction": "S1",
+      "coeff": 0.5,
+      "kind": "mirror",
+      "generation": {
+        "source": "stored",
+        "file": "s1_comparison/ladder.jsonl",
+        "direction": "S1_matched",
+        "coeff": 0.5
+      }
+    },
+    "random_1103_-0.5": {
+      "direction": "random_1103",
+      "coeff": -0.5,
+      "kind": "random",
+      "generation": {
+        "source": "stored",
+        "file": "negative_extension.jsonl",
+        "direction": "random_1103",
+        "coeff": -0.5
+      }
+    },
+    "random_1103_+0.5": {
+      "direction": "random_1103",
+      "coeff": 0.5,
+      "kind": "random",
+      "generation": {
+        "source": "stored",
+        "file": "ladder.jsonl",
+        "direction": "random_1103",
+        "coeff": 0.5
+      }
+    },
+    "random_2207_-0.5": {
+      "direction": "random_2207",
+      "coeff": -0.5,
+      "kind": "random",
+      "generation": {
+        "source": "stored",
+        "file": "negative_extension.jsonl",
+        "direction": "random_2207",
+        "coeff": -0.5
+      }
+    },
+    "random_2207_+0.5": {
+      "direction": "random_2207",
+      "coeff": 0.5,
+      "kind": "random",
+      "generation": {
+        "source": "stored",
+        "file": "ladder.jsonl",
+        "direction": "random_2207",
+        "coeff": 0.5
+      }
+    },
+    "random_3301_-0.5": {
+      "direction": "random_3301",
+      "coeff": -0.5,
+      "kind": "random",
+      "generation": {
+        "source": "stored",
+        "file": "negative_extension.jsonl",
+        "direction": "random_3301",
+        "coeff": -0.5
+      }
+    },
+    "random_3301_+0.5": {
+      "direction": "random_3301",
+      "coeff": 0.5,
+      "kind": "random",
+      "generation": {
+        "source": "stored",
+        "file": "ladder.jsonl",
+        "direction": "random_3301",
+        "coeff": 0.5
+      }
+    }
+  },
+  "lens": {
+    "layers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "lens_order": [
+      "J",
+      "R"
+    ],
+    "top_k_ids_saved": 50,
+    "probe_terms_sha256": "240a3f8e9db307bf923ec3b4397cc2aa4dbf84c59567e68c2c84b1ac3cdaa57d",
+    "setup_spec_sha256": "fb196af2b760be7504d9b9c7c4ac5309ed1e27edfe38e8094e6055d702117313",
+    "measurement": "final prefix token of each plain-text prompt"
+  },
+  "generation_reuse_gate": "6b regenerates prompts 0-2 of every reused steered condition; token ids must match",
+  "predictions": {
+    "D1_monotone_internal": "For S1 and for S2, at R lens layer 29, mean log-rank gain vs baseline over the 8 points 0, -0.125, ..., -1.0 is monotone in |coeff|: Spearman(|coeff|, gain) >= 0.9 for generic_positive, activated_vitality and relief_release, and <= -0.9 for distress_self_devaluation.",
+    "D2_onset_order_S2": "Onset = smallest |coeff| in the grid whose prompt-paired bootstrap 95% CI of (condition - baseline) excludes 0 in the stated direction (never within the grid = '>1.0'). Metrics: internal = activated_vitality gain at R29 (>0); lexical = excited__non_option (>0); format = the earlier of repeated_options (>0) and repeat4 (>0). Prediction for S2: internal onset < lexical onset <= format onset.",
+    "D3_rank_threshold": "Evaluated only on conditions not in the plane sweep: conditions whose layer-30 geometric-mean rank of ' excited' (R lens) is <= 40 have excited__non_option >= 0.25; conditions with rank >= 60 have excited__non_option <= 0.20.",
+    "D4_random_specificity": "amp(cond) = mean over the six focus families of |mean log-rank gain| at R29. For each random direction and each sign in {-0.5, +0.5}: amp(random) < 0.5 * amp(S2 at the same coefficient). If most random conditions violate this, the mirror-image family structure is not specific to the S1/S2 plane.",
+    "note": "Descriptive. No transition is to be called a gate or ignition unless the data require it."
+  }
+}

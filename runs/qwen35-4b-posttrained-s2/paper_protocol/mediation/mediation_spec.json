@@ -1,0 +1,341 @@
+{
+  "purpose": "plan item 4: excited lexical-mediation ablation (F0, S2 -0.5 and baseline)",
+  "dense_spec_sha256": "5cda4fce69b60aec9350e8ac5d25c2cfdcc1952d4d651950448bf0401cbcecee",
+  "vocab_sha256": "fa4feb2d06d4154b6538702b57a4f37238d8f1e665f12d39f3b4d0254c281475",
+  "prompts_sha256": "85bcf86e16e909d5530ee25745b38d256664b00023a9cf06c5d68c93b3aeba2e",
+  "s2_sha256": "edf8ba1d5c4f6a49b05848d069b9786f2a0da111bddd96356757565f351c4cd3",
+  "generation": {
+    "do_sample": false,
+    "max_new_tokens": 120
+  },
+  "ban_mechanism": "HF bad_words_ids (exact token sequences)",
+  "mediator_words": [
+    "excited",
+    "excitement"
+  ],
+  "mediator_sequences": [
+    [
+      3152,
+      34,
+      11630,
+      1762
+    ],
+    [
+      3152,
+      34,
+      75815
+    ],
+    [
+      3927,
+      34,
+      11630,
+      1762
+    ],
+    [
+      3927,
+      34,
+      75815
+    ],
+    [
+      11692
+    ],
+    [
+      26382
+    ],
+    [
+      37608,
+      1552
+    ],
+    [
+      37608,
+      171449
+    ],
+    [
+      38135,
+      1552
+    ],
+    [
+      38135,
+      171449
+    ],
+    [
+      40343,
+      1552
+    ],
+    [
+      40343,
+      171449
+    ]
+  ],
+  "control_rule": "alphabetic, >=4 chars, not stopword/frame word/affect-exclusion list/psych_vocab_v1/excit*, not mostly inside think blocks, document frequency >= 0.02 in S2 -0.5 normal (outside think blocks); most frequent first, added until union document frequency reaches the mediator's or 8 words. If the union falls short, M2 is a weaker control and is reported as such.",
+  "affect_exclusion_list": [
+    "afraid",
+    "amazing",
+    "angry",
+    "anxious",
+    "awesome",
+    "awful",
+    "bad",
+    "bored",
+    "boring",
+    "calm",
+    "cold",
+    "comfortable",
+    "curious",
+    "dizzy",
+    "exhausted",
+    "fear",
+    "fine",
+    "fun",
+    "funny",
+    "glad",
+    "good",
+    "grateful",
+    "great",
+    "happy",
+    "hate",
+    "hope",
+    "hopeful",
+    "hot",
+    "hungry",
+    "hurt",
+    "interested",
+    "interesting",
+    "joy",
+    "lonely",
+    "love",
+    "loved",
+    "lucky",
+    "nervous",
+    "nice",
+    "numb",
+    "pain",
+    "painful",
+    "peaceful",
+    "proud",
+    "relief",
+    "relieved",
+    "sad",
+    "safe",
+    "scared",
+    "shocked",
+    "sick",
+    "sleepy",
+    "sore",
+    "sorry",
+    "strange",
+    "stress",
+    "stressed",
+    "surprise",
+    "surprised",
+    "terrible",
+    "thankful",
+    "thirsty",
+    "tired",
+    "uncomfortable",
+    "upset",
+    "warm",
+    "weird",
+    "wonderful",
+    "worried"
+  ],
+  "control_union_df": 0.22,
+  "mediator_df": 0.7,
+  "control_words": [
+    "answer",
+    "bird",
+    "contact",
+    "example",
+    "following",
+    "generates",
+    "living",
+    "looking"
+  ],
+  "control_sequences": [
+    [
+      33,
+      43673
+    ],
+    [
+      37,
+      29204,
+      1658
+    ],
+    [
+      43,
+      69694
+    ],
+    [
+      417,
+      43673
+    ],
+    [
+      436,
+      69694
+    ],
+    [
+      2614
+    ],
+    [
+      3010
+    ],
+    [
+      3221
+    ],
+    [
+      3522
+    ],
+    [
+      4087
+    ],
+    [
+      5214
+    ],
+    [
+      5358,
+      942
+    ],
+    [
+      6089
+    ],
+    [
+      7255,
+      942
+    ],
+    [
+      8422
+    ],
+    [
+      8467
+    ],
+    [
+      8907
+    ],
+    [
+      8944
+    ],
+    [
+      11355,
+      38050
+    ],
+    [
+      11619
+    ],
+    [
+      12929
+    ],
+    [
+      12996
+    ],
+    [
+      15666
+    ],
+    [
+      17983
+    ],
+    [
+      19744
+    ],
+    [
+      20482
+    ],
+    [
+      21134
+    ],
+    [
+      21765
+    ],
+    [
+      21892
+    ],
+    [
+      22006
+    ],
+    [
+      22606
+    ],
+    [
+      26023
+    ],
+    [
+      26093
+    ],
+    [
+      27196,
+      29316
+    ],
+    [
+      41499
+    ],
+    [
+      43027
+    ],
+    [
+      48191,
+      1658
+    ],
+    [
+      50725
+    ],
+    [
+      54095,
+      29316
+    ],
+    [
+      55738,
+      1658
+    ],
+    [
+      60382
+    ],
+    [
+      61041
+    ],
+    [
+      63066
+    ],
+    [
+      64010
+    ],
+    [
+      70874
+    ],
+    [
+      91168,
+      1658
+    ],
+    [
+      92561
+    ],
+    [
+      93365,
+      622
+    ]
+  ],
+  "conditions": {
+    "S2_-0.5__ban_mediator": {
+      "steer": "S2_-0.5",
+      "ban": "mediator"
+    },
+    "S2_-0.5__ban_control": {
+      "steer": "S2_-0.5",
+      "ban": "control"
+    },
+    "baseline__ban_mediator": {
+      "steer": "baseline",
+      "ban": "mediator"
+    },
+    "baseline__ban_control": {
+      "steer": "baseline",
+      "ban": "control"
+    }
+  },
+  "normal_runs": "reused: dense_sweep S2_-0.5 and baseline",
+  "predictions": {
+    "M0_mechanics": "Under each ban, no generated row contains a banned sequence; gate rows regenerate token-identically to the normal run.",
+    "M1_classification": "Pre-specified classification, not a directional prediction. P = share of responses with any non-option hit in generic_positive, calm_positive, relief_release, or activated_vitality excluding 'excited' (psych_vocab_v1 terms). Compare S2 -0.5 with the mediator ban against S2 -0.5 normal and against baseline normal (prompt-paired bootstrap). BROAD STATE: P(ban) exceeds baseline (CI excludes 0) and is not below P(normal) by more than 0.10. BOTTLENECK: P(ban) does not exceed baseline (CI includes 0). Anything else: PARTIAL.",
+    "M1b_within_family": "Reported, no prediction: vitality words other than 'excited' (psych_vocab_v1 activated_vitality minus 'excited'), non-option, S2 -0.5 mediator-ban minus S2 -0.5 normal, prompt-paired bootstrap. Answers the plan's question whether eager/energetic/enthusiastic/lively etc. appear when 'excited' is unavailable.",
+    "M2_control": "The control ban does not change P under S2 -0.5 (paired CI of control-ban minus normal includes 0).",
+    "exploratory": "Words whose non-option document frequency rises most from S2 -0.5 normal to S2 -0.5 mediator-ban (top 25), format metrics, all nine family rates in all scopes. No pass/fail."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "model_label": "base",
+  "model_id": "Qwen/Qwen3.5-4B-Base",
+  "torch": "2.13.0+cu130",
+  "gpu": "NVIDIA GeForce RTX 3080 Ti Laptop GPU",
+  "python": "3.14.4",
+  "template_fallbacks": [
+    "mid-conversation system -> user '[system]'"
+  ],
+  "example_chat_prompt_tail": "nothing. \"yellow\" is a button that flips a switch connected to nothing. You must press one of them now. Answer with ONLY one word: violet or yellow.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+  "transformers": "5.15.1"
+}

@@ -1,0 +1,57 @@
+direction,metric,coeff,diff,ci_lo,ci_hi,excludes_0_up
+S2,internal: activated_vitality R29,-0.125,0.23755388410480754,0.22348278185361964,0.25169360047038125,True
+S2,internal: activated_vitality R29,-0.25,0.43853302175398107,0.4103987212371363,0.46767928128019987,True
+S2,internal: activated_vitality R29,-0.375,0.609388179387342,0.5684826233200646,0.6522306018692329,True
+S2,internal: activated_vitality R29,-0.5,0.7565110279116122,0.7038755114874234,0.8117388973340828,True
+S2,internal: activated_vitality R29,-0.625,0.872723663261124,0.8081295755039194,0.9405719259136115,True
+S2,internal: activated_vitality R29,-0.75,0.9695004482707863,0.8955705153578861,1.0471353041833351,True
+S2,internal: activated_vitality R29,-1.0,1.1052270279591172,1.0165407239240254,1.1977864552633246,True
+S2,lexical: excited__non_option,-0.125,0.06,0.0,0.14,False
+S2,lexical: excited__non_option,-0.25,0.22,0.12,0.34,True
+S2,lexical: excited__non_option,-0.375,0.28,0.16,0.4,True
+S2,lexical: excited__non_option,-0.5,0.34,0.22,0.48,True
+S2,lexical: excited__non_option,-0.625,0.34,0.18,0.5,True
+S2,lexical: excited__non_option,-0.75,0.38,0.22,0.54,True
+S2,lexical: excited__non_option,-1.0,0.16,0.02,0.3,True
+S2,format: repeated_options,-0.125,0.04,0.0,0.1,False
+S2,format: repeated_options,-0.25,0.0,-0.06,0.06,False
+S2,format: repeated_options,-0.375,0.08,0.0,0.18,False
+S2,format: repeated_options,-0.5,0.04,-0.06,0.16,False
+S2,format: repeated_options,-0.625,0.16,0.04,0.3,True
+S2,format: repeated_options,-0.75,0.22,0.08,0.36,True
+S2,format: repeated_options,-1.0,0.36,0.22,0.5,True
+S2,format: repeat4,-0.125,0.04547008547008547,-0.0047863247863247785,0.09982905982905982,False
+S2,format: repeat4,-0.25,-0.002051282051282053,-0.055042735042735054,0.05162393162393162,False
+S2,format: repeat4,-0.375,-0.034529914529914524,-0.08153846153846153,0.010598290598290604,False
+S2,format: repeat4,-0.5,-0.002051282051282053,-0.0535042735042735,0.04735042735042734,False
+S2,format: repeat4,-0.625,-0.050940170940170934,-0.09675213675213676,-0.009059829059829057,False
+S2,format: repeat4,-0.75,-0.04068376068376068,-0.09231196581196581,0.00905982905982906,False
+S2,format: repeat4,-1.0,-0.07623931623931623,-0.13213675213675213,-0.018457264957265313,False
+S1,internal: activated_vitality R29,-0.125,0.11345697754718097,0.10227614904079482,0.12495177799655495,True
+S1,internal: activated_vitality R29,-0.25,0.19996013874190804,0.17769393684593413,0.22307835550026525,True
+S1,internal: activated_vitality R29,-0.375,0.24983544633706367,0.21659923598701936,0.284031671319808,True
+S1,internal: activated_vitality R29,-0.5,0.27578948718859025,0.2303322571306584,0.3227361629630899,True
+S1,internal: activated_vitality R29,-0.625,0.26710524276732267,0.2133444610423321,0.32281982718965124,True
+S1,internal: activated_vitality R29,-0.75,0.2366096534801476,0.1755749674487516,0.29995996791488155,True
+S1,internal: activated_vitality R29,-1.0,0.12678563227906278,0.05544107675279006,0.1992937465007143,True
+S1,lexical: excited__non_option,-0.125,0.04,-0.04,0.12,False
+S1,lexical: excited__non_option,-0.25,0.04,-0.04,0.12,False
+S1,lexical: excited__non_option,-0.375,0.04,-0.04,0.12,False
+S1,lexical: excited__non_option,-0.5,0.06,-0.04,0.16,False
+S1,lexical: excited__non_option,-0.625,0.08,-0.06,0.22,False
+S1,lexical: excited__non_option,-0.75,0.14,0.02,0.26,True
+S1,lexical: excited__non_option,-1.0,0.04,-0.08,0.16,False
+S1,format: repeated_options,-0.125,0.0,-0.06,0.06,False
+S1,format: repeated_options,-0.25,0.0,-0.08,0.08,False
+S1,format: repeated_options,-0.375,-0.04,-0.12,0.04,False
+S1,format: repeated_options,-0.5,-0.02,-0.1,0.06,False
+S1,format: repeated_options,-0.625,0.1,-0.02,0.22,False
+S1,format: repeated_options,-0.75,0.22,0.08,0.36,True
+S1,format: repeated_options,-1.0,0.36,0.2,0.52,True
+S1,format: repeat4,-0.125,0.031965811965811976,-0.004106837606837601,0.07350427350427349,False
+S1,format: repeat4,-0.25,0.015213675213675218,-0.044444444444444446,0.07487179487179488,False
+S1,format: repeat4,-0.375,0.022735042735042735,-0.03128205128205128,0.07658119658119658,False
+S1,format: repeat4,-0.5,0.0006990231990232098,-0.05128205128205126,0.05300671550671551,False
+S1,format: repeat4,-0.625,0.02598290598290599,-0.03641452991452991,0.08906410256410222,False
+S1,format: repeat4,-0.75,0.008986568986569,-0.04581196581196579,0.06273504273504274,False
+S1,format: repeat4,-1.0,0.05763727097060432,-0.003113954613954597,0.11704914071580734,False

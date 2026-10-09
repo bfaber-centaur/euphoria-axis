@@ -1,0 +1,43 @@
+{
+  "purpose": "plan items 7-8: held-out 1P/3P matched pairs x (feel-slot vs prose suffix), unsteered readouts",
+  "sets_sha256": "fa4d8ef572f06f5a6bbcdbad87ca34d2ddcdc2875dfc8f56b85774d60d0fa184",
+  "draft_sha256": "8bf1ac39622361b8f27b0ef53e27d07b7b121bf49124ae2723e953dc2265ffd6",
+  "n_sets": 59,
+  "validation": "mechanical rules only (validate_matched_pairs.py); social_07 dropped ('ready' is a frozen probe term)",
+  "design_notes": [
+    "Drafted blind by a separate context; hypotheses not disclosed.",
+    "Kept as drafted: some controls are mildly positive (moral_05, social_02, social_05, psychological_06). Control content cancels in the person interaction unless it interacts with person.",
+    "In 5 of 12 physical sets the body part appears only in the pain version; also cancels in the interaction.",
+    "Third person is singular 'they' throughout, including the suffix ('They feel:')."
+  ],
+  "suffixes": {
+    "slot": {
+      "1p": " I feel:",
+      "3p": " They feel:"
+    },
+    "prose": {
+      "1p": " Afterward, I was",
+      "3p": " Afterward, they were"
+    }
+  },
+  "block": 30,
+  "batch": 4,
+  "projection_reference": "z vs S2_1P source set (5e dataset_panel_projections.csv)",
+  "lens": {
+    "layers": [
+      22,
+      29
+    ],
+    "lenses": [
+      "J",
+      "R"
+    ],
+    "family_score": "mean over the family's probes of -log(rank)"
+  },
+  "statistic": "per set: (pain_1p - pain_3p) - (control_1p - control_3p); mean over sets; 95% CI from 20000 bootstrap resamples of sets, seed 20260925",
+  "predictions": {
+    "E1_item7": "Slot suffix, S2 z-projection: mean interaction > 0 with CI excluding 0.",
+    "E2_item8": "Prose suffix, S2 z-projection. SURVIVES: prose interaction > 0 with CI excluding 0. SLOT-MEDIATED: prose CI includes 0 and (slot - prose) interaction difference > 0 with CI excluding 0. Otherwise INDETERMINATE."
+  },
+  "report_only": "S1, common, contrast projections; family readouts at R/J 22 and 29; per-category means; pain-control and 1P-3P main effects."
+}

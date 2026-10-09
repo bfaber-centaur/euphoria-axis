@@ -1,0 +1,18 @@
+{
+  "vocab_sha256": "fa4feb2d06d4154b6538702b57a4f37238d8f1e665f12d39f3b4d0254c281475",
+  "gen_gate_prompts": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "gen_identical": "15/15",
+  "gen_first_divergences": [],
+  "lens_gate_prompts": [
+    0,
+    1
+  ],
+  "lens_rank_identical_frac": 1.0,
+  "lens_max_abs_logit_diff": 7.502679033599691e-17
+}

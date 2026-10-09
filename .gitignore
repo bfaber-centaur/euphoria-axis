@@ -9,3 +9,7 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
+# Bulky derived artifacts: hashed in runs/**/bulky_artifacts_manifest.json, backed up with rclone.
+runs/**/*.npz
+runs/**/lens_readout/all50_psych_vocab_ranks.csv
+runs/**/lens_readout/all50_top50.csv

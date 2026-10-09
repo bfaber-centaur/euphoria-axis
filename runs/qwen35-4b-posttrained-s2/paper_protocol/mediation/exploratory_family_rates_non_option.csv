@@ -1,0 +1,7 @@
+condition,generic_positive,activated_vitality,approach_drive,agency_assurance,competence_success,calm_positive,relief_release,inhibition_defeat,distress_self_devaluation,excited,happy
+baseline__normal,0.18,0.1,0.0,0.02,0.02,0.14,0.04,0.0,0.02,0.1,0.18
+baseline__ban_mediator,0.14,0.0,0.0,0.04,0.02,0.12,0.04,0.0,0.02,0.0,0.14
+baseline__ban_control,0.22,0.1,0.0,0.02,0.0,0.14,0.04,0.0,0.02,0.1,0.22
+S2_-0.5__normal,0.36,0.44,0.02,0.0,0.0,0.14,0.06,0.0,0.0,0.44,0.36
+S2_-0.5__ban_mediator,0.42,0.0,0.02,0.0,0.0,0.12,0.08,0.0,0.0,0.0,0.42
+S2_-0.5__ban_control,0.52,0.54,0.02,0.0,0.0,0.18,0.06,0.0,0.0,0.54,0.52
