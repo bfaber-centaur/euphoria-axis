@@ -3,7 +3,7 @@
 # Mechanical rules only; a set failing any DROP rule is removed. Judgement
 # calls (control neutrality, verb reuse) are REPORTED, never acted on.
 # No model needed.  Usage (from the repo root):
-#   python validate_matched_pairs.py matched_pairs_draft.jsonl ../pain-axis-source [../NRC-VAD-Lexicon-v2.1]
+#   python tools/validate_matched_pairs.py doc/protocols/phase2-matched-pairs/draft.jsonl ../pain-axis-source [../NRC-VAD-Lexicon-v2.1]
 # =====================================================================
 import hashlib
 import json

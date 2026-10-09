@@ -169,7 +169,7 @@ Avoid overinterpreting category means before matched contrasts are in place.
 
 # Phase 4 — Persona / task-mode control
 
-Use `doc/draft/persona-control.md`.
+Use `doc/plan/persona-control.md`.
 
 Construct a broad:
 
