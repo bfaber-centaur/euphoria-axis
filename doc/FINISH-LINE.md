@@ -7,6 +7,11 @@
 Revisions on 2026-10-09 are marked **[added 2026-10-09]**: an updated
 evidence inventory, a lens-calibration gate (Gate L), a reproduction gate on
 a paper model (Gate 2a), and decisions frozen ahead of Gates 1-3.
+A second revision the same day is marked **[rev 3]**: Gate L narrowed to
+validation of the published lenses (L0 done), hardware assignments, a 14B
+lens fit in Gate 2a, and the O-Lens appendix comparison. **[rev 4]**: an
+optional J++ readout panel for Qwen3.6-27B in Gate 3. **[rev 5]**: O-Lens
+attribution and the published 27B O-Lens's read contract in Gate 4.
 
 ## Mission
 
@@ -51,7 +56,7 @@ The intended deliverables are a technical PDF, reproducible evidence in the repo
 ### Incomplete or not yet established
 
 - Post-trained 4B button viability (frozen run, not yet executed) and any behavioral result.
-- Lens calibration (Gate L).
+- Lens calibration (Gate L): L0 done; refits pending. **[rev 3]**
 - Reproduction on a paper model (Gate 2a).
 - Qwen3.5-27B and Qwen3.6-27B generalization.
 - O-Lens exploratory panel.
@@ -69,7 +74,7 @@ Actions:
 
 - [ ] Build a results inventory linking every proposed claim to its experiment, specification, data, figure, and limitations.
 - [ ] Separate source-method transfer, exploratory extensions, and prospectively tested findings. **[added]** Prospectively tested so far: D1-D4, C1-C5, M0-M2, V1-V2, P1-P3, E1-E2 (with failures recorded as failures). Exploratory: plane sweep, 5e-5g reading side.
-- [ ] Confirm the exact 4B extraction and steering conventions: dataset hashes, model revisions, layer indices, hook positions, normalization, coefficients, tokenizer, and prompt formats. **[added]** Include: every condition injects the negative of its named direction; the source repo pin (`8d1649c0`, plus content hashes of files read); lens provenance (source repo, file hash, `provenance.config_json`) for every lens used.
+- [ ] Confirm the exact 4B extraction and steering conventions: dataset hashes, model revisions, layer indices, hook positions, normalization, coefficients, tokenizer, and prompt formats. **[added]** Include: every condition injects the negative of its named direction; the source repo pin (`8d1649c0`, plus content hashes of files read); lens provenance (source repo, file hash, `provenance.config_json`) for every lens used. **[rev 3]** Published 4B lenses: J `8ac16d8e…`, R `848b9b8e…` (`workspace-lenses` at `d740106d`, `jacobian-lens` at `581d3986`; full hashes in `lens_calibration/l0_published_lens_provenance.json`).
 - [ ] Record which candidate predictions passed, failed, or remain unresolved.
 - [ ] Verify that `psych_vocab_v1` and its psychological references are documented; retain its original definition.
 - [x] **[added]** Fresh 1P/3P confirmation: done (E1 pass, E2 slot-mediated).
@@ -84,33 +89,43 @@ Reopen a completed analysis only for an identified implementation defect or a co
 
 ---
 
-## Gate L — Lens calibration **[added 2026-10-09]**
+## Gate L — Lens calibration **[added 2026-10-09; rev 3]**
 
-**Goal:** Know how much to trust the published R/J lenses that every lens-based claim relies on, and whether we can fit recipe-matched lenses ourselves.
+**Goal:** Confirm that our pipeline reproduces the published R/J lenses that every lens-based claim relies on. This is validation, not tuning: published pairs stay in use for Qwen3.5-4B, Qwen3.5-27B and Qwen3.6-27B unless the refit shows a significant discrepancy.
 
-Context: all lenses used come from `camilablank/workspace-lenses`, which ships recipe-matched J/R pairs (target layer n_layers - 2, skip_first 4, n = 25 pile-10k prompts) for Qwen3.5-4B, Qwen3.5-27B and Qwen3.6-27B. Whether n = 25 is adequate for our readouts is unknown. Runs on the current 16 GB GPU (4B only).
+**L0 (done).** Published 4B pair inspected (`lens_calibration/l0_published_lens_provenance.json`):
+
+- Lens repos at the commits recorded when the readouts were made, working trees clean, so the files on disk are the ones all results used. J `8ac16d8e…`, R `848b9b8e…`.
+- Recipe from the files' own provenance: first 25 `NeelNanda/pile-10k` documents in order (`docs_consumed` = 25), `t_max` 128, `skip_first` 4, target layer 30, uniform weighting, raw pretraining text. R rules: LN, identity, half (beta 0.5); QK norms and gated norms excluded.
+- Fitting code was a fork (`git_commit: "modal"`); the pinned `jlens` has the standard estimator only, so R needs our own RelP implementation. BOS handling during fitting is not recorded.
+- J vs R per-layer Frobenius cosine rises from 0.69 (layer 0) to 0.996 (layer 29). Consequence for claims: family readouts at layer 29 barely depend on J vs R; early/mid-layer claims (the relief lead at layers 16-18, the leave-one-term-out crossover) are the lens-sensitive ones and are flagged as such.
 
 Actions:
 
-- [ ] Record provenance of the published 4B pair (file hashes, `provenance.config_json`).
-- [ ] **L1 refit:** fit a 4B J/R pair with the published configuration (official `jlens.fit`; R-lens via the three RelP backward rules: RMSNorm rsqrt detached, SiLU sigmoid detached, SwiGLU product half-detached; forward values unchanged).
-- [ ] **L2 convergence:** fit the same recipe at n = 100 (n = 200 if cheap).
-- [ ] Compare on our own instruments, not only generic ones: frozen family log-rank gains at layer 29 for the plane-sweep S2 -0.5 and S1 -0.5 conditions; per-probe rank correlation; sign agreement on the focus families. Add the reference repo's lens-eval readability for n = 25, n = 100 and the logit lens.
+- [ ] **L1a J refit:** official `jlens.fit` with the published recipe (`skip_first=4` set explicitly; the library default is 16). Fit with `force_bos=True`, then `False` if needed; the matching setting answers the BOS question.
+- [ ] **L1b R refit:** our RelP implementation, configured exactly as the published config. Only after L1a passes.
+- [ ] **L2 (optional):** one J fit at n = 100, as a stability measurement of layer-29 readouts, not tuning.
 
 Pass criteria (set before fitting):
 
-- **L1 pass:** refit matches the published pair (per-layer Frobenius cosine >= 0.99 if the 25 documents can be reproduced exactly; otherwise readout agreement: per-probe Spearman >= 0.95 at layer 29 and identical signs on the six focus families).
-- **L2 pass:** n = 25 and n = 100 readouts agree (per-probe Spearman >= 0.95 at layer 29, identical focus-family signs).
+- **L1 matrix bar, per layer l < 30:** 1 - cos(refit, published lens of the same type) < 1 - cos(published J, published R). The refit must sit closer to its own published lens than the two published types sit to each other (distance below about 0.004 at layer 29, below about 0.31 at layer 0).
+- **L1 readout bar:** frozen family log-rank gains for the plane-sweep S2 -0.5 and S1 -0.5 conditions at layer 29: per-probe Spearman >= 0.95 against the published lens, identical signs on the six focus families.
+- **L2:** n = 25 and n = 100 readouts agree at layer 29 (per-probe Spearman >= 0.95, identical focus-family signs).
 
 Outcomes:
 
-- **L1 and L2 pass:** published lenses are adequate for our claims; say so in Methods with the numbers. Use published pairs for Gates 2-3.
-- **L1 fails:** stop lens work; keep using published pairs, recorded by hash; note that we could not reproduce the fitting.
-- **L1 passes, L2 fails:** report as a limitation. Fit higher-n recipe-matched pairs for every model in Gates 2-3 only if time allows; within-lens comparisons stand either way.
+- **L1 passes:** published lenses trusted; Methods reports the numbers.
+- **L1 fails:** stop lens work; keep published pairs, recorded by hash; report that the fitting could not be reproduced.
+- **L2 fails (if run):** report as a limitation; within-lens comparisons stand.
 
-**Time box:** two working days including code.
+Hardware and environment:
 
-**Stop:** No recipe research, no lens-quality optimization, no new lens methods. A reusable refit pipeline with calibration tables across models goes to FUTURE-WORK.
+- RunPod A40 (48 GB). The local 16 GB card overflowed VRAM into shared system memory (now disabled with "Prefer No Sysmem Fallback") and is not used for fitting.
+- Before a full fit, run one document on the pod and confirm Qwen3.5's linear-attention fast path loads and supports the backward pass.
+- Pin `jlens` at `581d3986`; record torch and transformers versions in each fit's JSON. Hugging Face cache, checkpoints and outputs on a network volume; resume tested before relying on it.
+- Fitted `.pt` files are not committed (`runs/**/lens_calibration/*.pt` in `.gitignore`); they go in the bulky manifest by sha256. Small JSON results are committed.
+
+**Stop:** No recipe research, no lens-quality optimization, no new lens methods, no Qwen3.5 lens refits beyond L1/L2. A reusable refit pipeline with calibration tables across models goes to FUTURE-WORK.
 
 ---
 
@@ -155,14 +170,18 @@ Actions:
 - [ ] **R1 extraction:** run the paper's extraction at layer 31. Pass: cosine with the released vector >= 0.99; AUC table within +/- 0.01 of the published values (S2_1P 0.985, S1_1P 0.933, S1_3P 0.791 at final token).
 - [ ] **R2 steering:** rerun the S2 ladder at layer 20 with the paper's coefficients and decoding. Report exact-match rate, first-divergence positions, and the paper's own keyword metrics on our outputs. The phenomenon, not the bytes, is the target.
 - [ ] **R3 self/other screen:** optional, if the harness is loaded.
+- [ ] **[rev 3] 14B lens pair, only after L1 passes:** fit J and R for `Qwen/Qwen3-14B-Base` with the same recipe (first 25 pile-10k documents, `t_max` 128, `skip_first` 4, target layer n_layers - 2 = 38), RelP rules mirroring the 4B config (LN rule on block norms; QK norms excluded; Qwen3 has no gated norms). Base model, not instruct. Provenance recorded like the published pairs. Purpose: R/J readouts on a model the paper studied, bridging reproduction and extension.
+- [ ] **[rev 3] R4, optional and exploratory:** frozen family readouts (layer 37) on the reproduced S2 ladder, with the new 14B pair.
 
 **Gate passes when:** R1 and R2 are complete with the numbers reported, matching or not.
 
-**Stop:** No lens fitting for 14B unless Gate L passed and time remains; no extension experiments on 14B.
+**Stop:** No extension experiments on 14B beyond R4. If the 14B lens fit fails, R4 is dropped and the reproduction stands alone.
+
+Hardware: RunPod A100/H100 (80 GB). The drift check runs on this machine first.
 
 ---
 
-## Gate 2 — Qwen3.5-27B quick generalization
+## Gate 2 — Qwen3.5-27B generalization
 
 **Goal:** Test whether the most informative 4B observations survive increased scale within the Qwen3.5 family.
 
@@ -171,7 +190,7 @@ Freeze the test battery before running.
 **[added 2026-10-09] Frozen decisions for Gates 2 and 3:**
 
 - **Layers:** same relative depth as 4B for both 27B models; no per-model tuning. 4B has 32 blocks (extraction 30, injection 16, family readout 29); 27B has 64 (extraction 62, injection 32, family readout 61). Cross-validated best-layer AUC is reported as a sensitivity check only.
-- **Readout:** R lens primary, using the recipe-matched workspace-lenses pairs for all three models (J lens alongside; plain logit lens as a model-agnostic sanity check). Lens files recorded by hash.
+- **Readout:** R lens primary, using the recipe-matched workspace-lenses pairs for all three models (J lens alongside; plain logit lens as a model-agnostic sanity check). Lens files recorded by hash. **[rev 3]** No Qwen3.5 lens refits unless Gate L finds a significant discrepancy.
 - **Dose:** the paper's own `ratio` convention (steering norm relative to residual norm at the injection layer), computed for 4B and applied at 27B.
 
 Minimum battery:
@@ -193,7 +212,7 @@ Use the same prompt families and analysis definitions as 4B wherever valid. Reco
 
 ---
 
-## Gate 3 — Qwen3.6-27B quick generalization
+## Gate 3 — Qwen3.6-27B generalization
 
 **Goal:** Test the stability of the same observations across a model-version change.
 
@@ -202,6 +221,12 @@ Use the same prompt families and analysis definitions as 4B wherever valid. Reco
 - [ ] Run the same compact extraction, projection, read-slot, and signed-steering battery.
 - [ ] Compare effect sizes and qualitative behavior, not just whether an effect is statistically detectable.
 - [ ] Preserve disagreements, failures, and model-specific artifacts.
+- [ ] **[rev 4] Optional J++ readout panel (exploratory).** The J++ Lens (Ayonrinde & Lindsey, 2026; released lenses at `koayon/jpp-lenses`, fitted on Qwen3.6-27B) reports its largest gains over the J- and R-Lens at early layers, which is where our lens-sensitive claims sit.
+  - Goal: read the frozen family probes with J++ for the same conditions as the R/J readouts, across layers, with particular attention to early layers.
+  - Method: use the released lenses and the authors' readout code (no reimplementation of the routing). Pin the release by file hash and repo commit.
+  - Caveat to measure, not assume away: J++ routes each position to one of several expert Jacobians per layer, so a steered activation can land in a different expert than its baseline. Report the expert assignment per condition and layer alongside the gains.
+  - Pass: the panel exists next to the R and J readouts, with expert assignments reported.
+  - Outcomes: agreement or disagreement with R/J, reported layer by layer. Not recipe-matched with the R/J pairs; no claim rests on J++ alone.
 
 **Gate passes when:** A direct comparison with Qwen3.5-27B is possible, or its limitations are explicitly documented.
 
@@ -226,6 +251,14 @@ If practical:
 - [ ] Record raw O-Lens verbalizations and compare them with available R/J readouts.
 - [ ] Report conspicuous disagreements and failures, not only compelling phrases.
 - [ ] Label the section exploratory throughout.
+- [ ] **[rev 3] Cross-scale pairing:** our 4B O-Lens (trained following Agam Bhatia and Camila Blank's published recipe) next to the published Qwen3.6-27B O-Lens (`agu18dec/olens_and_ar`, adapter `olens_s3d_rl600`, with its matched reconstructor `ar_ptag_pooled`), on the same preselected examples. Qualitative comparison only; differences cannot be attributed to scale alone.
+- [ ] **[rev 5] Read contract, taken whole:** for the 27B O-Lens, the `concepts_raw` verbalizer prompt, `unit` transform, alpha 16000, and the injection marker found by the documented scan (not hardcoded); for our 4B O-Lens, its own training contract. Capture activations with the adapter disabled. Mixing contracts is a different experiment, not a noisier one.
+- [ ] **[rev 5] In-contract layers only:** the 27B O-Lens was trained on layers 20-60 in steps of 4. Read examples at in-band layers (e.g. 32, 44, 60), not at our extraction (62) or family-readout (61) layers. Its reconstructor's FVE rises with depth (0.12 at layer 20, 0.34 at 60); weigh shallow reads accordingly.
+- [ ] **[rev 5] No FVE comparison across reconstructors:** FVE is only meaningful on the reconstructor a lens was trained against.
+- [ ] **[rev 5] Code availability:** the published reading example imports a `global_workspace` package; confirm it is installable, otherwise reimplement the contract exactly and check it against the card's documented behaviour before reading any example.
+- [ ] **[rev 3] Recipe-diff table:** every documented training setting of the published recipe next to what our 4B run actually used, each row marked matched / differs (why) / unknown. Written from the published recipe documentation and our training records and configs, not from memory. Pay particular attention to shared datasets used differently.
+- [ ] **[rev 3] Provenance:** source, file hash and training provenance for both O-Lens checkpoints, as for the J/R lenses. **[rev 5]** Pin `olens_s3d_rl600` by file hash: the card notes later RL branches may supersede it.
+- [ ] **[rev 3] Lineage:** name the method by its implementation (link); make no claims about its relationship to Anthropic's oracle-lens proposal.
 
 **Gate passes when:** A small, honestly presented panel exists—or the section is omitted.
 
@@ -239,7 +272,7 @@ Those questions belong to the next O-Lens project, using Qwen3.5-4B and Qwen3.6-
 
 **Goal:** Produce a self-contained PDF explaining what was done, what was found, and what remains uncertain.
 
-Start the report skeleton before the 27B experiments finish. Insert frozen results as they arrive.
+The report skeleton can start alongside the 27B experiments; insert frozen results as they arrive.
 
 Proposed structure:
 
@@ -302,11 +335,12 @@ Each reported result must have a reproducible input, analysis, and artifact loca
 
 ---
 
-## Order of work **[added 2026-10-09]**
+## Order of work **[added 2026-10-09; rev 3]**
 
-1. Current GPU (16 GB): Gate 0 (writing) in parallel with Gate L (4B lens fits), then Gate 1 (post-trained buttons).
-2. New hardware: machine-drift check, Gate 2a (Qwen3-14B base), Gate 2, Gate 3.
-3. Gate 4 if practical; Gate 5 skeleton starts during step 2; Gate 6 after author comments.
+1. Local GPU (16 GB, sysmem fallback disabled): Gate 0 (writing), then Gate 1 (post-trained buttons).
+2. RunPod A40, in parallel with step 1: Gate L (L1a, L1b, optional L2).
+3. RunPod A100/H100 (80 GB): drift check, Gate 2a (including the 14B lens pair after L1 passes), Gate 2, Gate 3, Gate 4 (published Qwen3.6-27B O-Lens).
+4. Gate 5 skeleton starts during step 3; Gate 6 after author comments.
 
 ## Global stopping rules
 
@@ -318,7 +352,7 @@ Each reported result must have a reproducible input, analysis, and artifact loca
 6. **No compulsory O-Lens work.** The O-Lens causal-validation project begins after this report.
 7. **No full-paper reproduction requirement.** This project succeeds by producing novel, carefully characterized observations, not matching the original team's scope.
 8. **Publication is the finish line.** New questions go into a follow-up document, not into the active critical path.
-9. **[added] Every detour is gated and time-boxed.** A new branch enters this file with a goal, pass criteria, outcomes, and a time box before any work on it starts.
+9. **[added] Every detour is gated.** A new branch enters this file with a goal, pass criteria, and outcomes before any work on it starts.
 
 ## Final handoff
 
@@ -329,7 +363,7 @@ On completion, the repository should contain:
 - A short results/claims index linking findings to artifacts.
 - Stable analysis code, frozen configurations, and plot source data.
 - `doc/writeup/dont-call-it-pain.md` — LW text.
-- A short `FUTURE-WORK.md` or equivalent capturing deferred research, especially O-Lens causal validation **[added]** and a reusable lens-refit pipeline with calibration tables across models.
+- A short `FUTURE-WORK.md` or equivalent capturing deferred research, especially O-Lens causal validation **[added]** and a reusable lens-refit pipeline with calibration tables across models. **[rev 3]** Also: how the O-Lens recipe relates to Anthropic's oracle-lens proposal.
 
 **Definition of done:** We have contributed a bounded, reproducible, intellectually useful extension of the Pain Axis research, explained its limitations, published the findings, and cleanly handed the remaining questions to future work.
 
