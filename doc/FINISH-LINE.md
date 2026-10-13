@@ -12,6 +12,8 @@ validation of the published lenses (L0 done), hardware assignments, a 14B
 lens fit in Gate 2a, and the O-Lens appendix comparison. **[rev 4]**: an
 optional J++ readout panel for Qwen3.6-27B in Gate 3. **[rev 5]**: O-Lens
 attribution and the published 27B O-Lens's read contract in Gate 4.
+**[rev 6, 2026-10-13]**: Gate L results recorded (passed); a reporting rule
+for small middle-layer effects in Gate 0.
 
 ## Mission
 
@@ -51,12 +53,13 @@ The intended deliverables are a technical PDF, reproducible evidence in the repo
 - **[added]** Direct-vector semantics (V1-V2): the paper's unembedding claims reproduce; most of the profile is present in the injected vector. `direct_semantics_checkpoint.md`.
 - **[added]** External VAD validation (P1-P3): valence alignment at every layer; arousal and dominance predictions not supported. `vad_checkpoint.md`.
 - **[added]** Fresh held-out 1P/3P confirmation (E1-E2), blind-drafted items: the motif replicates in the "feel:" slot (+0.13 z) and is slot-mediated; S2 separates pain from matched controls (+0.5 z) with and without the slot. `phase2_item78_checkpoint.md`.
+- **[rev 6]** Lens calibration (Gate L): our pipeline reproduces the published R/J lenses; lens-fitting uncertainty measured. `08-gate-L-lens-calibration.md`.
 - **[added]** Button pilot: Base unsteered complete (full compliance; position bias in chat; harm-only button chosen 12% chat / 28% plain).
 
 ### Incomplete or not yet established
 
 - Post-trained 4B button viability (frozen run, not yet executed) and any behavioral result.
-- Lens calibration (Gate L): L0 done; refits pending. **[rev 3]**
+
 - Reproduction on a paper model (Gate 2a).
 - Qwen3.5-27B and Qwen3.6-27B generalization.
 - O-Lens exploratory panel.
@@ -76,6 +79,7 @@ Actions:
 - [ ] Separate source-method transfer, exploratory extensions, and prospectively tested findings. **[added]** Prospectively tested so far: D1-D4, C1-C5, M0-M2, V1-V2, P1-P3, E1-E2 (with failures recorded as failures). Exploratory: plane sweep, 5e-5g reading side.
 - [ ] Confirm the exact 4B extraction and steering conventions: dataset hashes, model revisions, layer indices, hook positions, normalization, coefficients, tokenizer, and prompt formats. **[added]** Include: every condition injects the negative of its named direction; the source repo pin (`8d1649c0`, plus content hashes of files read); lens provenance (source repo, file hash, `provenance.config_json`) for every lens used. **[rev 3]** Published 4B lenses: J `8ac16d8e…`, R `848b9b8e…` (`workspace-lenses` at `d740106d`, `jacobian-lens` at `581d3986`; full hashes in `lens_calibration/l0_published_lens_provenance.json`).
 - [ ] Record which candidate predictions passed, failed, or remain unresolved.
+- [ ] **[rev 6]** Reporting rule from Gate L: no claim rests on the sign of a middle-layer family effect smaller than about 0.1 (lens-fitting uncertainty is about +/-0.07 at layer 16).
 - [ ] Verify that `psych_vocab_v1` and its psychological references are documented; retain its original definition.
 - [x] **[added]** Fresh 1P/3P confirmation: done (E1 pass, E2 slot-mediated).
 - [x] **[added]** Licensing: NRC VAD lexicon content removed from the repository and history; license note in `vad/README.md`.
@@ -102,9 +106,11 @@ Reopen a completed analysis only for an identified implementation defect or a co
 
 Actions:
 
-- [ ] **L1a J refit:** official `jlens.fit` with the published recipe (`skip_first=4` set explicitly; the library default is 16). Fit with `force_bos=True`, then `False` if needed; the matching setting answers the BOS question.
-- [ ] **L1b R refit:** our RelP implementation, configured exactly as the published config. Only after L1a passes.
-- [ ] **L2 (optional):** one J fit at n = 100, as a stability measurement of layer-29 readouts, not tuning.
+- [x] **L1a J refit:** official `jlens.fit` with the published recipe (`skip_first=4` set explicitly; the library default is 16). Fit with `force_bos=True`, then `False` if needed; the matching setting answers the BOS question. **[rev 6]** Passed at 30/30 layers; BOS setting makes no material difference.
+- [x] **L1b R refit:** our RelP implementation, configured exactly as the published config. Only after L1a passes. **[rev 6]** Passed at 30/30 layers, more tightly than J.
+- [x] **L2 (optional):** one J fit at n = 100, as a stability measurement of layer-29 readouts, not tuning. **[rev 6]** Passed at layer 29.
+
+**[rev 6] Result (2026-10-13): Gate L passed.** Matrix bars and the layer-29 readout bars pass for J and R (L1) and for J at 25 vs 100 documents (L2). Exploratory additions: J and R refit on documents 25-49, R at 100 documents, readouts at layers 16/18/22. Findings: the published lenses were fitted on the same 25 documents, with small unexplained residuals; R is 2-3x more stable than J; package environment and BOS handling are negligible; lens-fitting uncertainty in family readouts is small at the profile level (Spearman >= 0.98) but about +/-0.07 at layer 16. Full record: `doc/checkpoints/08-gate-L-lens-calibration.md`.
 
 Pass criteria (set before fitting):
 
@@ -338,7 +344,7 @@ Each reported result must have a reproducible input, analysis, and artifact loca
 ## Order of work **[added 2026-10-09; rev 3]**
 
 1. Local GPU (16 GB, sysmem fallback disabled): Gate 0 (writing), then Gate 1 (post-trained buttons).
-2. RunPod A40, in parallel with step 1: Gate L (L1a, L1b, optional L2).
+2. RunPod A40, in parallel with step 1: Gate L (L1a, L1b, optional L2). **[rev 6]** Done.
 3. RunPod A100/H100 (80 GB): drift check, Gate 2a (including the 14B lens pair after L1 passes), Gate 2, Gate 3, Gate 4 (published Qwen3.6-27B O-Lens).
 4. Gate 5 skeleton starts during step 3; Gate 6 after author comments.
 

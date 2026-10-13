@@ -16,3 +16,10 @@ runs/**/lens_readout/all50_top50.csv
 
 # NRC VAD Lexicon content: non-commercial license, not redistributed. Rebuilt locally by chunk 10a.
 runs/**/vad/vad_single_token_lexicon.csv
+
+# Lens refits and fitting checkpoints (~0.4-0.8 GB each): hashed in the bulky manifest, backed up with rclone
+runs/**/lens_calibration/*.pt
+*.ckpt.pt
+
+# macOS
+.DS_Store
