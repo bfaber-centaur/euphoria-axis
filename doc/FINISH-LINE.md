@@ -163,27 +163,36 @@ If the task is invalid, do not infer that the model lacks a behavioral response 
 
 ---
 
-## Gate 2a — Reproduce on a paper model **[added 2026-10-09]**
+## Gate 2a — Reproduce on a paper model
 
-**Goal:** One direct reproduction check on a model the source paper studied, run first on the new hardware so it doubles as the machine check.
+**Goal:** Reproduce a bounded portion of the source paper
+on an identical checkpoint, establishing an empirical anchor
+for our methodological extensions.
 
-Model: Qwen3-14B base (paper layer 31 for extraction, layer 20 for the S2 steering ladder). About 28 GB in bf16; needs the new hardware.
+**Exact checkpoint:** `Qwen/Qwen3-14B`.
 
-Actions:
+The source labels this model `Qwen_3_14B_base`, but this
+is a results identifier, not the separate
+`Qwen/Qwen3-14B-Base` checkpoint.
 
-- [ ] **Machine drift first:** on the new machine, rerun a small 4B anchor (held-out AUC; plane-sweep baseline and S2 -0.5 lens arrays; a few ladder generations). Tolerances set now: AUC within 0.005; lens ranks >= 99% identical; generations reported with first-divergence position (exact match not required).
-- [ ] Read `v2_controls/scientific_pins.json` and `v2_controls/MANUSCRIPT_DISCREPANCIES.md` in the source repo; freeze the reproduction spec using the authors' settings and code.
-- [ ] **R1 extraction:** run the paper's extraction at layer 31. Pass: cosine with the released vector >= 0.99; AUC table within +/- 0.01 of the published values (S2_1P 0.985, S1_1P 0.933, S1_3P 0.791 at final token).
-- [ ] **R2 steering:** rerun the S2 ladder at layer 20 with the paper's coefficients and decoding. Report exact-match rate, first-divergence positions, and the paper's own keyword metrics on our outputs. The phenomenon, not the bytes, is the target.
-- [ ] **R3 self/other screen:** optional, if the harness is loaded.
-- [ ] **[rev 3] 14B lens pair, only after L1 passes:** fit J and R for `Qwen/Qwen3-14B-Base` with the same recipe (first 25 pile-10k documents, `t_max` 128, `skip_first` 4, target layer n_layers - 2 = 38), RelP rules mirroring the 4B config (LN rule on block norms; QK norms excluded; Qwen3 has no gated norms). Base model, not instruct. Provenance recorded like the published pairs. Purpose: R/J readouts on a model the paper studied, bridging reproduction and extension.
-- [ ] **[rev 3] R4, optional and exploratory:** frozen family readouts (layer 37) on the reproduced S2 ladder, with the new 14B pair.
+**Required:**
+- R1: Source-faithful extraction, AUC, and control checks.
+  Compare in-sample and held-out values separately.
+  Compare vectors if the exact source artifact is available.
+- R2: Source-faithful S2 steering ladder at block 20,
+  with original coefficients and decoding.
 
-**Gate passes when:** R1 and R2 are complete with the numbers reported, matching or not.
+**Optional:**
+- R3: Original 420-scenario self/other screen.
+- R4: Fit J/R lenses on the exact same checkpoint and
+  apply our frozen semantic-family probes. This is an
+  extension, not part of the reproduction.
 
-**Stop:** No extension experiments on 14B beyond R4. If the 14B lens fit fails, R4 is dropped and the reproduction stands alone.
+**Pass:** R1 and R2 completed and compared with published
+results, whether matching or discrepant.
 
-Hardware: RunPod A100/H100 (80 GB). The drift check runs on this machine first.
+**Stop:** No additional 14B experiments beyond the
+specified optional extensions.
 
 ---
 
