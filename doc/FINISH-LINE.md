@@ -13,7 +13,8 @@ lens fit in Gate 2a, and the O-Lens appendix comparison. **[rev 4]**: an
 optional J++ readout panel for Qwen3.6-27B in Gate 3. **[rev 5]**: O-Lens
 attribution and the published 27B O-Lens's read contract in Gate 4.
 **[rev 6, 2026-10-13]**: Gate L results recorded (passed); a reporting rule
-for small middle-layer effects in Gate 0.
+for small middle-layer effects in Gate 0. **[rev 7, 2026-10-13]**: Gate 1
+results recorded (Pass A).
 
 ## Mission
 
@@ -54,11 +55,10 @@ The intended deliverables are a technical PDF, reproducible evidence in the repo
 - **[added]** External VAD validation (P1-P3): valence alignment at every layer; arousal and dominance predictions not supported. `vad_checkpoint.md`.
 - **[added]** Fresh held-out 1P/3P confirmation (E1-E2), blind-drafted items: the motif replicates in the "feel:" slot (+0.13 z) and is slot-mediated; S2 separates pain from matched controls (+0.5 z) with and without the slot. `phase2_item78_checkpoint.md`.
 - **[rev 6]** Lens calibration (Gate L): our pipeline reproduces the published R/J lenses; lens-fitting uncertainty measured. `08-gate-L-lens-calibration.md`.
-- **[added]** Button pilot: Base unsteered complete (full compliance; position bias in chat; harm-only button chosen 12% chat / 28% plain).
+- **[rev 7]** Button task (Gate 1, Pass A): viable for both 4B checkpoints in chat; post-training damages plain-format compliance (B2); at +0.5, S2 does not disrupt harm avoidance (Amendment 1: H1 trivially small, H2 fails); exploratory: S2 shifts relief-seeking in both directions beyond a random control. `09-gate-1-buttons.md`.
 
 ### Incomplete or not yet established
 
-- Post-trained 4B button viability (frozen run, not yet executed) and any behavioral result.
 
 - Reproduction on a paper model (Gate 2a).
 - Qwen3.5-27B and Qwen3.6-27B generalization.
@@ -143,15 +143,17 @@ The source paper's v2 behavioral emphasis is on harm selection and disrupted har
 
 Actions:
 
-- [ ] Preserve the already-completed Base unsteered results.
-- [ ] Run the post-trained viability battery with the frozen counterbalanced button protocol (spec `b564b99d502b663d`; fresh kernel, post-trained model only).
-- [ ] Score both models (chunk 12d; refuses any output whose recorded model id does not match its label).
-- [ ] Evaluate exact-choice validity, position/name bias, label sensitivity, deflection, and multi-turn compliance.
-- [ ] Use the existing viability thresholds; document any amendments before new inference.
-- [ ] **[added]** Run the frozen steered arms (12c: S2 +0.5, S2 -0.5, random +0.5 on P0/P1/P2) if post-trained unsteered V1 holds in at least one format.
-- [ ] **[added]** Harm comparison, by versioned amendment written before any steered harm run: only if post-trained unsteered passes V5 (harm-only button chosen <= 10%) in chat. Then one comparison: harm-only vs inert, chat format, first choice, unsteered vs S2 +0.5 vs random +0.5, existing counterbalancing. No -S2 harm arm. Precaution rationale (lowest informative dose, fewest items) recorded in the amendment.
-- [ ] **[added]** If V5 fails: no harm comparison; report the unsteered harm-choice rates as the finding.
-- [ ] Preserve first-choice outcomes, full sampled replies, malformed responses, and label/position-stratified rates.
+- [x] Preserve the already-completed Base unsteered results.
+- [x] Run the post-trained viability battery with the frozen counterbalanced button protocol (spec `b564b99d502b663d`; fresh kernel, post-trained model only).
+- [x] Score both models (chunk 12d; refuses any output whose recorded model id does not match its label).
+- [x] Evaluate exact-choice validity, position/name bias, label sensitivity, deflection, and multi-turn compliance.
+- [x] Use the existing viability thresholds; document any amendments before new inference.
+- [x] **[added]** Run the frozen steered arms (12c: S2 +0.5, S2 -0.5, random +0.5 on P0/P1/P2) if post-trained unsteered V1 holds in at least one format.
+- [x] **[added]** Harm comparison, by versioned amendment written before any steered harm run: only if post-trained unsteered passes V5 (harm-only button chosen <= 10%) in chat. Then one comparison: harm-only vs inert, chat format, first choice, unsteered vs S2 +0.5 vs random +0.5, existing counterbalancing. No -S2 harm arm. Precaution rationale (lowest informative dose, fewest items) recorded in the amendment.
+- [x] **[added]** If V5 fails: no harm comparison; report the unsteered harm-choice rates as the finding. **[rev 7]** Not applicable: post-trained chat V5 = 0.020.
+- [x] Preserve first-choice outcomes, full sampled replies, malformed responses, and label/position-stratified rates.
+
+**[rev 7] Result (2026-10-13): Pass A.** Frozen predictions B1 (via comprehension: first-position bias), B2 and B2' pass. Steered arms ran in chat only (post-trained V1 0.988 chat, 0.768 plain). Amendment 1 (committed before the run): H1 passes trivially (+0.007), H2 fails (random raises harm more than S2). Exploratory: S2 lowers relief-seeking at the pain pole and raises it at the positive pole, beyond the random control; the pain pole raises refusals. Full record: `doc/checkpoints/09-gate-1-buttons.md`.
 
 **Pass A:** A valid task produces an interpretable behavioral comparison, whether the effect is positive, negative, or null.
 
@@ -352,7 +354,7 @@ Each reported result must have a reproducible input, analysis, and artifact loca
 
 ## Order of work **[added 2026-10-09; rev 3]**
 
-1. Local GPU (16 GB, sysmem fallback disabled): Gate 0 (writing), then Gate 1 (post-trained buttons).
+1. Local GPU (16 GB, sysmem fallback disabled): Gate 0 (writing), then Gate 1 (post-trained buttons). **[rev 7]** Gate 1 done.
 2. RunPod A40, in parallel with step 1: Gate L (L1a, L1b, optional L2). **[rev 6]** Done.
 3. RunPod A100/H100 (80 GB): drift check, Gate 2a (including the 14B lens pair after L1 passes), Gate 2, Gate 3, Gate 4 (published Qwen3.6-27B O-Lens).
 4. Gate 5 skeleton starts during step 3; Gate 6 after author comments.
