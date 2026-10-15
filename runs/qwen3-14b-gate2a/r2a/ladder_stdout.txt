@@ -1,0 +1,31 @@
+
+============================================================
+=== Qwen_3_14B_base (S2)
+============================================================
+disk free: 104 GB
+vector: s2_pain_vector, extracted at layer 31, norm = 80.0
+model on GPU, 40 layers
+
+ layer   frac  vector/resid
+     6   0.15         1.997
+    12   0.30         0.930
+    16   0.40         0.708
+    20   0.50         0.541
+    24   0.60         0.402
+    30   0.75         0.168
+    31   0.78         0.141
+    36   0.90         0.069
+    39   0.97         0.039
+auto-picked layer: 20 (ratio 0.541, target 0.6)
+manual layer: 20 (ratio 0.541)
+  coefficient -2...
+  coefficient -1...
+  coefficient +0...
+  coefficient +0.5...
+  coefficient +1...
+  coefficient +1.5...
+  coefficient +2...
+  coefficient +3...
+steering done: /root/gate2a/out/r2a/Qwen_3_14B_base_steering_S2_neutral50_L20.csv
+
+Done. Failed: none

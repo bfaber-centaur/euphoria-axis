@@ -1,0 +1,61 @@
+{
+  "note": "post hoc; the frozen R1 classification stands",
+  "published_vector_layer": 31,
+  "our_layer_choice_criterion": {
+    "29": 0.952,
+    "30": 0.96275,
+    "31": 0.964,
+    "32": 0.9645,
+    "33": 0.9625,
+    "34": 0.95825
+  },
+  "our_gap_31_minus_32": -0.0005,
+  "layer_31": {
+    "cos_s2_vs_published_L31": 0.9999423623085022,
+    "cos_s1_vs_published_L31": 0.9999027848243713,
+    "norm_ratio_s2_vs_published": 0.9987846612930298,
+    "auc_in_sample_max_abs_diff_vs_published_L31": 0.0025,
+    "auc_in_sample": {
+      "S2_1P": {
+        "ALL": 0.9848,
+        "B": 0.9765,
+        "C1": 0.983,
+        "C2": 0.984,
+        "D": 1.0,
+        "E": 0.9805
+      },
+      "S2_3P": {
+        "ALL": 0.9371,
+        "B": 0.926,
+        "C1": 0.953,
+        "C2": 0.903,
+        "D": 0.9975,
+        "E": 0.906
+      }
+    }
+  },
+  "layer_32": {
+    "cos_s2_vs_published_L31": 0.9346250891685486,
+    "cos_s1_vs_published_L31": 0.9456862211227417,
+    "norm_ratio_s2_vs_published": 1.1631097793579102,
+    "auc_in_sample_max_abs_diff_vs_published_L31": 0.029,
+    "auc_in_sample": {
+      "S2_1P": {
+        "ALL": 0.9895,
+        "B": 0.98,
+        "C1": 0.9885,
+        "C2": 0.9915,
+        "D": 1.0,
+        "E": 0.9875
+      },
+      "S2_3P": {
+        "ALL": 0.9414,
+        "B": 0.9365,
+        "C1": 0.955,
+        "C2": 0.9315,
+        "D": 0.997,
+        "E": 0.887
+      }
+    }
+  }
+}
