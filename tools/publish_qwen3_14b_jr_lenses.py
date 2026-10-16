@@ -80,11 +80,12 @@ def main() -> int:
     parser.add_argument("--publish", action="store_true", help="Actually upload verified files; omitted = dry run")
     args = parser.parse_args()
     repo_root = args.repo_root.resolve()
-    card_file = Path(__file__).resolve().parent / "README.md"
-    if not card_file.exists():
-        card_file = Path(__file__).resolve().parents[1] / "releases/qwen3-14b-jr-lenses/README.md"
-    if not card_file.exists():
+    card_file = Path(__file__).resolve().parents[1] / "releases/qwen3-14b-jr-lenses/README.md"
+    if not card_file.is_file():
         parser.error(f"Missing release model card: {card_file}")
+    card = card_file.read_text()
+    if not card.startswith("---\n") or "license: apache-2.0" not in card or "# J-lens and R-lens for Qwen3-14B" not in card:
+        parser.error(f"Unexpected release model card contents: {card_file}")
 
     files = []
     for label, record in RECORDS.items():
