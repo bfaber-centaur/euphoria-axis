@@ -16,7 +16,8 @@ MODEL_PATH = os.environ["MODEL_PATH"]
 DO_FIT = os.environ.get("BENCH_FIT", "1") == "1"
 OUT = Path("/workspace/bench"); OUT.mkdir(parents=True, exist_ok=True)
 dev = "cuda"
-R = {"gpu": torch.cuda.get_device_name(0), "gpu_mem_gib": torch.cuda.get_device_properties(0).total_memory / 2**30,
+R = {"omp_threads": os.environ.get("OMP_NUM_THREADS"), "torch_threads": torch.get_num_threads(),
+     "gpu": torch.cuda.get_device_name(0), "gpu_mem_gib": torch.cuda.get_device_properties(0).total_memory / 2**30,
      "model": MODEL_PATH, "torch": torch.__version__, "transformers": transformers.__version__, "python": platform.python_version()}
 sync = torch.cuda.synchronize
 def peak():
@@ -137,23 +138,27 @@ if DO_FIT:
     doc = load_dataset("NeelNanda/pile-10k", split="train")[0]["text"]
     fit_model = jlens.from_hf(hf, tok, force_bos=False)
     jfp = jlens.jacobian_for_prompt
+    # two full documents: the first is cold (pays kernel compilation and tuning for these exact shapes),
+    # the second is the warm per-document rate that the cost model uses
     for db in [16, 8, 4, 2]:                 # largest batch that fits; Gate L used 16 on 4B
         kw = {k: v for k, v in dict(source_layers=list(range(EXTRACT)), target_layer=EXTRACT, max_seq_len=128, skip_first=4,
                                     dim_batch=db).items() if k in inspect.signature(jfp).parameters}
         try:
-            # warm-up on a short slice: compiles the fast-path kernels outside the timed run (a cold first document
-            # read ~1.5x slow on the 4B A40 check)
-            torch.cuda.empty_cache(); sync(); t0 = time.time()
-            _ = jfp(fit_model, doc, **{**kw, "max_seq_len": 32}); sync(); del _
-            R["B5_warmup_s"] = time.time() - t0
             torch.cuda.empty_cache(); torch.cuda.reset_peak_memory_stats(); sync(); t0 = time.time()
-            _ = jfp(fit_model, doc, **kw); sync()
-            R.update({"B5_s_per_doc": time.time() - t0, "B5_dim_batch": db, "B5_peak_gib": peak()}); del _
+            _ = jfp(fit_model, doc, **kw); sync(); del _
+            R["B5_cold_s"] = time.time() - t0
+            torch.cuda.empty_cache(); sync(); t0 = time.time()
+            _ = jfp(fit_model, doc, **kw); sync(); del _
+            R.update({"B5_s_per_doc": time.time() - t0, "B5_dim_batch": db, "B5_peak_gib": peak()})
             break
         except torch.OutOfMemoryError:
             print(f"B5: dim_batch {db} out of memory; trying smaller")
+        except Exception as e:                  # e.g. fla's Hopper guard on Triton < 3.7.1: record it, keep B0-B4
+            R["B5_error"] = f"{type(e).__name__}: {e}"[:400]
+            print(f"B5 skipped: {R['B5_error'][:160]}")
+            break
     if "B5_s_per_doc" in R:
-        print(f"B5 lens fit: {R['B5_s_per_doc'] / 60:.1f} min per document (dim_batch {R['B5_dim_batch']}, "
+        print(f"B5 lens fit: cold {R['B5_cold_s'] / 60:.1f} min, warm {R['B5_s_per_doc'] / 60:.1f} min per document (dim_batch {R['B5_dim_batch']}, "
               f"peak {R['B5_peak_gib']:.0f} GiB) -> {R['B5_s_per_doc'] * 25 / 3600:.1f} h per 25-document lens")
 
 name = R["gpu"].replace(" ", "_").replace("/", "-")

@@ -23,3 +23,6 @@ runs/**/lens_calibration/*.pt
 
 # macOS
 .DS_Store
+
+# R4 lenses for Qwen3-14B (~2 GB each): kept on the RunPod volume, hashed in their JSON records
+runs/**/q14_*_bos*.pt

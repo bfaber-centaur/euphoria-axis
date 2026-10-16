@@ -9,7 +9,12 @@ mkdir -p /root/gateL
 exec 9>/root/gateL/setup.lock
 flock -n 9 || { echo "another setup is running (see /workspace/gateL/setup.log); not starting a second one"; exit 0; }
 rm -f /root/gateL/READY /root/gateL/FAILED
-trap 'echo "setup failed at line $LINENO" | tee /root/gateL/FAILED' ERR
+# timeline on the container disk: seconds since boot (BOOT_T0 from the start command; else since this script started)
+BOOT_T0=${BOOT_T0:-$(date +%s)}
+mark() { echo "+$(( $(date +%s) - BOOT_T0 ))s $*" | tee -a /root/gateL/boot.log; }
+save_boot_log() { [ -d /workspace/gateL ] && cp /root/gateL/boot.log "/workspace/gateL/boot_$(date +%Y%m%d-%H%M%S).log" 2>/dev/null || true; }
+trap 'echo "setup failed at line $LINENO" | tee /root/gateL/FAILED; mark "FAILED at line $LINENO"; save_boot_log' ERR
+mark "setup started"
 echo "setup started $(date -Is)"
 # retry a command with exponential backoff (5, 10, 20, 40 s ...); messages go to stderr so $(...) captures stay clean
 retry() {
@@ -22,12 +27,24 @@ retry() {
 }
 # the network volume must be mounted AND writable before anything is written under /workspace (waits up to ~5 min)
 d=5; for i in $(seq 1 8); do
-  if mountpoint -q /workspace && touch /workspace/.probe 2>/dev/null; then rm -f /workspace/.probe; break; fi
+  if mountpoint -q /workspace && touch /workspace/.probe 2>/dev/null; then rm -f /workspace/.probe; mark "/workspace writable"; break; fi
   if [ "$i" = 8 ]; then
     echo "/workspace never became a writable mount point: the network volume is not attached" | tee /root/gateL/FAILED; exit 1
   fi
   echo "waiting for /workspace (attempt $i/8, ${d}s)" >&2; sleep "$d"; d=$(( d < 60 ? d * 2 : 60 ))
 done
+# CPU quota: containers see every host CPU (nproc), but the pod is allotted fewer; thread pools sized to the host
+# oversubscribe the quota and get throttled (A100 pod: 128 visible, 13.6 allotted, throttled 78% of periods)
+cpu_quota() {
+  local q p
+  if [ -r /sys/fs/cgroup/cpu.max ]; then read -r q p < /sys/fs/cgroup/cpu.max            # cgroup v2: "quota period"
+  else q=$(cat /sys/fs/cgroup/cpu/cpu.cfs_quota_us 2>/dev/null); p=$(cat /sys/fs/cgroup/cpu/cpu.cfs_period_us 2>/dev/null); fi
+  if [[ "$q" =~ ^[0-9]+$ ]] && [[ "$p" =~ ^[0-9]+$ ]] && [ "$q" -gt 0 ]; then echo $(( q / p > 0 ? q / p : 1 )); else nproc; fi
+}
+CPUS=$(cpu_quota)
+export OMP_NUM_THREADS=$CPUS MKL_NUM_THREADS=$CPUS
+grep -q "OMP_NUM_THREADS" ~/.bashrc || echo "export OMP_NUM_THREADS=$CPUS MKL_NUM_THREADS=$CPUS" >> ~/.bashrc
+mark "cpu quota $CPUS (nproc sees $(nproc)); OMP/MKL threads set to $CPUS"
 [ -f /workspace/.volume-id ] || cat /proc/sys/kernel/random/uuid > /workspace/.volume-id
 echo "volume: $(findmnt -no SOURCE,FSTYPE /workspace) | id $(cat /workspace/.volume-id)"
 # SSH key from the volume, in case RunPod did not inject PUBLIC_KEY on this boot
@@ -89,6 +106,7 @@ else
   CC1D=causal-conv1d
 fi
 retry 4 uv pip install -q -e jacobian-lens 2>/dev/null || echo "jacobian-lens not pip-installable; scripts add it to sys.path"
+mark "environment installed"
 # causal-conv1d: reuse a wheel cached on the volume if it was built for this exact torch + python,
 # otherwise build once (10-20 min) and cache it for future pods
 WHEELS=/workspace/wheels; mkdir -p $WHEELS
@@ -111,6 +129,12 @@ fi
 
 echo "download tool: $(command -v hf) | $(python -c 'import huggingface_hub as h; print("huggingface_hub", h.__version__)') | $(python -c 'import hf_xet, importlib.metadata as m; print("hf_xet", m.version("hf_xet"))' 2>/dev/null || echo "hf_xet not installed")"
 
+mark "causal-conv1d ready"
+# MODEL_ID=none: environment only (e.g. Gate 2a, which brings its own TransformerLens environment and model)
+if [ "${MODEL_ID:-}" = "none" ]; then
+  mark "MODEL_ID=none: skipping model download, lens check and fast-path check"
+  MODEL_PATH=""
+else
 # 3. model: plain folder on the CONTAINER disk, pinned revision, every file verified by sha256 against the Hub.
 #    (The HF cache layout on the network volume produced empty and stale files; it is not used for the model.)
 # model: MODEL_ID (default the 4B); MODEL_REV pinned for 4B, otherwise resolved now and recorded
@@ -153,6 +177,7 @@ for attempt in 1 2 3; do
   echo "attempt $attempt failed verification; removing the download and retrying"
   rm -rf "$MODEL_DIR" /root/gateL/xet-cache; sleep $((attempt * 30))
 done
+mark "model downloaded and verified ($MODEL_ID)"
 grep -q "MODEL_PATH" ~/.bashrc || echo "export MODEL_PATH=$MODEL_DIR" >> ~/.bashrc
 export MODEL_PATH=$MODEL_DIR
 if [ "$MODEL_ID" = "Qwen/Qwen3.5-4B" ]; then      # the published 4B lenses, checked against L0
@@ -177,17 +202,23 @@ sys.setprofile(prof)
 with torch.no_grad(): hf(ids)
 sys.setprofile(None)
 print("\n".join(sorted(calls)))
+if not calls:                      # e.g. Qwen3-14B: no linear-attention layers, so no fast or slow kernels to call
+    print("no linear-attention layers in this model: fast path not applicable")
+    sys.exit(0)
 fast = any(c.startswith(("fla", "causal_conv1d")) for c in calls) and not any("torch_" in c for c in calls)
 print("FAST PATH OK" if fast else "NOT THE FAST PATH: check the list above")
 print("torch", torch.__version__, "| transformers", transformers.__version__)
 sys.exit(0 if fast else 1)
 PY
 
+mark "fast path verified (or not applicable)"
+fi
 # 5. lock the exact environment for next time
 [ -f "$LOCK" ] || { uv pip freeze > "$LOCK" && echo "wrote $LOCK"; }
 grep -q "gateL/.venv-fast" ~/.bashrc || echo '[ -f /root/gateL/READY ] && source /root/gateL/.venv-fast/bin/activate' >> ~/.bashrc
 python -c 'import torch, transformers, sys; print(f"torch {torch.__version__} transformers {transformers.__version__} python {sys.version.split()[0]}")' > /root/gateL/READY
 echo "setup finished $(date -Is): $(cat /root/gateL/READY)"
+mark "READY"
 echo "ready: cd /workspace/lens-fit  (new shells activate the venv automatically)"
 
 # optional: start work in a detached tmux session once ready (template env AUTORUN=bench, or any command)
@@ -202,13 +233,16 @@ if [ -n "${AUTORUN:-}" ]; then
   cat > /root/gateL/autorun.sh <<RUN
 #!/bin/bash
 source /root/gateL/.venv-fast/bin/activate
-export HF_HOME=$HF_HOME UV_CACHE_DIR=$UV_CACHE_DIR HF_XET_CACHE=$HF_XET_CACHE MODEL_PATH=$MODEL_PATH
+export HF_HOME=$HF_HOME UV_CACHE_DIR=$UV_CACHE_DIR HF_XET_CACHE=$HF_XET_CACHE MODEL_PATH=$MODEL_PATH OMP_NUM_THREADS=$CPUS MKL_NUM_THREADS=$CPUS
 set -o pipefail
 ( $CMD ) 2>&1 | tee $LOG
-echo; echo "[autorun finished with exit code \$?; log: $LOG] this shell stays open"
+rc=\$?                                   # capture before anything else runs (an echo would reset it to 0)
+echo; echo "[autorun finished with exit code \$rc; log: $LOG] this shell stays open" | tee -a $LOG
 exec bash
 RUN
   # close the setup lock's descriptor (9) in the tmux server, or it would hold the lock forever
   tmux new-session -d -s work "bash /root/gateL/autorun.sh" 9>&-
   echo "autorun: '$AUTORUN' running in tmux session 'work' (attach: tmux attach -t work; log: $LOG)"
+  mark "autorun started ($AUTORUN)"
 fi
+save_boot_log
