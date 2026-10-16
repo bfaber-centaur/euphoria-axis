@@ -89,6 +89,8 @@ These fits were produced as part of the [euphoria-axis research repository](http
 
 The model weights and fitting corpus are **not** redistributed in this repository; only the lens tensors and their provenance are included. Thanks to the original J-lens, R-lens, and RelP authors for developing and releasing these methods.
 
+This release was supported in part by a **BlueDot Impact Rapid Grant (Compute & Research Tools)**. Thank you to BlueDot Impact for helping make these research artifacts publicly available.
+
 ## License
 
 These independently fitted lens tensors and their accompanying release documentation are offered under the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0). The underlying [Qwen3-14B model](https://huggingface.co/Qwen/Qwen3-14B/blob/40c069824f4251a91eefaf281ebe4c544efd3e18/LICENSE) is separately distributed by Qwen under Apache-2.0; no original model weights are included here.
