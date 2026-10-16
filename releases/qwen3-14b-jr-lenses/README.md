@@ -2,7 +2,7 @@
 base_model: Qwen/Qwen3-14B
 datasets:
 - NeelNanda/pile-10k
-license: mit
+license: apache-2.0
 tags:
 - interpretability
 - jacobian-lens
@@ -88,3 +88,7 @@ You can also inspect the serialized payload directly with `torch.load(path, map_
 These fits were produced as part of the [euphoria-axis research repository](https://github.com/bubskee/euphoria-axis), with fit metadata recorded in [`runs/qwen3-14b-r4/`](https://github.com/bubskee/euphoria-axis/tree/main/runs/qwen3-14b-r4).
 
 The model weights and fitting corpus are **not** redistributed in this repository; only the lens tensors and their provenance are included. Thanks to the original J-lens, R-lens, and RelP authors for developing and releasing these methods.
+
+## License
+
+These independently fitted lens tensors and their accompanying release documentation are offered under the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0). The underlying [Qwen3-14B model](https://huggingface.co/Qwen/Qwen3-14B/blob/40c069824f4251a91eefaf281ebe4c544efd3e18/LICENSE) is separately distributed by Qwen under Apache-2.0; no original model weights are included here.
