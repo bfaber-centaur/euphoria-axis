@@ -19,7 +19,7 @@ The J/R lens tensors themselves are **not** committed to GitHub. The publisher r
    python3 tools/publish_qwen3_14b_jr_lenses.py
    ```
 
-3. Review [the model card](README.md), including its proposed **MIT** license, then publish:
+3. Review [the model card](README.md), including its **Apache-2.0** license declaration (matching Qwen3-14B's upstream license), then publish:
 
    ```bash
    python3 tools/publish_qwen3_14b_jr_lenses.py --publish
