@@ -26,9 +26,12 @@ Frozen protocols and verdicts remain in `doc/protocols/` and checkpoints 10–12
   in `tools/runpod/` are the latest robust versions, not necessarily
   bit-identical to what every completed run executed. The run headers are
   authoritative; consider tags for the exact execution revisions.
-- [ ] Import the nine historical `reorg-pod-tools` commits onto the fork,
-  reconcile them with the newer upstream additions, then review the eventual
-  PR against `bubskee/main`.
+- [x] Import the **file contents** of the nine-commit handoff onto
+  `bfaber-centaur/reorg-pod-tools` above updated `main` in three logical
+  commits. All 30 changed Git blobs were verified against the local tree.
+  The original nine commit objects remain in the handoff bundle (the online
+  branch uses new commit identities).
+- [ ] Review the eventual PR against `bubskee/main` without merging it yet.
 - [ ] **After** the repo-backed boot merges into `bubskee/main`, update the
   RunPod template's start command. Never switch the template beforehand.
 
