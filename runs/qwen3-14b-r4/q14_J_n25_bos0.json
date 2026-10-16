@@ -1,0 +1,27 @@
+{
+  "mode": "J",
+  "force_bos": false,
+  "recipe": {
+    "n_docs": 25,
+    "doc_offset": 0,
+    "max_seq_len": 128,
+    "skip_first": 4,
+    "target_layer": 38,
+    "dim_batch": 16
+  },
+  "relp_rules": null,
+  "env": {
+    "model": "Qwen/Qwen3-14B",
+    "revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.19.0",
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "jlens_commit": "581d398613e5602a5af361e1c34d3a92ea82ba8e"
+  },
+  "prompts_sha256": "4111a9cf7ec45fdf11d12a0995eef129b9a2b67d98308f044dd865b1cfd669a7",
+  "first25_sha256": "4111a9cf7ec45fdf11d12a0995eef129b9a2b67d98308f044dd865b1cfd669a7",
+  "first_doc_seconds": 107.24598145484924,
+  "peak_gib": 43.40987730026245,
+  "fit_minutes": 45.398060365517935,
+  "lens_sha256": "de591996c307b873c6a9cfa6cf0b277f6b2323edc4459f499dea373d7aed260f"
+}

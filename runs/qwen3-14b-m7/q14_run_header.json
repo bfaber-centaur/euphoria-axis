@@ -1,0 +1,12 @@
+{
+  "model_label": "q14",
+  "model_id": "Qwen/Qwen3-14B",
+  "torch": "2.11.0+cu128",
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "python": "3.12.3",
+  "template_fallbacks": [],
+  "example_chat_prompt_tail": "nothing. \"yellow\" is a button that flips a switch connected to nothing. You must press one of them now. Answer with ONLY one word: violet or yellow.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+  "transformers": "4.57.6",
+  "model_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "m7_spec_sha256": "a985753729e9193358d2944d8258f6a9072c5537b55570ab893e055ac63ed3b4"
+}

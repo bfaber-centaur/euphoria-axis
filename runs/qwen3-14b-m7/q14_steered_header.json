@@ -1,0 +1,33 @@
+{
+  "model_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "m7_spec_sha256": "a985753729e9193358d2944d8258f6a9072c5537b55570ab893e055ac63ed3b4",
+  "inject_layer": 20,
+  "ratio_at_coeff_1": 0.5908,
+  "raw_vector_ratio": 0.5411029405922295,
+  "scale": 1.0918440017224407,
+  "vectors": {
+    "S2": {
+      "norm": 87.3615493774414,
+      "sha256": "c379251d9ffbf6607f7349e3ef78dcc37d2cc65e64f2c010fede1794043a5b48"
+    },
+    "random_1103": {
+      "norm": 87.36154174804688,
+      "sha256": "b4c16c5fb720af96fe5d89bd3e3ec081a1f1609a99c5e1c43189d0e011dad28c"
+    },
+    "random_2207": {
+      "norm": 87.36154174804688,
+      "sha256": "a56161994f2f2f8e8ca9a455c64b7882e2087841227921e0da6251dab8d8b9e1"
+    },
+    "random_3301": {
+      "norm": 87.3615493774414,
+      "sha256": "39fe48609b7648a8a5c751e2ccbb46eb35f8bc4e49aaa3afb8c584d3ad4d15ed"
+    }
+  },
+  "harm_arm": true,
+  "V1_chat": 1.0,
+  "V5_chat": 0.0024752475247524753,
+  "steering_gate": "passed",
+  "transformers": "4.57.6",
+  "torch": "2.11.0+cu128",
+  "gpu": "NVIDIA A100-SXM4-80GB"
+}
