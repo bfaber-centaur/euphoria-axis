@@ -1,6 +1,6 @@
 # Euphoria Axis — Finish Line
 
-**Date:** 2026-10-08, revised 2026-10-09
+**Date:** 2026-10-08, revised through 2026-10-16
 **Status:** Convergence toward technical report and LessWrong post
 **Repository:** [https://github.com/bubskee/euphoria-axis](https://github.com/bubskee/euphoria-axis)
 
@@ -14,7 +14,11 @@ optional J++ readout panel for Qwen3.6-27B in Gate 3. **[rev 5]**: O-Lens
 attribution and the published 27B O-Lens's read contract in Gate 4.
 **[rev 6, 2026-10-13]**: Gate L results recorded (passed); a reporting rule
 for small middle-layer effects in Gate 0. **[rev 7, 2026-10-13]**: Gate 1
-results recorded (Pass A).
+results recorded (Pass A). **[rev 8, 2026-10-16]** Gate 2a completed (R1
+DISCREPANT; R2a BEHAVIOURALLY_REPRODUCED; R2b DIVERGENT); the optional
+Qwen3-14B extensions M7 and R4 completed. Gate 3b (Qwen3.8-27B), M5,
+M7 on all models, and R4 are now in the cross-model scope; see
+`doc/plan/generalization-plan.md` and checkpoints 10–12.
 
 ## Mission
 
@@ -56,12 +60,15 @@ The intended deliverables are a technical PDF, reproducible evidence in the repo
 - **[added]** Fresh held-out 1P/3P confirmation (E1-E2), blind-drafted items: the motif replicates in the "feel:" slot (+0.13 z) and is slot-mediated; S2 separates pain from matched controls (+0.5 z) with and without the slot. `phase2_item78_checkpoint.md`.
 - **[rev 6]** Lens calibration (Gate L): our pipeline reproduces the published R/J lenses; lens-fitting uncertainty measured. `08-gate-L-lens-calibration.md`.
 - **[rev 7]** Button task (Gate 1, Pass A): viable for both 4B checkpoints in chat; post-training damages plain-format compliance (B2); at +0.5, S2 does not disrupt harm avoidance (Amendment 1: H1 trivially small, H2 fails); exploratory: S2 shifts relief-seeking in both directions beyond a random control. `09-gate-1-buttons.md`.
+- **[rev 8] Gate 2a:** bounded source reproduction on Qwen3-14B completed; R1's automatic best layer differed by a one-pair near tie, while the layer-matched vector cosine was 0.99994. R2 with the published vector reproduced the behavioral ladder; R2 with the automatically selected layer-32 vector diverged. `doc/checkpoints/10-gate-2a-reproduction.md`.
+- **[rev 8] M7 (Qwen3-14B):** the preregistered harm-choice comparison passed (0.2% unsteered versus about 22% under S2 pain-side steering, beyond three sampled random directions); relief specificity and deflection failed, with ceiling/floor limits. `doc/checkpoints/11-m7-q14-buttons.md`.
+- **[rev 8] R4 (Qwen3-14B):** fitted J/R lenses, with R4-P1 passing narrowly by its frozen amplitude criterion; the signed, mirrored S2 family profile versus the largely uniform random-direction shifts is **post hoc**. `doc/checkpoints/12-r4-q14-lenses.md`.
 
 ### Incomplete or not yet established
 
 
-- Reproduction on a paper model (Gate 2a).
-- Qwen3.5-27B and Qwen3.6-27B generalization.
+- Qwen3.5/3.6/3.8-27B generalization (Gates 2, 3 and 3b); the 27B protocol must be frozen before data collection.
+- Some completed Qwen3-14B M7/R4 result tables and 27B benchmark files have not yet been committed from the Mac/RunPod volume; see `doc/notes/2026-10-16-handoff-gaps.md`.
 - O-Lens exploratory panel.
 - Final technical report and publication figures.
 
@@ -193,8 +200,25 @@ is a results identifier, not the separate
 **Pass:** R1 and R2 completed and compared with published
 results, whether matching or discrepant.
 
+**[rev 8] Completed 2026-10-14–16:** R1 classified **DISCREPANT** (automatic
+best-layer 32 vs published 31, a one-ranked-pair near tie). The post-hoc
+matched-layer S2 cosine was 0.99994. R2a, using the published vector,
+classified **BEHAVIOURALLY_REPRODUCED** (keyword rates agree at 7/8 doses;
+exact text is unstable even at zero steering); R2b, using our automatic
+layer-32 vector, classified **DIVERGENT**. The gate passed because the
+predeclared requirement was to complete and compare R1 and R2, not to force
+agreement. Full frozen verdicts and caveats: `doc/checkpoints/10-gate-2a-reproduction.md`.
+
+**Optional 14B extensions also complete:** M7 button task (checkpoint 11) and
+R4 J/R lens fitting and semantic readout (checkpoint 12). M7's harm-choice
+increase passes the three-random-direction comparison, but random_3301 also
+raises harm substantially (about 16%); relief and deflection predictions
+fail (the latter at a floor). R4-P1 passes **narrowly**, while the profile
+structure interpretation is exploratory. Neither implies model experience.
+
 **Stop:** No additional 14B experiments beyond the
-specified optional extensions.
+specified optional extensions. Do not promote exploratory readouts to
+frozen predictions retroactively.
 
 ---
 
@@ -204,7 +228,7 @@ specified optional extensions.
 
 Freeze the test battery before running.
 
-**[added 2026-10-09] Frozen decisions for Gates 2 and 3:**
+**[added 2026-10-09] Decisions recorded for Gates 2 and 3; revisions for Gate 3b and expanded modules are in `doc/plan/generalization-plan.md`:**
 
 - **Layers:** same relative depth as 4B for both 27B models; no per-model tuning. 4B has 32 blocks (extraction 30, injection 16, family readout 29); 27B has 64 (extraction 62, injection 32, family readout 61). Cross-validated best-layer AUC is reported as a sensitivity check only.
 - **Readout:** R lens primary, using the recipe-matched workspace-lenses pairs for all three models (J lens alongside; plain logit lens as a model-agnostic sanity check). Lens files recorded by hash. **[rev 3]** No Qwen3.5 lens refits unless Gate L finds a significant discrepancy.
@@ -250,6 +274,15 @@ Use the same prompt families and analysis definitions as 4B wherever valid. Reco
 **Stop:** Do not retune the protocol to recover a previously observed pattern.
 
 The objective is to test generalization, not produce agreement.
+
+## Gate 3b — Qwen3.8-27B generalization **[rev 8]**
+
+Apply the same G1–G14 questions and reporting rules as Gates 2 and 3, with
+pre-data model-specific adaptations documented in a separately frozen 27B spec.
+Validate the published Qwen3.6-27B R-lens recipe by a refit before interpreting
+cross-version lens differences; if no recipe-matched published Qwen3.8-27B
+pair is available, fit J/R for 3.8 and document hashes and provenance.
+See `doc/plan/generalization-plan.md`. This gate is **planned, not run**.
 
 ---
 
@@ -300,7 +333,7 @@ Proposed structure:
 5. **Steering and interpretability** — Both poles, dose effects, R/J findings, lexical and formatting complications.
 6. **Experiencer and context** — 1P/3P effects, read-slot dependence, task and persona considerations.
 7. **Behavioral exploration** — Buttons, including task failure or null results as applicable.
-8. **Cross-model generalization** — Qwen3.5-27B and Qwen3.6-27B.
+8. **Cross-model generalization** — Qwen3.5-, Qwen3.6- and Qwen3.8-27B (Gates 2, 3, 3b).
 9. **Optional exploratory O-Lens observations** — Clearly separated from validated findings.
 10. **Precautions** **[added]** — Steering toward the pain pole and any harm-choice runs: doses, item counts, and the rationale, alongside the source paper's own section.
 11. **Discussion, limitations, and future work** — Competing interpretations, provenance, failure modes, and unresolved questions. **[added]** Engage with the authors' `MANUSCRIPT_DISCREPANCIES.md`; cite the pinned source commit.
@@ -356,8 +389,9 @@ Each reported result must have a reproducible input, analysis, and artifact loca
 
 1. Local GPU (16 GB, sysmem fallback disabled): Gate 0 (writing), then Gate 1 (post-trained buttons). **[rev 7]** Gate 1 done.
 2. RunPod A40, in parallel with step 1: Gate L (L1a, L1b, optional L2). **[rev 6]** Done.
-3. RunPod A100/H100 (80 GB): drift check, Gate 2a (including the 14B lens pair after L1 passes), Gate 2, Gate 3, Gate 4 (published Qwen3.6-27B O-Lens).
-4. Gate 5 skeleton starts during step 3; Gate 6 after author comments.
+3. RunPod A100 80 GB: **[rev 8]** Gate 2a, 14B M7 and R4 done (checkpoints 10–12); 27B benchmark complete. Keep the historical GPU/environment records, not the current container image, as authoritative for the finished runs.
+4. Before any 27B observations, freeze `doc/protocols/gen27b/` and its per-model G1–G14 predictions and failure rules; then Gate 2 (Qwen3.5-27B), Gate 3 (Qwen3.6-27B), Gate 3b (Qwen3.8-27B) on A100, with drift checks.
+5. Gate 5 skeleton can start during step 4; Gate 4 remains optional; Gate 6 follows author comments.
 
 ## Global stopping rules
 

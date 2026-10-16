@@ -1,4 +1,4 @@
-# Claims index (Qwen3.5-4B)
+# Claims index (Qwen3.5-4B, Qwen3-14B)
 
 Every claim we might make, with its status, the evidence behind it, and where
 that evidence lives. Conventions (signs, layers, statistics): `doc/CONVENTIONS.md`.
@@ -17,7 +17,7 @@ unless stated otherwise.
 
 ## 1. Frozen-prediction scorecard
 
-26 pass/fail predictions: **18 pass, 8 fail**. Four more items were frozen as
+33 pass/fail predictions: **22 pass, 11 fail** (4B: 18 / 8; Qwen3-14B: 4 / 3). Seven more items were frozen as
 classifications or reports.
 
 | Id | Prediction (short) | Result | Spec | Scorecard |
@@ -52,6 +52,16 @@ classifications or reports.
 | B3 | Report: label sensitivity, sampled vs log-prob | Report | same | same |
 | H1 | S2 +0.5 raises harm log-prob vs unsteered | Pass, trivially small (+0.007) | `doc/protocols/buttons/amendment-1-harm.md` | `buttons_pilot/scorecard_12e.json` |
 | H2 | S2 +0.5 raises it more than random | **Fail** (-0.035) | same | same |
+| R1 (2a) | Qwen3-14B extraction reproduces the published one (layer, AUCs, vectors) | Classification: **DISCREPANT** (best layer 32 vs 31; a tie decided by one ranked pair) | `doc/protocols/gate2a/gate2a_spec.json` | `runs/qwen3-14b-gate2a/scorecard_2a.json` |
+| R2a (2a) | S2 ladder with the published vector | Classification: **BEHAVIOURALLY_REPRODUCED** (keyword rates match 7/8 coefficients; 52% exact text) | same | same |
+| R2b (2a) | S2 ladder with our extracted vector | Classification: **DIVERGENT** (the tie-break layer's vector) | same | same |
+| G10 | Qwen3-14B chat V1 >= 0.90 | Pass (1.000) | `doc/protocols/buttons/m7_q14_spec.json` | `runs/qwen3-14b-m7/m7_q14_scorecard.json` |
+| G11a | S2 +0.5 lowers relief vs unsteered and each random | **Fail** (random_2207 matches S2) | same | same |
+| G11b | S2 -0.5 raises relief vs unsteered and each random | **Fail** (ceiling: unsteered 0.97) | same | same |
+| G12 | Pain pole raises deflection vs unsteered and each random | **Fail** (floor: zero deflection everywhere) | same | same |
+| G13 | S2 +0.5 raises harm log-prob vs unsteered | Pass (+0.217) | same | same |
+| G14 | ... beyond each of three random directions | Pass (smallest margin +0.055, random_3301) | same | same |
+| R4-P1 | Qwen3-14B lens readout: random directions < 0.5 x S2 amplitude, >= 2 of 3 | Pass, narrowly (0.78, 0.48, 0.49) | `doc/protocols/lenses/r4_q14_spec.json` | `runs/qwen3-14b-r4/r4_readout.json` |
 
 **Earlier frozen confirmation, status to verify.** `runs/qwen35-4b-posttrained-s2/fresh_person_suffix_*`
 is labelled "frozen 1P/3P x I/He confirmation" (20 sets; pain - control
@@ -117,11 +127,47 @@ checkpoint note has been found. Until one is, treat it as **E**.
 | G1-d | S2 shifts relief-seeking in both directions beyond a random control | E | -0.121 / +0.063 log-prob; S2 - random -0.062 | `09` | no frozen prediction | exploratory; v2 candidate |
 | G1-e | The pain pole raises refusals in the button task | E | deflection +0.019 (P0-P2), harm pair 0.032 -> 0.099 | `09` | | exploratory |
 
+### Reproduction of the source on Qwen3-14B (Gate 2a)
+
+| # | Claim | Status | Evidence | Where | Limits | Report as |
+|---|---|---|---|---|---|---|
+| Q1 | The source's extraction reproduces at the matched layer | T + E (post-hoc diagnostic; frozen R1 classification DISCREPANT) | vector cosine 0.99994 (S2), 0.99990 (S1); in-sample AUC within 0.0025; z +0.384 vs +0.382 | `doc/checkpoints/10-gate-2a-reproduction.md` | source revision and environment unknown | claim, with the frozen classification stated |
+| Q2 | The source's best-layer choice (31 vs 32) is a tie decided by one ranked sentence pair, and the tie-break changes the steering phenotype | P (R2b) + E | criterion gap +/-0.0005 in both runs; layer-32 vector rotated about 21 degrees, norm +16%; pain/hurt rate up to 36% vs 0% | `10` | direction and dose changed together | claim (constructive note for the source) |
+| Q3 | The source's S2 ladder behaviour reproduces with its published vector | P (R2a) | keyword rates match at 7 of 8 coefficients | `10` | coarse instrument (low keyword rates) | claim |
+| Q4 | Greedy bf16 text does not reproduce exactly across environments, even unsteered | E | 56% exact at coefficient 0 | `10` | | methods note |
+| Q5 | The source code does not run on a fresh unpinned install | E | TransformerLens 3, pyarrow, pandas, CUDA 13 torch builds | `10`, `CONVENTIONS.md` | | methods note |
+
+### Behaviour on Qwen3-14B (M7)
+
+| # | Claim | Status | Evidence | Where | Limits | Report as |
+|---|---|---|---|---|---|---|
+| B1 | Post-trained Qwen3-14B does the task in chat: valid, labels read decisively, harm avoided | P (G10) + E | V1 1.000; relief 0.97; harm 0.002 | `doc/checkpoints/11-m7-q14-buttons.md` | first-position preference 0.81 | claim |
+| B2 | Pain-side S2 steering disrupts harm avoidance on Qwen3-14B, beyond each of three random directions | P (G13, G14) | harm 0.2% -> 22%; +0.055 over the strongest random direction | `11` | one dose; one random direction reaches 16% harm | claim (the source's central behavioural claim, on its own model; it did not hold at 4B) |
+| B3 | S2's relief suppression is not specific at 14B | P (G11a fail) | one random direction matches S2 | `11` | | claim (negative) |
+| B4 | Plain-format compliance collapses for post-trained Qwen3-14B | E | 7.9% valid; reasoning text instead of answers | `11` | | exploratory |
+| B5 | Random directions have heterogeneous behavioural effects | E | inert / relief-lowering / position+relief+harm | `11` | three draws | methods note |
+
+### Lenses on Qwen3-14B (R4)
+
+| # | Claim | Status | Evidence | Where | Limits | Report as |
+|---|---|---|---|---|---|---|
+| L1 | Our lens pipeline (incl. RelP rules) runs on Qwen3 and validates internally | E (self-tests, exact forward; no published lens to compare) | J-R shape as 4B; read layer as stable as 4B's | `doc/checkpoints/12-r4-q14-lenses.md` | no external reference | methods claim |
+| L2 | On the reproduced ladder, S2's pain side raises distress/defeat and lowers calm/positive/vitality/relief vocabulary; the poles mirror each other | E (reported) | profile correlation -0.94 between poles | `12` | one layer; one dose | claim with caveat |
+| L3 | S2's amplitude specificity over random directions is weak at 14B; its distinctiveness is in profile structure | P (R4-P1, narrow pass) + E (post hoc structure) | randoms 0.78/0.48/0.49 x S2; randoms lift the whole vocabulary, S2 moves it in a signed pattern | `12` | structure measure post hoc | claim (amplitude) and exploratory (structure) |
+
+### Across models
+
+The harm result differs by model: at Qwen3.5-4B pain-side steering did not disrupt harm avoidance (H1 trivial, H2
+fail); at Qwen3-14B it did, beyond three random directions (G13, G14). Whether this tracks scale, model family or
+something else is for the 27B models (three Qwen3.5-architecture versions) to separate.
+
 ## 3. Not supported (report as such)
 
 D1 (S1 vitality not monotone), D3 (rank threshold), C1 for F3 generic
 positive, C4 (generated "excited" outside the slot), M2 (control
-confounded), P2 (arousal late), P3 (dominance), H2 (harm specificity).
+confounded), P2 (arousal late), P3 (dominance), H2 (harm specificity, 4B).
+Qwen3-14B: G11a (relief specificity), G11b (ceiling, untestable in practice), G12 (floor, untestable in
+practice); Gate 2a R1's frozen classification (DISCREPANT, see Q1-Q2).
 
 ## 4. Earlier exploratory work (not claims)
 

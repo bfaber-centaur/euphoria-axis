@@ -1,4 +1,4 @@
-# Conventions (Qwen3.5-4B work)
+# Conventions
 
 Every value below is read from a frozen file in this repository; the
 "Pinned in" column says which. Paths are relative to
@@ -73,7 +73,8 @@ compare their coefficients with the paper-protocol ones.
 | Lenses | R (primary) and J from `camilablank/workspace-lenses` at `d740106d1e0f95456dc8718fba2895e9c8ffd6ef`: J sha256 `8ac16d8e…`, R `848b9b8e…`; read with `jacobian-lens` at `581d398613e5602a5af361e1c34d3a92ea82ba8e` | `paper_protocol/lens_readout/setup_spec.json`, `paper_protocol/lens_calibration/l0_published_lens_provenance.json` |
 | Lens target / source layers | target 30; sources 0-30 | `setup_spec.json` |
 | Position | final prompt token; plain text; `force_bos=False` | `setup_spec.json` |
-| Vocabulary | `psych_vocab_v1`: 9 families, 74 terms, frozen | `paper_protocol/s1_comparison/psych_vocab_v1.json` |
+| Vocabulary | `psych_vocab_v1`: 9 families, 74 terms, frozen before scoring; families are conceptual probes, not labels for S2 (file notes) | `paper_protocol/s1_comparison/psych_vocab_v1.json` |
+| Psychological grounding | `doc/plan/psych-eval.md`: behavioral activation/inhibition (Carver & White, 1994), subjective vitality (Ryan & Frederick, 1997), positive affect (PANAS; Watson, Clark & Tellegen, 1988), interpersonal agency (Horowitz et al., 2006). These ground the vitality, approach, agency and activated-positive families; calm, relief, defeat and distress have no cited source. | `doc/plan/psych-eval.md` |
 | Lens probes | the 60 terms whose " term" form is a single token | `notebooks/03-decursed.ipynb` cell 9; hash in `plane_sweep/sweep_spec.json` (`probe_terms_sha256`) |
 | Gain | per probe: log(rank under baseline / rank under condition), averaged over the 50 prompts; family = mean over its probes | chunk definitions; `plane_sweep/sweep_spec.json` |
 | Usual family-readout layer | R lens layer 29 (target - 1) | checkpoints |
@@ -110,11 +111,34 @@ single-token word list is rebuilt locally and checked against hashes in
 
 | Where | What is recorded |
 |---|---|
-| Local server (WSL, 16 GB GPU) | `uv` environment (Python 3.14); package versions were not recorded for the 4B runs. CUDA sysmem fallback disabled since Gate L. |
+| Local server (WSL, 16 GB GPU) | `uv` environment (Python 3.14); package versions were not recorded at the time of the 4B runs. A snapshot taken 2026-10-13 (`runs/qwen35-4b-posttrained-s2/env-local-2026-10-13.txt`) records the environment as of that date, not proof of what earlier runs used. CUDA sysmem fallback disabled since Gate L. |
 | RunPod (Gate L fits) | A40; torch 2.11.0+cu128, transformers 5.19.0, `fla` + `causal-conv1d` fast path (verified by call tracing); full lock in `paper_protocol/lens_calibration/env-fast.lock.txt` |
 | Bulky artifacts | not committed; sha256 in `paper_protocol/bulky_artifacts_manifest.json`; backed up with rclone |
 
-## 11. Reporting rules
+## 11. Qwen3-14B work (Gate 2a, M7, R4)
+
+| Item | Value | Pinned in |
+|---|---|---|
+| Model | `Qwen/Qwen3-14B` (the source's `Qwen_3_14B_base` is a results label, not the `-Base` checkpoint), revision `40c069824f4251a91eefaf281ebe4c544efd3e18`, every file verified against the Hub. The source does not record its revision; ours is consistent with it (residual-norm ratio at layer 20: 0.5411 vs published 0.5408). | `runs/qwen3-14b-gate2a/r1/run_header.json` |
+| Reproduction environment (Gate 2a, M7) | transformer_lens 2.18.0, transformers 4.57.6, torch 2.11.0+cu128, numpy 1.26.4, pyarrow 17.0.0, pandas 2.3.3. The source pins nothing; a fresh install does not run its code. | `doc/protocols/gate2a/gate2a_spec.json` |
+| Lens environment (R4) | the main fast environment (torch 2.11.0+cu128, transformers 5.19.0) | `doc/protocols/lenses/r4_q14_spec.json` |
+| Vector and layers | the source's published S2 vector (layer 31, cosine 0.99994 with our layer-31 vector), injected at the source's layer 20; R4 reads at layer 37 (target - 1) | Gate 2a, M7, R4 specs |
+| Dose | vector scaled so coefficient 1 equals a vector-to-residual ratio of 0.5908 at the injection layer (the 4B convention), measured with the source's own method (final-token residual norm, first 3 neutral prompts) | `doc/protocols/buttons/m7_q14_spec.json` |
+| Random controls | three directions, seeds 1103, 2207, 3301, norm-matched to the scaled S2 | same |
+| "Beyond each random direction" | the paired difference against every random condition separately has a CI excluding 0 in the stated direction | same |
+| Probes | `psych_vocab_v1` unchanged; the single-token subset rebuilt for the Qwen3 tokenizer | `runs/qwen3-14b-r4/r4_probe_terms.csv` |
+
+## 12. Infrastructure (RunPod)
+
+| Rule | Why |
+|---|---|
+| Pods boot from git: the start command clones the repository and runs `tools/runpod/boot.sh`, which copies `tools/runpod/*`, data files and frozen specs onto the volume and records the commit (`boot.log`, `SYNCED_FROM_COMMIT`) | the volume can only be written from a running pod, so pods otherwise ran stale scripts |
+| Read resources from the cgroup, never from `nproc` or `/proc/meminfo` | containers report the host (an A100 pod saw 128 CPUs for a 13.6-CPU quota, throttled 78% of the time; an A40 pod saw 503 GB of RAM for a 46.6 GiB limit) |
+| Caches, environments and model weights on the container disk, verified by checksum; the network volume holds whole artifacts only, copied by contents (no metadata) | the global volume refuses permission and timestamp changes and produced empty files through the Hugging Face and Xet caches |
+| Lens fitting on Ampere (A100), not Hopper, with the locked environment | `fla` refuses the linear-attention backward pass on Hopper with Triton 3.4.0-3.7.0 (incorrect results; fla #640) |
+| Every run records its environment, model revision and spec hash in a header | the source recorded neither revision nor versions, which limited Gate 2a's attribution |
+
+## 13. Reporting rules
 
 - State the sign actually injected (section 1).
 - Name the read slot for any self/other claim (the ordering depends on it).
@@ -125,3 +149,11 @@ single-token word list is rebuilt locally and checked against hashes in
   to it.
 - Separate measurement from experience: neither representation nor steering
   effects establish felt states.
+- Exact text match is not a cross-environment reproduction bar: greedy bf16 decoding diverged in 44% of unsteered
+  generations between our environment and the source's (Gate 2a); compare behavioural measures.
+- Per-trial log-probabilities from bf16 logits are quantized (0.25-logit steps at Qwen3-14B's logit sizes), which
+  produces exact duplicates; averages are unaffected. From the 27B work on, name logits are computed in float32.
+- Use at least three random directions: their effects are heterogeneous (Qwen3-14B: one inert, one lowering relief,
+  one moving position, relief and harm together). Report specificity by amplitude and, from the 27B work on, by
+  profile structure (R4: random directions lift the whole vocabulary; S2 moves it in a signed pattern).
+- State in advance how a prediction is scored when the unsteered rate leaves no room (ceiling or floor).
